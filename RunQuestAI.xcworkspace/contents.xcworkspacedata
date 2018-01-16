@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Run+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:Run+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:Run+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:Run+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "group:RunQuestAI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
