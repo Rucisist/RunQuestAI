@@ -28,6 +28,9 @@
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.itemSize = CGSizeMake(150, 150);
     layout.minimumLineSpacing = 20;
+    layout.minimumInteritemSpacing = 20;
+    
+    
     
     [layout setFooterReferenceSize:CGSizeMake(100, 50)];
     [layout setHeaderReferenceSize:CGSizeMake(150, 25)];
@@ -62,6 +65,14 @@
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PrisesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
     cell.textLabel.text = self.albumDescription[indexPath.row];
+    
+    //cell.contentView.layer.cornerRadius = 30;
+    
+    cell.contentView.layer.cornerRadius = 20.0f;
+    //cell.contentView.layer.borderWidth = 1.0f;
+   // cell.contentView.layer.borderColor = [UIColor clearColor].CGColor;
+    cell.contentView.layer.masksToBounds = YES;
+    
     if (self.allDistance.doubleValue / 1000 >= [self.albumHelper[indexPath.row] doubleValue])
     {
         cell.priseImage.alpha = 1.0;

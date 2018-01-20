@@ -65,6 +65,15 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     self.speaker = [AISSystemSpeaker new];
     self.voicePlayer = [AISRealVoicesPlayer new];
     
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    
+    NSError *setCategoryError = nil;
+    if (![session setCategory:AVAudioSessionCategoryPlayback
+                  withOptions:AVAudioSessionCategoryOptionMixWithOthers
+                        error:&setCategoryError]) {
+        NSLog(@"error");
+    }
+    
     self.mapViewOpenButton = [UIButton new];
     self.mapViewOpenButton.frame = CGRectMake(20, 20, 40, 40);
     [self.mapViewOpenButton setTitle:@"🗺" forState:UIControlStateNormal];

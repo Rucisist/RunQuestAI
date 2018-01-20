@@ -16,7 +16,7 @@
     if (self)
     {
         _textLabel = [UILabel new];
-        _textLabel.frame = CGRectMake(0, 0, CGRectGetWidth(frame), 25);
+        _textLabel.frame = CGRectMake(4, 0, CGRectGetWidth(frame), 25);
         _textLabel.textColor = [UIColor grayColor];
         
         _priseImage = [UIImageView new];
