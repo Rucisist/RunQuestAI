@@ -211,6 +211,9 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 - (void)saveRun
 {
     [self.dataService saveDataWith:self.locations duration:self.seconds distance:self.distance date:[NSDate date]];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    double distanceSaved = [userDefaults doubleForKey:@"allDistance"];
+    [userDefaults setDouble:distanceSaved + self.distance forKey:@"allDistance"];
 }
 
 

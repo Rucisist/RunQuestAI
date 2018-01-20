@@ -27,7 +27,6 @@
 		BF3065EF200CB5BB00F3058E /* RunMissionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EE200CB5BB00F3058E /* RunMissionMapViewController.m */; };
 		BF3065F2200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F1200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m */; };
 		BF3065F4200CF3F500F3058E /* eq6v-MGxOuU.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF3065F3200CF3F500F3058E /* eq6v-MGxOuU.jpg */; };
-		BF3065F6200CF98900F3058E /* eq6v-MGxOuUmin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF3065F5200CF98900F3058E /* eq6v-MGxOuUmin.jpg */; };
 		BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F8200D3B0700F3058E /* AISTranslationUnitsModel.m */; };
 		BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE99620124F97000BEC8A /* AISCustomRunView.m */; };
 		BF4CE99C20127A34000BEC8A /* GELogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE99820127A31000BEC8A /* GELogo.png */; };
@@ -123,7 +122,6 @@
 		BF3065F0200CB7FA00F3058E /* RunMissionCharacteristicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunMissionCharacteristicsViewController.h; sourceTree = "<group>"; };
 		BF3065F1200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunMissionCharacteristicsViewController.m; sourceTree = "<group>"; };
 		BF3065F3200CF3F500F3058E /* eq6v-MGxOuU.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eq6v-MGxOuU.jpg"; sourceTree = "<group>"; };
-		BF3065F5200CF98900F3058E /* eq6v-MGxOuUmin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "eq6v-MGxOuUmin.jpg"; path = "../../../eq6v-MGxOuUmin.jpg"; sourceTree = "<group>"; };
 		BF3065F7200D3B0700F3058E /* AISTranslationUnitsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISTranslationUnitsModel.h; sourceTree = "<group>"; };
 		BF3065F8200D3B0700F3058E /* AISTranslationUnitsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTranslationUnitsModel.m; sourceTree = "<group>"; };
 		BF4CE99520124F97000BEC8A /* AISCustomRunView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCustomRunView.h; sourceTree = "<group>"; };
@@ -437,7 +435,6 @@
 				BF4CE9AE20128E3A000BEC8A /* AISCustomViews */,
 				BF3065D1200C022300F3058E /* model */,
 				BF83EE252008B0F3000EBA5C /* Assets.xcassets */,
-				BF3065F5200CF98900F3058E /* eq6v-MGxOuUmin.jpg */,
 				BF83EE272008B0F3000EBA5C /* LaunchScreen.storyboard */,
 				BF83EE2A2008B0F3000EBA5C /* Info.plist */,
 				BF83EE2B2008B0F3000EBA5C /* main.m */,
@@ -606,7 +603,6 @@
 				BF83EE292008B0F3000EBA5C /* LaunchScreen.storyboard in Resources */,
 				BF83EE262008B0F3000EBA5C /* Assets.xcassets in Resources */,
 				BF4CE9A4201282CA000BEC8A /* road.png in Resources */,
-				BF3065F6200CF98900F3058E /* eq6v-MGxOuUmin.jpg in Resources */,
 				BF3065F4200CF3F500F3058E /* eq6v-MGxOuU.jpg in Resources */,
 				BF26D49720100ABE00D70121 /* lightsaber-1980155_960_720.png in Resources */,
 				BF4CE9A5201282CA000BEC8A /* medal.png in Resources */,

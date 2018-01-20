@@ -12,7 +12,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    NSLog(@"CASCollectionViewCell");
     self = [super initWithFrame:frame];
     if (self)
     {

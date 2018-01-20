@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     self.album = @[@"alliance",@"GELogo",@"runbuttonImage",@"SWLogo"];
-    self.albumDescription = @[@"пробежать 1 км", @"пробежать 10 км", @"пробежат 50 км", @"пробежать 100 км"];
+    self.albumDescription = @[@"пробежать 1 км", @"пробежать 10 км", @"пробежать 50 км", @"пробежать 100 км"];
     self.albumHelper = @[@1, @10, @50, @100];
     
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
@@ -58,16 +58,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PrisesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];

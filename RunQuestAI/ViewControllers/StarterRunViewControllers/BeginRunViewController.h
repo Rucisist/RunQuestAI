@@ -11,6 +11,6 @@
 
 @interface BeginRunViewController : UIViewController <CLLocationManagerDelegate>
 
-@property (nonatomic, strong) CLLocationManager *locationManager;
+-(void)configureSaberView;
 
 @end

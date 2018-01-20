@@ -14,7 +14,7 @@
 
 @interface MainViewTabbarController ()
 
-//@property (nonatomic, strong) BeginRunViewController *beginRunViewController;
+@property (nonatomic, strong) BeginRunViewController *beginRunViewController;
 @property (nonatomic, strong) StatsViewController *statsViewController;
 @property (nonatomic, strong) PrisesCollectionViewController *prisesCollectionViewController;
 @property (nonatomic, strong) PrisesPagesViewController *prisesPagesViewController;
@@ -32,6 +32,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES];
+    [self.beginRunViewController configureSaberView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +42,7 @@
 
 -(void)configureTabBarWithViewControllers
 {
-    BeginRunViewController *beginRunViewController = [BeginRunViewController new];
+    self.beginRunViewController = [BeginRunViewController new];
     self.statsViewController = [StatsViewController new];
     self.prisesCollectionViewController = [PrisesCollectionViewController new];
     self.prisesPagesViewController = [PrisesPagesViewController new];
@@ -57,13 +58,13 @@
 
     
     
-    beginRunViewController.tabBarItem = firstItem;
+    self.beginRunViewController.tabBarItem = firstItem;
 //    self.characteristicsViewController.tabBarItem = rightTabBarItem;
     self.statsViewController.tabBarItem = rightTabBarItem;
     self.prisesCollectionViewController.tabBarItem = thirdTabBarItem;
     //self.prisesPagesViewController.tabBarItem = forthTabBarItem;
     
-    NSArray *tabBarControllers = @[beginRunViewController, self.statsViewController, self.prisesCollectionViewController];
+    NSArray *tabBarControllers = @[self.beginRunViewController, self.statsViewController, self.prisesCollectionViewController];
     
     self.viewControllers = tabBarControllers;
 }

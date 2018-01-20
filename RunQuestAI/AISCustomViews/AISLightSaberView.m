@@ -38,6 +38,7 @@ static double distanceToCompleteHelper = 100000.0;
         _allDistanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame)-80, CGRectGetWidth(self.frame), 40)];
         _allDistanceLabel.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.1 alpha:1.0];
         _allDistanceValue = [NSNumber numberWithDouble:0.0];
+        [self addSubview:_allDistanceLabel];
     }
     return self;
 }
@@ -53,6 +54,7 @@ static double distanceToCompleteHelper = 100000.0;
     self.frontImageView.frame = portionFrame;
     self.backImageView.frame = addFrame;
     self.backImageView.alpha = 0.2;
+
 }
 
 -(void)configureTheLightSaberView
@@ -64,12 +66,9 @@ static double distanceToCompleteHelper = 100000.0;
 
 -(void)configureAllDistanceLabel
 {
-    
     [self bringSubviewToFront:self.allDistanceLabel];
-    NSLog(@"fgfdgdf");
-    self.allDistanceLabel.text = @"dfsg";
     self.allDistanceLabel.textAlignment = NSTextAlignmentCenter;
-    [self addSubview:self.allDistanceLabel];
+
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSLog(@"%f",[userDefaults doubleForKey:@"allDistance"]);

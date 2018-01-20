@@ -28,15 +28,18 @@ static CGFloat AISoffsetFromBottom = 200;
 @property (nonatomic, strong) UILabel *AllDistanceLabel;
 @property (nonatomic, strong) UIButton *freeRunButton;
 @property (nonatomic, strong) UIButton *questRunButton;
-//@property (nonatomic, strong) UIView *light
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
 @implementation BeginRunViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureUI];
+    [self initializeSaberView];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SW1"]];
     
     imageView.frame = self.view.frame;
@@ -52,6 +55,7 @@ static CGFloat AISoffsetFromBottom = 200;
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -107,11 +111,15 @@ static CGFloat AISoffsetFromBottom = 200;
     [self presentViewController:settingsViewController animated:YES completion:nil];
 }
 
--(void)configureSaberView
+-(void)initializeSaberView
 {
     self.lightSaberView = [[AISLightSaberView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200)];
-    [self.lightSaberView configureTheLightSaberView];
     [self.view addSubview:self.lightSaberView];
+}
+
+-(void)configureSaberView
+{
+    [self.lightSaberView configureTheLightSaberView];
 }
 
 
