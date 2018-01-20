@@ -18,6 +18,7 @@
 @property (nonatomic, strong) StatsViewController *statsViewController;
 @property (nonatomic, strong) PrisesCollectionViewController *prisesCollectionViewController;
 @property (nonatomic, strong) PrisesPagesViewController *prisesPagesViewController;
+@property (nonatomic, strong) UIImageView *loadingImageView;
 
 @end
 
@@ -26,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureTabBarWithViewControllers];
+    [self initializeLoadingView];
+    [self animateLoading];
     // Do any additional setup after loading the view.
 }
 
@@ -53,11 +56,6 @@
     UITabBarItem *rightTabBarItem = [[UITabBarItem alloc] initWithTitle:@"stats" image:[UIImage imageNamed:@"runbuttonImageLittle"] tag:1];
     UITabBarItem *thirdTabBarItem = [[UITabBarItem alloc] initWithTitle:@"prises" image:[UIImage imageNamed:@"medal"] tag:2];
     
-  //  UITabBarItem *forthTabBarItem = [[UITabBarItem alloc] initWithTitle:@"prises2" image:[UIImage imageNamed:@"runbuttonImageLittle"] tag:3];
-    
-
-    
-    
     self.beginRunViewController.tabBarItem = firstItem;
 //    self.characteristicsViewController.tabBarItem = rightTabBarItem;
     self.statsViewController.tabBarItem = rightTabBarItem;
@@ -67,6 +65,36 @@
     NSArray *tabBarControllers = @[self.beginRunViewController, self.statsViewController, self.prisesCollectionViewController];
     
     self.viewControllers = tabBarControllers;
+}
+
+-(void)initializeLoadingView
+{
+    self.loadingImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    self.loadingImageView.image = [UIImage imageNamed:@"redSaberInitialImage"];
+    self.loadingImageView.backgroundColor = [UIColor blackColor];
+    self.loadingImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:self.loadingImageView];
+}
+
+-(void)animateLoading
+{
+    UIView *helperCoverView = [[UIView alloc] initWithFrame:self.view.frame];
+    helperCoverView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:helperCoverView];
+    
+    CGRect theFrame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 0);
+    
+    [UIView animateWithDuration:2.0 animations:^{
+        helperCoverView.frame = theFrame;
+    } completion:^(BOOL Complete){
+        
+    }];
+    [UIView animateWithDuration:2.0 delay:2.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.loadingImageView.alpha = 0.0;
+    } completion:^(BOOL Finished){
+        [self.view sendSubviewToBack:self.loadingImageView];
+        [self.view sendSubviewToBack:helperCoverView];
+    }];
 }
 
 /*

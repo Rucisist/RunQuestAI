@@ -9,8 +9,6 @@
 #import "StatsViewController.h"
 #import "StatsTableViewCell.h"
 #import "AppDelegate.h"
-#import "Run+CoreDataProperties.h"
-#import "Location+CoreDataProperties.h"
 #import "RunStaticsViewController.h"
 #import "AISUserDefaultsService.h"
 #import "AISDataService.h"
@@ -18,6 +16,7 @@
 
 @interface StatsViewController ()
 
+@property (nonatomic) double allDistance;
 @property (nonatomic, strong) StatsTableViewCell *statsTableViewCell;
 @property (nonatomic, strong) AISDataService *dataService;
 @property (nonatomic, strong) UILabel *allDistanceLabel;
@@ -57,8 +56,6 @@
     [self.tableView registerClass:[StatsTableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
-
-
 -(void)configurateHeaderView
 {
     CGFloat aISheaderViewHeight = 100;
@@ -86,7 +83,6 @@
 {
     self.runArray = [NSMutableArray new];
     self.runArray = [self.dataService loadAllRuns];
-    NSLog(@"%@", self.runArray);
     [self calculateTheKilometersEverRun];
 }
 
@@ -96,20 +92,18 @@
     for (Run *object in self.runArray)
     {
         allDistanceHelper = allDistanceHelper + object.distance;
-        NSLog(@"%f", allDistanceHelper);
     }
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setDouble:allDistanceHelper forKey:@"allDistance"];
     
     self.allDistanceLabel.text = [NSString stringWithFormat:@"Вы пробежали %@", [AISTranslationUnitsModel stringifyDistance:allDistanceHelper]];
+    self.allDistance = allDistanceHelper;
 }
     
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     StatsTableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    tableViewCell.runInfoLabel.text = @"f";
     Run *runObject;
     
     runObject = [self.runArray objectAtIndex:indexPath.row];
@@ -148,27 +142,28 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self actionsButtonDeletePressed];
+        self.allDistance = self.allDistance - self.runArray[indexPath.row].distance;
         [self.dataService deleteRun:self.runArray[indexPath.row]];
         [self.runArray removeObjectAtIndex:indexPath.row];
+        
+        self.allDistanceLabel.text = [NSString stringWithFormat:@"Вы пробежали %@", [AISTranslationUnitsModel stringifyDistance:self.allDistance]];
+        
         [tableView reloadData];
     }
 }
 
 -(void)actionsButtonDeletePressed
 {
-
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Run *runInfo;
     runInfo = [self.runArray objectAtIndex:indexPath.row];
-    NSLog(@"dgdfskgds;fkg;sdflgksfd;lgjsfdgkjsdflgkfdg%lu", runInfo.locations.count);
     RunStaticsViewController *runStatViewController;
     runStatViewController = [[RunStaticsViewController alloc] initWithRunInfo:runInfo.timestamp];
 
-    //runStatViewController.someDate = runInfo.timestamp;
     runStatViewController.runDetails = runInfo;
     
     [self.navigationController pushViewController:runStatViewController animated:YES];

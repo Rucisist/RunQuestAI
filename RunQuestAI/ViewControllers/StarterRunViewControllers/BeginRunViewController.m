@@ -30,6 +30,7 @@ static CGFloat AISoffsetFromBottom = 200;
 @property (nonatomic, strong) UIButton *questRunButton;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
+
 @end
 
 @implementation BeginRunViewController
@@ -38,6 +39,7 @@ static CGFloat AISoffsetFromBottom = 200;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self configureUI];
     [self initializeSaberView];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SW1"]];

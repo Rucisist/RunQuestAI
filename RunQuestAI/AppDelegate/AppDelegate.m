@@ -10,6 +10,7 @@
 #import "BeginRunViewController.h"
 #import "CountdownRunMissionViewController.h"
 #import "MainViewTabbarController.h"
+#import "AISLoadViewController.h"
 @import GoogleMaps;
 @import GooglePlaces;
 
@@ -28,13 +29,10 @@
     
     //configure window
     self.window = [UIWindow new];
-    BeginRunViewController *beginRunViewController = [BeginRunViewController new];
-    
-
-    
     MainViewTabbarController *rootViewController = [MainViewTabbarController new];
-    
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    //AISLoadViewController *loadView = [AISLoadViewController new];
     
     self.window.rootViewController = navigationController;
     

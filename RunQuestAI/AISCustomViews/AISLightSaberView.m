@@ -10,7 +10,8 @@
 #import "AISUserDefaultsService.h"
 #import "AISTranslationUnitsModel.h"
 
-static double distanceToCompleteHelper = 100000.0;
+static double distanceToCompleteHelper = 10000.0;
+static double distanceToCompleteForRedSaber = 50000.0;
 
 @interface AISLightSaberView()
 
@@ -31,13 +32,24 @@ static double distanceToCompleteHelper = 100000.0;
     self = [super initWithFrame:frame];
     if (self)
     {
-        _frontImage = [UIImage imageNamed:@"LightsaberBlueIndicator"];
-        _backImage = [UIImage imageNamed:@"LightsaberBlueIndicator"];
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        _allDistanceValue = [NSNumber numberWithDouble:[userDefaults doubleForKey:@"allDistance"]];
+        if ([_allDistanceValue doubleValue] >= distanceToCompleteHelper)
+        {
+            _frontImage = [UIImage imageNamed:@"LightsaberRedIndicator"];
+            _backImage = [UIImage imageNamed:@"LightsaberRedIndicator"];
+        }
+        else
+        {
+            _frontImage = [UIImage imageNamed:@"LightsaberBlueIndicator"];
+            _backImage = [UIImage imageNamed:@"LightsaberBlueIndicator"];
+        }
         _backImageView = [[UIImageView alloc] initWithFrame:self.frame];
         _frontImageView = [[UIImageView alloc] initWithFrame:self.frame];
+        _frontImageView.contentMode = UIViewContentModeScaleAspectFit;
         _allDistanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame)-80, CGRectGetWidth(self.frame), 40)];
         _allDistanceLabel.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.1 alpha:1.0];
-        _allDistanceValue = [NSNumber numberWithDouble:0.0];
+    
         [self addSubview:_allDistanceLabel];
     }
     return self;
@@ -61,6 +73,15 @@ static double distanceToCompleteHelper = 100000.0;
 {
     [self configureAllDistanceLabel];
     double coefficientForLightSaber = [self.allDistanceValue doubleValue] / distanceToCompleteHelper;
+    if (coefficientForLightSaber > 1)
+    {
+        coefficientForLightSaber = [self.allDistanceValue doubleValue] / distanceToCompleteForRedSaber;
+    }
+    
+    if (coefficientForLightSaber > 1)
+    {
+        coefficientForLightSaber = 1;
+    }
     [self indicatorFill:coefficientForLightSaber];
 }
 
@@ -69,14 +90,26 @@ static double distanceToCompleteHelper = 100000.0;
     [self bringSubviewToFront:self.allDistanceLabel];
     self.allDistanceLabel.textAlignment = NSTextAlignmentCenter;
 
-    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"%f",[userDefaults doubleForKey:@"allDistance"]);
+    
     double allDistanceCopyHelper = [userDefaults doubleForKey:@"allDistance"];
     self.allDistanceValue = [NSNumber numberWithDouble:allDistanceCopyHelper];
 
+    
+    double actualDistanceToComplete;
+
+    if ([self.allDistanceValue doubleValue] < distanceToCompleteHelper)
+    {
+        actualDistanceToComplete = distanceToCompleteHelper;
+    }
+    else
+    {
+        actualDistanceToComplete = distanceToCompleteForRedSaber;
+    }
+    
     NSString *allDistanceString = [NSString stringWithFormat:@"%@", [AISTranslationUnitsModel stringifyDistance:[self.allDistanceValue doubleValue]]];
-    NSString *distanceToCompleteString = [NSString stringWithFormat:@"%@", [AISTranslationUnitsModel stringifyDistance:distanceToCompleteHelper]];
+    NSString *distanceToCompleteString = [NSString stringWithFormat:@"%@", [AISTranslationUnitsModel stringifyDistance:actualDistanceToComplete]];
+    
     self.allDistanceLabel.text = [NSString stringWithFormat:@"%@ / %@", allDistanceString, distanceToCompleteString];
 }
 /*

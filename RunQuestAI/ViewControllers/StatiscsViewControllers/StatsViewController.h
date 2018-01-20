@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Run+CoreDataProperties.h"
+#import "Location+CoreDataProperties.h"
 
 @interface StatsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *runArray;
+@property (nonatomic, strong) NSMutableArray<Run *> *runArray;
 
 @end

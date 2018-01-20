@@ -42,6 +42,9 @@
 		BF4CE9EF20129210000BEC8A /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9E920129210000BEC8A /* Run+CoreDataProperties.m */; };
 		BF4CE9F020129210000BEC8A /* Location+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9EC20129210000BEC8A /* Location+CoreDataClass.m */; };
 		BF4CE9F120129210000BEC8A /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9ED20129210000BEC8A /* Location+CoreDataProperties.m */; };
+		BF4CE9F42012D23D000BEC8A /* AISLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */; };
+		BF4CE9F62012D845000BEC8A /* redSaber.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F52012D844000BEC8A /* redSaber.png */; };
+		BF4CE9F92012EB33000BEC8A /* lightsaber-1980163_960_720.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */; };
 		BF7D3479200E2837007D33B2 /* MainViewTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3478200E2837007D33B2 /* MainViewTabbarController.m */; };
 		BF7D3482200E2A3F007D33B2 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3481200E2A3F007D33B2 /* StatsViewController.m */; };
 		BF7D3485200E36C4007D33B2 /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3484200E36C4007D33B2 /* StatsTableViewCell.m */; };
@@ -146,6 +149,10 @@
 		BF4CE9EB20129210000BEC8A /* Location+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataClass.h"; sourceTree = "<group>"; };
 		BF4CE9EC20129210000BEC8A /* Location+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataClass.m"; sourceTree = "<group>"; };
 		BF4CE9ED20129210000BEC8A /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BF4CE9F22012D23D000BEC8A /* AISLoadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISLoadViewController.h; sourceTree = "<group>"; };
+		BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISLoadViewController.m; sourceTree = "<group>"; };
+		BF4CE9F52012D844000BEC8A /* redSaber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redSaber.png; sourceTree = "<group>"; };
+		BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightsaber-1980163_960_720.png"; sourceTree = "<group>"; };
 		BF7D3477200E2837007D33B2 /* MainViewTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewTabbarController.h; sourceTree = "<group>"; };
 		BF7D3478200E2837007D33B2 /* MainViewTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewTabbarController.m; sourceTree = "<group>"; };
 		BF7D3480200E2A3F007D33B2 /* StatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
@@ -262,6 +269,7 @@
 		BF3065D1200C022300F3058E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BF4CE9F72012E37B000BEC8A /* AISApeakerModel */,
 				BF26D484200F915F00D70121 /* AISModelHelpers */,
 				BF26D4AA2010698900D70121 /* AISTargetModel */,
 				BF4CE9AC20128DF7000BEC8A /* CoreDataClasses */,
@@ -288,6 +296,8 @@
 				BF3065CF200BDBAC00F3058E /* BeginRunViewController.m */,
 				BF26D47E200F74EF00D70121 /* SettingsViewController.h */,
 				BF26D47F200F74EF00D70121 /* SettingsViewController.m */,
+				BF4CE9F22012D23D000BEC8A /* AISLoadViewController.h */,
+				BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */,
 			);
 			path = StarterRunViewControllers;
 			sourceTree = "<group>";
@@ -339,6 +349,8 @@
 		BF4CE9BC20128F69000BEC8A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */,
+				BF4CE9F52012D844000BEC8A /* redSaber.png */,
 				BF4CE9C120128FF4000BEC8A /* eq6v-MGxOuUmin.jpg */,
 				BF4CE9A020127B74000BEC8A /* 10km.gif */,
 				BF4CE99A20127A32000BEC8A /* alliance.png */,
@@ -377,6 +389,17 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		BF4CE9F72012E37B000BEC8A /* AISApeakerModel */ = {
+			isa = PBXGroup;
+			children = (
+				BFC1615620114D6900EF12BC /* AISSystemSpeaker.h */,
+				BFC1615720114D6900EF12BC /* AISSystemSpeaker.m */,
+				BFC1615920115B6500EF12BC /* AISRealVoicesPlayer.h */,
+				BFC1615A20115B6500EF12BC /* AISRealVoicesPlayer.m */,
+			);
+			path = AISApeakerModel;
+			sourceTree = "<group>";
+		};
 		BF7D347A200E28A4007D33B2 /* RunMissionViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,10 +411,6 @@
 				BF3065EB200CB4A800F3058E /* RunMissionInProgressTabBarController.m */,
 				BF3065F0200CB7FA00F3058E /* RunMissionCharacteristicsViewController.h */,
 				BF3065F1200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m */,
-				BFC1615620114D6900EF12BC /* AISSystemSpeaker.h */,
-				BFC1615720114D6900EF12BC /* AISSystemSpeaker.m */,
-				BFC1615920115B6500EF12BC /* AISRealVoicesPlayer.h */,
-				BFC1615A20115B6500EF12BC /* AISRealVoicesPlayer.m */,
 			);
 			path = RunMissionViewControllers;
 			sourceTree = "<group>";
@@ -598,6 +617,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4CE99F20127A34000BEC8A /* star_wars_symbol__06295.1490486204.png in Resources */,
+				BF4CE9F62012D845000BEC8A /* redSaber.png in Resources */,
 				BF4CE99D20127A34000BEC8A /* SWLogo.png in Resources */,
 				BF4CE9A120127B74000BEC8A /* 10km.gif in Resources */,
 				BF83EE292008B0F3000EBA5C /* LaunchScreen.storyboard in Resources */,
@@ -606,6 +626,7 @@
 				BF3065F4200CF3F500F3058E /* eq6v-MGxOuU.jpg in Resources */,
 				BF26D49720100ABE00D70121 /* lightsaber-1980155_960_720.png in Resources */,
 				BF4CE9A5201282CA000BEC8A /* medal.png in Resources */,
+				BF4CE9F92012EB33000BEC8A /* lightsaber-1980163_960_720.png in Resources */,
 				BFC16169201167D500EF12BC /* TimeToRun.m4a in Resources */,
 				BF4CE9A72012844D000BEC8A /* SW1.jpg in Resources */,
 				BF4CE99C20127A34000BEC8A /* GELogo.png in Resources */,
@@ -815,6 +836,7 @@
 				BF4CE9F020129210000BEC8A /* Location+CoreDataClass.m in Sources */,
 				BF26D48A200F990100D70121 /* PrisesCollectionReusableView.m in Sources */,
 				BF4CE9EF20129210000BEC8A /* Run+CoreDataProperties.m in Sources */,
+				BF4CE9F42012D23D000BEC8A /* AISLoadViewController.m in Sources */,
 				BF3065EC200CB4A800F3058E /* RunMissionInProgressTabBarController.m in Sources */,
 				BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */,
 			);
