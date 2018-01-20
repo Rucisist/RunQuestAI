@@ -22,13 +22,15 @@ static CGFloat AISoffsetFromBottom = 200;
 @property (nonatomic, strong) UIButton *startRunButton;
 @property (nonatomic, strong) UIImageView *lightSaberImageView;
 @property (nonatomic, strong) UIButton *settingsButton;
-@property (nonatomic, strong) AISUserDefaultsService *userDefaultsService;
-@property (nonatomic, strong) AISLightSaberView *lightSaberView;
-@property (nonatomic, strong) AISButtonsForTheBeginRunView *buttonPannel;
+
 @property (nonatomic, strong) UILabel *AllDistanceLabel;
 @property (nonatomic, strong) UIButton *freeRunButton;
 @property (nonatomic, strong) UIButton *questRunButton;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+
+@property (nonatomic, strong) AISUserDefaultsService *userDefaultsService;
+@property (nonatomic, strong) AISLightSaberView *lightSaberView;
+@property (nonatomic, strong) AISButtonsForTheBeginRunView *buttonPannel;
 
 
 @end
@@ -37,7 +39,8 @@ static CGFloat AISoffsetFromBottom = 200;
 
 
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     [self configureUI];
@@ -73,10 +76,9 @@ static CGFloat AISoffsetFromBottom = 200;
     CGFloat frameHeight = CGRectGetHeight(screenFrame);
     
     CGRect startButtonFrame = CGRectMake(frameWidth / 2 - AISstartRunButtonDiameter / 2, frameHeight - AISoffsetFromBottom, AISstartRunButtonDiameter, AISstartRunButtonDiameter);
+    
     self.startRunButton = [[UIButton alloc] initWithFrame:startButtonFrame];
-    
     self.startRunButton.layer.cornerRadius = AISstartRunButtonDiameter / 2;
-    
     self.startRunButton.backgroundColor = [UIColor redColor];
     
     [self.startRunButton setTitle:@"run!" forState:UIControlStateNormal];
@@ -86,10 +88,6 @@ static CGFloat AISoffsetFromBottom = 200;
     [self.startRunButton addTarget:self action:@selector(startButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
     [self configureSaberView];
-    
-    //[self configureSettingsButton];
-    
-    
     self.AllDistanceLabel = [UILabel new];
 }
 
@@ -97,12 +95,11 @@ static CGFloat AISoffsetFromBottom = 200;
 -(void)configureSettingsButton
 {
     CGFloat height = CGRectGetHeight(self.view.frame);
-    CGFloat width = CGRectGetWidth(self.view.frame);
     self.settingsButton = [[UIButton alloc] initWithFrame:CGRectMake(50, height - AISoffsetFromBottom + 40, AISSettingsButtonDiameter, AISSettingsButtonDiameter)];
     self.settingsButton.backgroundColor = [UIColor redColor];
     self.settingsButton.layer.cornerRadius = AISSettingsButtonDiameter / 2;
-    [self.settingsButton setTitle:@"информация" forState:UIControlStateNormal];
     
+    [self.settingsButton setTitle:@"информация" forState:UIControlStateNormal];
     [self.view addSubview:self.settingsButton];
     [self.settingsButton addTarget:self action:@selector(goToSettingsScreen) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -116,6 +113,7 @@ static CGFloat AISoffsetFromBottom = 200;
 -(void)initializeSaberView
 {
     self.lightSaberView = [[AISLightSaberView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200)];
+    
     [self.view addSubview:self.lightSaberView];
 }
 
@@ -129,7 +127,6 @@ static CGFloat AISoffsetFromBottom = 200;
 {
     self.userDefaultsService = [AISUserDefaultsService new];
     [self.userDefaultsService setUserDefaultsForTheKey:@"name" objectForTheKey:@"Andrew I."];
-    
 }
 
 -(void)startButtonPressed
@@ -141,7 +138,7 @@ static CGFloat AISoffsetFromBottom = 200;
 {
     CountdownRunMissionViewController *countdownViewController;
     countdownViewController = [CountdownRunMissionViewController new];
-    //[self presentViewController:countdownViewController animated:YES completion:nil];
+    
     [self.navigationController pushViewController:countdownViewController animated:YES];
 }
 

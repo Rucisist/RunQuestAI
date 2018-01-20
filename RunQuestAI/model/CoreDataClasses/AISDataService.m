@@ -26,9 +26,11 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
                                    entityForName:@"Run" inManagedObjectContext:[self coreDataContext]];
+    
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
+    
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     
     return [[[self coreDataContext] executeFetchRequest:fetchRequest error:nil] mutableCopy];
@@ -37,9 +39,13 @@
 -(void)deleteRun: (Run*)run
 {
     self.managedObjectContext = [self coreDataContext];
+    
     NSManagedObjectContext * context = [self managedObjectContext];
+    
     [context deleteObject:run];
+    
     NSError * error = nil;
+    
     if (![context save:&error])
     {
         NSLog(@"Error ! %@", error);
@@ -59,6 +65,7 @@
         newRun.timestamp = [NSDate date];
 
         NSMutableArray *locationArray = [NSMutableArray array];
+        
         for (CLLocation *someLocation in locations)
         {
             Location *locationObject = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
@@ -68,7 +75,6 @@
             locationObject.longitude = someLocation.coordinate.longitude;
             [locationArray addObject:locationObject];
         }
-
         newRun.locations = [NSOrderedSet orderedSetWithArray:locationArray];
         NSError *error = nil;
     

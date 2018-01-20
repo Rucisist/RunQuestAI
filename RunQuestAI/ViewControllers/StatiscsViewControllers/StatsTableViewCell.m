@@ -15,8 +15,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
-        //CGFloat cellWidth =CGRectGetWidth(self.contentView.frame);
-        CGFloat cellHeight =CGRectGetHeight(self.contentView.frame);
         CGFloat offsetX = 20;
         CGFloat offsetY = 0;
         CGFloat labelHeight = 40;
@@ -29,7 +27,6 @@
         
         [_runInfoLabel setFont:[UIFont fontWithName:@"Helvetica" size:18]];
         [_distanceInfoLabel setFont:[UIFont fontWithName:@"Helvetica" size:12]];
-
         
         [self.contentView addSubview:_runInfoLabel];
         [self.contentView addSubview:_distanceInfoLabel];

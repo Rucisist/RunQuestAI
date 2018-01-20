@@ -29,25 +29,30 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 @property int seconds;
 @property float distance;
 @property float distanceToAim;
+@property (nonatomic) CGRect viewFrame;
+
 @property (nonatomic, strong) NSMutableArray *locations;
 @property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, strong) Run *run;
+
 @property (nonatomic, strong) UILabel *paceLabel;
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UILabel *distanceToAimLabel;
 @property (nonatomic, strong) UILabel *distanceLabel;
+
 @property (nonatomic, strong) UIVisualEffectView *blurEffectView;
+
 @property (nonatomic, strong) UIButton *pauseButton;
 @property (nonatomic, strong) UIButton *stopButton;
 @property (nonatomic, strong) UIButton *resumeButton;
-@property (nonatomic) CGRect viewFrame;
-@property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, strong) AISDataService *dataService;
-@property (nonatomic, strong) AISTargetAllocatorHelper *targetAllocator;
-@property (nonatomic, strong) CLLocation *targetLocation;
 @property (nonatomic, strong) UIButton *mapViewOpenButton;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *targetLocation;
+
 @property (nonatomic, strong) AISSystemSpeaker *speaker;
 @property (nonatomic, strong) AISRealVoicesPlayer *voicePlayer;
+@property (nonatomic, strong) Run *run;
+@property (nonatomic, strong) AISDataService *dataService;
+@property (nonatomic, strong) AISTargetAllocatorHelper *targetAllocator;
 
 @end
 
@@ -77,7 +82,7 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     self.mapViewOpenButton = [UIButton new];
     self.mapViewOpenButton.frame = CGRectMake(20, 20, 40, 40);
     [self.mapViewOpenButton setTitle:@"🗺" forState:UIControlStateNormal];
-    //self.mapViewOpenButton.backgroundColor = [UIColor blueColor];
+
     [self.view addSubview:self.mapViewOpenButton];
     
     [self.mapViewOpenButton addTarget:self action:@selector(openMapViewAndPaintaRouteWith) forControlEvents:UIControlEventTouchUpInside];
@@ -122,7 +127,8 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 - (void)startLocationUpdates
 {
-    if (self.locationManager == nil) {
+    if (self.locationManager == nil)
+    {
         self.locationManager = [[CLLocationManager alloc] init];
     }
     
@@ -133,37 +139,47 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     self.locationManager.allowsBackgroundLocationUpdates = YES;
     self.locationManager.showsBackgroundLocationIndicator = YES;
     
-    // Movement threshold for new events.
-    self.locationManager.distanceFilter = 10; // meters
+    self.locationManager.distanceFilter = 10;
     
-    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+    {
         [self.locationManager requestWhenInUseAuthorization];
     }
+    
     [self.locationManager startUpdatingLocation];
 }
 
 - (void)updateLabels
 {
     self.timeLabel.text = [NSString stringWithFormat:@"⏱\n %@",  [AISTranslationUnitsModel stringifySecondCount:self.seconds usingLongFormat:NO]];
+    
     self.distanceToAimLabel.numberOfLines = 2;
     self.distanceToAimLabel.text = [NSString stringWithFormat:@"%@", [AISTranslationUnitsModel stringifyDistance:self.distance]];
+    
     self.paceLabel.text = [NSString stringWithFormat:@"Темп\n%@",  [AISTranslationUnitsModel stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
+    
     self.distanceLabel.text = [NSString stringWithFormat:@" %@", [AISTranslationUnitsModel stringifyDistance:self.distanceToAim]];
 }
 
 -(void)addBackgroundView
 {
     AISCustomRunView *customView = [[AISCustomRunView alloc] initWithFrame:self.view.frame];
+    
     [self.view addSubview:customView];
+    
     customView.backgroundColor = [UIColor blackColor];
+    
     [self.view sendSubviewToBack:customView];
 }
 
 -(void)speakCharacteristics
 {
     NSString *timeString = [NSString stringWithFormat:@"Time is %@ minutes.",  [AISTranslationUnitsModel stringifySecondCount:self.seconds usingLongFormat:NO]];
+    
     NSString *distanceString = [NSString stringWithFormat:@"Distance: %@.", [AISTranslationUnitsModel stringifyDistance:self.distance]];
+    
     NSString *paceString = [NSString stringWithFormat:@"Pace: %@.",  [AISTranslationUnitsModel stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
+    
     [self.speaker speakCharacteristicsTime:timeString pace:paceString distance:distanceString];
 }
 
@@ -184,7 +200,9 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 {
     [self pauseUpdatingLocations];
     [self saveRun];
+    
     self.resumeButton.hidden = YES;
+    
     [self goToBeginRunViewController];
     
 }
@@ -196,7 +214,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 -(void)resumeButtonPressed
 {
-    
     self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
     [self.locationManager startUpdatingLocation];
     [self animationForResumeButton];
@@ -216,7 +233,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 }
 
 
-
 - (void)saveRun
 {
     [self.dataService saveDataWith:self.locations duration:self.seconds distance:self.distance date:[NSDate date]];
@@ -233,11 +249,8 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 -(void)startRun
 {
-    // hide the start UI
-    
     self.seconds = 0;
     
-    // initialize the timer
     self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
     
     [self.voicePlayer play];
@@ -251,7 +264,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 -(void)configurePaceLabel
 {
     CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
-    //CGFloat paceLabelWidth = paceTimeDTAlabelWidth;
     CGFloat paceLabelHeight = paceTimeDTAlabelHeight;
     CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
     
@@ -279,7 +291,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 {
     CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
     CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
-    //CGFloat timeLabelWidth = paceTimeDTAlabelWidth;
     CGFloat timeLabelHeight = paceTimeDTAlabelHeight;
     
     CGRect timeLabelRect = CGRectMake(screenWidth/2, screenHeight / 2, screenWidth / 2, timeLabelHeight);
@@ -289,7 +300,7 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     
     self.timeLabel.textAlignment = NSTextAlignmentCenter;
     
-    self.timeLabel.text = @"something\n";
+    self.timeLabel.text = @"0";
     
     [self.timeLabel setFont:[UIFont fontWithName:@"Helvetica" size:20]];
     
@@ -340,7 +351,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 -(void)animationForPauseButton
 {
-
     [UIView animateWithDuration:0.4 animations:^{
         self.stopButton.alpha = 1.0;
         self.resumeButton.alpha = 1.0;
@@ -356,20 +366,19 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
         self.resumeButton.hidden = NO;
     }];
     
+    
     [UIView animateWithDuration:0.6 animations:^{
         [self blurEffect];
         
         CGRect stopButtonFrame = self.stopButton.frame;
         CGRect resumeButtonFrame = self.resumeButton.frame;
         
-
         CGFloat quefficient = 1.5;
         CGFloat newSize = pauseButtonDiameter / quefficient;
         CGFloat oldSize = pauseButtonDiameter / 2;
         CGFloat delta = (newSize - oldSize) / 2;
         
         self.stopButton.frame = CGRectMake(CGRectGetMinX(stopButtonFrame) - delta, CGRectGetMinY(stopButtonFrame), CGRectGetHeight(stopButtonFrame)/quefficient, CGRectGetHeight(stopButtonFrame)/quefficient);
-
 
         self.resumeButton.frame = CGRectMake(CGRectGetMinX(resumeButtonFrame) - delta, CGRectGetMinY(resumeButtonFrame), CGRectGetHeight(resumeButtonFrame)/quefficient, CGRectGetHeight(resumeButtonFrame)/quefficient);
 
@@ -388,8 +397,7 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
         [self configureMainView];
         [self.pauseButton bringSubviewToFront:self.view];
     }
-    completion:^(BOOL Finished)
-    {
+    completion:^(BOOL Finished){
         [self returnStopButtonInitialState];
         [self returnResumeButtonInitialState];
         self.pauseButton.hidden = NO;
@@ -430,7 +438,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 -(void)returnStopButtonInitialState
 {
- 
     CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
     CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
     
@@ -532,8 +539,9 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
         [self.view bringSubviewToFront:self.paceLabel];
         [self.view bringSubviewToFront:self.timeLabel];
         [self.view bringSubviewToFront:self.distanceToAimLabel];
-        
-    } else {
+    }
+    else
+    {
         self.view.backgroundColor = [UIColor whiteColor];
     }
 }
@@ -565,7 +573,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 -(void)configureDistanceLabel
 {
-    CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
     CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
     self.distanceLabel.frame = CGRectMake(0, 40, screenWidth, 60);
     [self.timeLabel setFont:[UIFont fontWithName:@"Helvetica" size:20]];
@@ -577,28 +584,28 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations
 {
-    for (CLLocation *newLocation in locations) {
+    for (CLLocation *newLocation in locations)
+    {
         
         NSDate *eventDate = newLocation.timestamp;
         
         NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
         
-        if (fabs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20) {
-            
-            // update distance
-            if (self.locations.count > 0) {
+        if (fabs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20)
+        {
+
+            if (self.locations.count > 0)
+            {
                 self.distance += [newLocation distanceFromLocation:self.locations.lastObject];
                 
                 self.distanceToAim = [newLocation distanceFromLocation:self.targetLocation];
-                
-                
                 
                 CLLocationCoordinate2D coords[2];
                 coords[0] = ((CLLocation *)self.locations.lastObject).coordinate;
                 coords[1] = newLocation.coordinate;
                 
             }
-            
+    
             [self.locations addObject:newLocation];
         }
     }

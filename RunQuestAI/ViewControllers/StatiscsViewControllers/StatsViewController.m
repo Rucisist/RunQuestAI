@@ -17,9 +17,9 @@
 @interface StatsViewController ()
 
 @property (nonatomic) double allDistance;
+@property (nonatomic, strong) UILabel *allDistanceLabel;
 @property (nonatomic, strong) StatsTableViewCell *statsTableViewCell;
 @property (nonatomic, strong) AISDataService *dataService;
-@property (nonatomic, strong) UILabel *allDistanceLabel;
 
 @end
 
@@ -28,9 +28,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
     self.dataService = [AISDataService new];
-    
     
     [self fetchRequest];
     [self configureUI];
@@ -135,7 +133,6 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return YES if you want the specified item to be editable.
     return YES;
 }
 
@@ -150,11 +147,6 @@
         
         [tableView reloadData];
     }
-}
-
--(void)actionsButtonDeletePressed
-{
-    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

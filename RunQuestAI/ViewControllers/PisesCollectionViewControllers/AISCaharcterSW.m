@@ -10,17 +10,6 @@
 
 @implementation AISCaharcterSW
 
-//-(id)initWithImage: (UIImage *)imageOfCharacter description: (NSString *)description
-//{
-//    self = [super init];
-//    if (self)
-//    {
-//        _characterImage = imageOfCharacter;
-//        _characterDescription = description;
-//    }
-//    return self;
-//}
-
 -(instancetype)init
 {
     self = [super init];

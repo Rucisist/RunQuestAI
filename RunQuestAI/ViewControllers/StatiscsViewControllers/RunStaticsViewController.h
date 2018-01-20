@@ -12,8 +12,8 @@
 
 @interface RunStaticsViewController : UIViewController
 
-@property (nonatomic, strong) Run *runDetails;
 @property (nonatomic, strong) NSDate *someDate;
+@property (nonatomic, strong) Run *runDetails;
 
 -(instancetype)initWithRunInfo:(NSDate *)date;
 

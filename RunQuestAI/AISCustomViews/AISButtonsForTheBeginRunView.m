@@ -11,12 +11,11 @@
 
 @interface AISButtonsForTheBeginRunView()
 
+@property (nonatomic) NSUInteger index;
 @property (nonatomic, strong) UIButton *freeRunButton;
 @property (nonatomic, strong) UIButton *kilometersLimitedRunButton;
 @property (nonatomic, strong) UIButton *questRunButton;
 @property (nonatomic, strong) UIButton *timeLimitedRunButton;
-@property (nonatomic) NSUInteger index;
-
 
 @end
 
@@ -34,7 +33,6 @@
         _questRunButton = [UIButton new];
         
         self.index = 4;
-        
     }
     return self;
 }

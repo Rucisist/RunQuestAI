@@ -14,11 +14,11 @@
 
 @interface MainViewTabbarController ()
 
+@property (nonatomic, strong) UIImageView *loadingImageView;
 @property (nonatomic, strong) BeginRunViewController *beginRunViewController;
 @property (nonatomic, strong) StatsViewController *statsViewController;
 @property (nonatomic, strong) PrisesCollectionViewController *prisesCollectionViewController;
 @property (nonatomic, strong) PrisesPagesViewController *prisesPagesViewController;
-@property (nonatomic, strong) UIImageView *loadingImageView;
 
 @end
 
@@ -29,7 +29,6 @@
     [self configureTabBarWithViewControllers];
     [self initializeLoadingView];
     [self animateLoading];
-    // Do any additional setup after loading the view.
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -47,21 +46,16 @@
 {
     self.beginRunViewController = [BeginRunViewController new];
     self.statsViewController = [StatsViewController new];
-    //self.prisesCollectionViewController = [PrisesCollectionViewController new];
     self.prisesPagesViewController = [PrisesPagesViewController new];
-    
-
     
     UITabBarItem *firstItem = [[UITabBarItem alloc] initWithTitle:@"run" image:[UIImage imageNamed:@"road"] tag:0];
     UITabBarItem *rightTabBarItem = [[UITabBarItem alloc] initWithTitle:@"stats" image:[UIImage imageNamed:@"runbuttonImageLittle"] tag:1];
     UITabBarItem *thirdTabBarItem = [[UITabBarItem alloc] initWithTitle:@"prises" image:[UIImage imageNamed:@"medal"] tag:2];
-    //UITabBarItem *forthTabBarItem = [[UITabBarItem alloc] initWithTitle:@"prises" image:[UIImage imageNamed:@"medal"] tag:3];
-    
     
     self.beginRunViewController.tabBarItem = firstItem;
-//    self.characteristicsViewController.tabBarItem = rightTabBarItem;
+    
     self.statsViewController.tabBarItem = rightTabBarItem;
-    //self.prisesCollectionViewController.tabBarItem = thirdTabBarItem;
+
     self.prisesPagesViewController.tabBarItem = thirdTabBarItem;
     
     NSArray *tabBarControllers = @[self.beginRunViewController, self.statsViewController, self.prisesPagesViewController];
@@ -91,6 +85,7 @@
     } completion:^(BOOL Complete){
         
     }];
+    
     [UIView animateWithDuration:2.0 delay:2.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.loadingImageView.alpha = 0.0;
     } completion:^(BOOL Finished){

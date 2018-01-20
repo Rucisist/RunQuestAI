@@ -12,8 +12,8 @@
 
 @interface AISSystemSpeaker : NSObject
 
--(void)speakCharacteristicsTime: (NSString *) time pace:(NSString *) pace distance:(NSString *) distance;
+-(void)speakCharacteristicsTime: (NSString *)time pace:(NSString *)pace distance:(NSString *)distance;
 
--(void)speakAnyString: (NSString *) anyString;
+-(void)speakAnyString:(NSString *)anyString;
 
 @end

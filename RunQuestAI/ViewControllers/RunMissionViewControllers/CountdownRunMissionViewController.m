@@ -14,8 +14,8 @@ static const int countdownTime = 6;
 
 @interface CountdownRunMissionViewController ()
 
-@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic) NSUInteger counter;
+@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) UILabel *countdownLabel;
 @property (nonatomic, strong) UILabel *countdownLabelHelper;
 @property (nonatomic, strong) UIView *GMapView;
@@ -30,7 +30,6 @@ static const int countdownTime = 6;
     [self configureCountdownScreen];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countdown) userInfo:nil repeats:YES];
-    // Do any additional setup after loading the view.
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -68,10 +67,10 @@ static const int countdownTime = 6;
     CGFloat frameWidth = CGRectGetWidth(screenFrame);
     CGFloat frameHeight = CGRectGetHeight(screenFrame);
 
-    
     self.counter = countdownTime;
     
     self.countdownLabel = [[UILabel alloc] initWithFrame:CGRectMake(frameWidth / 2 - 100, frameHeight / 2 - 50, 200, 100)];
+    
     self.countdownLabelHelper = [[UILabel alloc] initWithFrame:CGRectMake(frameWidth / 2 - 100, frameHeight / 2 - 50, 200, 100)];
     
     [self.countdownLabel setFont:[UIFont boldSystemFontOfSize:70]];
@@ -94,6 +93,7 @@ static const int countdownTime = 6;
     if (self.counter > 1)
     {
         self.countdownLabelHelper.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.counter-1];
+        
         self.countdownLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.counter];
     }
     else
@@ -101,6 +101,7 @@ static const int countdownTime = 6;
         self.countdownLabel.text = @"1";
         self.countdownLabelHelper.text = @"go!";
     }
+    
     [self returnCountdownLabelToTheInitialState];
     [self returnCountdownLabelHelperToTheInitialState];
     
@@ -134,6 +135,7 @@ static const int countdownTime = 6;
     CGFloat frameHeight = CGRectGetHeight(screenFrame);
     
     self.countdownLabelHelper.frame = CGRectMake(frameWidth / 2 - 100, frameHeight / 2 - 50 - 50, 200, 100);
+    
     self.countdownLabelHelper.textColor = [UIColor whiteColor];
     
     self.countdownLabelHelper.alpha = 0;
@@ -144,7 +146,6 @@ static const int countdownTime = 6;
     RunMissionCharacteristicsViewController *runMissionController;
     runMissionController = [RunMissionCharacteristicsViewController new];
     [self.navigationController pushViewController:runMissionController animated:YES];
-
 }
 
 @end

@@ -36,13 +36,12 @@
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     pageControl.backgroundColor = [UIColor whiteColor];
     
-    // Create page view controller
     self.PageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     
     self.PageViewController.dataSource = self;
     
-    
     NSArray *viewControllers = @[self.prisesCollectionViewController];
+    
     [self.PageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     
     self.PageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -61,7 +60,8 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    if ([viewController isKindOfClass:[PrisesCollectionViewController class]]) {
+    if ([viewController isKindOfClass:[PrisesCollectionViewController class]])
+    {
         return nil;
     }
     else
@@ -72,7 +72,8 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    if ([viewController isKindOfClass:[TypeOfPersonViewController class]]) {
+    if ([viewController isKindOfClass:[TypeOfPersonViewController class]])
+    {
         return nil;
     }
     else

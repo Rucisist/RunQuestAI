@@ -41,15 +41,11 @@ static CGFloat AISBottomMapViewOffset = 200;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.someDate = [NSDate date];
-    //NSLog(@"%@", self.someDate);
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    NSLog(@"%@", self.someDate);
-    NSLog(@"%@", self.runDetails.locations.lastObject.timestamp);
     Location *loc;
     for (loc in self.runDetails.locations)
     {
@@ -73,10 +69,10 @@ static CGFloat AISBottomMapViewOffset = 200;
     while (i < self.runDetails.locations.count)
     {
         CLLocation *locationTo = [[CLLocation alloc] initWithLatitude:self.runDetails.locations[i].latitude longitude:self.runDetails.locations[i].longitude];
+        
         CLLocation *locationFrom = [[CLLocation alloc] initWithLatitude:self.runDetails.locations[i-1].latitude longitude:self.runDetails.locations[i-1].longitude];
         
         dt = [self.runDetails.locations[i].timestamp timeIntervalSinceReferenceDate] - [self.runDetails.locations[i-1].timestamp timeIntervalSinceReferenceDate];
-        
         
         delta = [locationTo distanceFromLocation:locationFrom] / dt;
         
@@ -108,10 +104,12 @@ static CGFloat AISBottomMapViewOffset = 200;
    
     NSUInteger i = 0;
     
-    while (i < self.paceArray.count) {
+    while (i < self.paceArray.count)
+    {
         helperNum = [self.paceArray[i] floatValue];
         
         helperNum = ((helperNum - [min floatValue]) / ([max floatValue] - [min floatValue]));
+        
         if (helperNum < 0.1)
         {
             helperNum = 0.1;
@@ -123,6 +121,7 @@ static CGFloat AISBottomMapViewOffset = 200;
         
         i = i+1;
     }
+    
     meanNormPace = sum / self.paceArray.count;
     
     self.meanNormolizedPace = [NSNumber numberWithDouble:meanNormPace];
@@ -135,9 +134,12 @@ static CGFloat AISBottomMapViewOffset = 200;
     CGRect AISGMSMapViewFrame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: self.runDetails.locations.lastObject.latitude longitude:self.runDetails.locations.lastObject.longitude zoom:16];
+    
     self.mapView = [GMSMapView mapWithFrame:AISGMSMapViewFrame camera:camera];
     self.mapView.myLocationEnabled = YES;
+    
     [self.view addSubview:self.mapView];
+    
     self.mapView.mapType = kGMSTypeNormal;
     
     GMSMutablePath *path = [GMSMutablePath path];
@@ -160,10 +162,9 @@ static CGFloat AISBottomMapViewOffset = 200;
     startPointMarker.snippet = @"Point";
     endPointMarker.map = self.mapView;
     
-
-    
     NSUInteger i = 1;
-    while (i < self.runDetails.locations.count) {
+    while (i < self.runDetails.locations.count)
+    {
         CLLocationCoordinate2D firstLocation = CLLocationCoordinate2DMake(self.runDetails.locations[i-1].latitude, self.runDetails.locations[i-1].longitude);
         
         CLLocationCoordinate2D secondLocation = CLLocationCoordinate2DMake(self.runDetails.locations[i].latitude, self.runDetails.locations[i].longitude);
@@ -194,10 +195,7 @@ static CGFloat AISBottomMapViewOffset = 200;
         else
         {
             strokeColor = [UIColor colorWithRed: greenColorCoefficient green: sqrt (1-colorCoeficient) / greenColorCoefficient blue:0.2 alpha:1.0];
-    }
-        
-//        NSLog(@"hgjhgjhgkhjgjhgjh%f", colorCoeficient);
-//        strokeColor = [UIColor colorWithRed:1-colorCoeficient green:colorCoeficient blue:20 alpha:1.0];
+        }
         
         polyline.strokeColor = strokeColor;
         
@@ -209,6 +207,7 @@ static CGFloat AISBottomMapViewOffset = 200;
     {
         [path addCoordinate:CLLocationCoordinate2DMake(loc.latitude, loc.longitude)];
     }
+    
     GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
     polyline.strokeColor = [UIColor redColor];
     //polyline.map = self.mapView;
@@ -223,11 +222,6 @@ static CGFloat AISBottomMapViewOffset = 200;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)configureUI
-{
-    
 }
 /*
 #pragma mark - Navigation

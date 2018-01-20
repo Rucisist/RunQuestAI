@@ -12,13 +12,6 @@
 
 - (void)drawRect:(CGRect)rect
 {
-//    CGContextRef ctx = UIGraphicsGetCurrentContext();
-//    CGContextAddEllipseInRect(ctx, rect);
-//    CGContextSetFillColor(ctx, CGColorGetComponents([[UIColor blueColor] CGColor]));
-//    CGContextFillPath(ctx);
-    
-    
-    
     CAShapeLayer *shape = [CAShapeLayer layer];
 
 
@@ -29,10 +22,8 @@
     CGFloat offsetY = 170;
     CGFloat offsetYCenter = 120;
 
-    // Set the starting point of the shape.
     [aPath moveToPoint:CGPointMake(0.0, height)];
 
-    // Draw the lines.
     [aPath addLineToPoint:CGPointMake(0.0, height - offsetY)];
     [aPath addLineToPoint:CGPointMake(width / 2, height - offsetYCenter)];
     [aPath addLineToPoint:CGPointMake(width, height - offsetY)];

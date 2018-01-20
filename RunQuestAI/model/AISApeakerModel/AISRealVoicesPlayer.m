@@ -20,7 +20,7 @@
     
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
                                                          error:&error];
-    //Infinite
+    
     [self.audioPlayer play];
 }
 

@@ -12,7 +12,7 @@
 
 @interface RunMissionInProgressTabBarController ()
 
-@property (nonatomic,strong) RunMissionMapViewController *mapViewController;
+@property (nonatomic, strong) RunMissionMapViewController *mapViewController;
 @property (nonatomic, strong) RunMissionCharacteristicsViewController *characteristicsViewController;
 
 @end
@@ -26,7 +26,6 @@
     UITabBarItem *leftTabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:0];
     UITabBarItem *rightTabBarItem = [[UITabBarItem alloc] initWithTitle:@"231" image:[UIImage imageNamed:@"runbuttonImageLittle"] tag:1];
 
-    
     self.mapViewController.tabBarItem = leftTabBarItem;
     self.characteristicsViewController.tabBarItem = rightTabBarItem;
     

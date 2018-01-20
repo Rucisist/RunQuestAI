@@ -26,7 +26,7 @@
     if (self)
     {
         [self load];
-        
+    
         _path = [GMSMutablePath new];
         _runTrack = [GMSPolyline new];
         
@@ -37,18 +37,15 @@
             [self.path addCoordinate:location.coordinate];
         }
 
-            self.runTrack.path = self.path;
-            self.runTrack.map = self.mapView;
+        self.runTrack.path = self.path;
+        self.runTrack.map = self.mapView;
     }
     return self;
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     [self configureUI];
-    
-    // Do any additional setup after loading the view.
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -76,19 +73,27 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)loadDataFromGooglePlaces:(CLLocation *) locationCoordinates
+-(void)loadDataFromGooglePlaces:(CLLocation *)locationCoordinates
 {
     NSURLComponents *components = [NSURLComponents componentsWithString:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json"];
+    
     NSString *locCoordsStr = [NSString stringWithFormat:@"%f,%f", locationCoordinates.coordinate.latitude, locationCoordinates.coordinate.longitude];
+    
     NSURLQueryItem *location = [NSURLQueryItem queryItemWithName:@"location" value:locCoordsStr];
+    
     NSURLQueryItem *key = [NSURLQueryItem queryItemWithName:@"key" value:@"AIzaSyDjln72xgdfshmYUC9ZJnu_stcEeX7R0pY"];
+    
     NSURLQueryItem *type = [NSURLQueryItem queryItemWithName:@"type" value:@"museum"];
+    
     NSURLQueryItem *radius = [NSURLQueryItem queryItemWithName:@"radius" value:@"2000"];
-    components.queryItems = @[ location,radius,type,key ];
+    
+    components.queryItems = @[location, radius, type, key];
+    
     NSURL *url = components.URL;
     NSLog(@"%@", url);
     
     NSURLSession *session = [NSURLSession sharedSession];
+    
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error)
         {
@@ -98,11 +103,9 @@
                 NSDictionary *helperJSONDictionary;
                 for (helperJSONDictionary in json[@"results"])
                 {
-                    NSLog(@"hhhghghgfhfhf%@", helperJSONDictionary[@"geometry"][@"location"]);
                     double POILattitude = [helperJSONDictionary[@"geometry"][@"location"][@"lat"] doubleValue];
                     double POILongitude = [helperJSONDictionary[@"geometry"][@"location"][@"lng"] doubleValue];
                     
-            
                     NSString *POIName = [NSString stringWithFormat:@"%@", helperJSONDictionary[@"name"]];
                     NSLog(@"%@", POIName);
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -120,8 +123,6 @@
                 NSLog(@"zero");
             }
         }
-        
-        
     }];
     
     [dataTask resume];
@@ -134,36 +135,18 @@
     
     [self.locationManager startUpdatingLocation];
     [self.locationManager startMonitoringSignificantLocationChanges];
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.locationManager.location.coordinate.latitude longitude:self.locationManager.location.coordinate.longitude zoom:4];
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.locationManager.location.coordinate.latitude longitude:self.locationManager.location.coordinate.longitude zoom:15];
+    
     self.mapView = [GMSMapView mapWithFrame:self.view.frame camera:camera];
     self.mapView.myLocationEnabled = YES;
+    
     [self.view addSubview:self.mapView];
     
-
-    // Creates a marker in the center of the map.
-//    GMSMarker *marker = [[GMSMarker alloc] init];
-//    marker.position = self.locationManager.location.coordinate;
-//    marker.title = @"Moscow";
-//    marker.snippet = @"Russia";
-//    marker.map = self.mapView;
-//    self.mapView.mapType = kGMSTypeNormal;
-    //CLLocation *someLoc = [[CLLocation alloc] initWithLatitude:55.7478257302915 longitude:37.607872330];
     CLLocation *someLoc = [[CLLocation alloc] initWithLatitude:self.locationManager.location.coordinate.latitude longitude:self.locationManager.location.coordinate.longitude];
     
     [self loadDataFromGooglePlaces:someLoc];
 }
-
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
-{
-    
-//    [self.mapView clear];
-//    [self.path addCoordinate:locations.lastObject.coordinate];
-//    self.runTrack.path = self.path;
-//    self.runTrack.map = self.mapView;
-}
-
-
-
 /*
 #pragma mark - Navigation
 

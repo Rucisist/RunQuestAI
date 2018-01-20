@@ -89,6 +89,7 @@ static float const metersInMile = 1609.344;
     {
         return @"0";
     }
+    
     float avgPaceSecMeters = seconds / meters;
     
     float unitMultiplier;

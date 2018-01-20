@@ -11,7 +11,7 @@
 
 @interface AISHelperForCharactersSW()
 
-@property (nonatomic, copy) NSMutableArray<AISCaharcterSW *>* characters;
+@property (nonatomic, copy) NSMutableArray<AISCaharcterSW *> *characters;
 
 @end
 
@@ -30,8 +30,10 @@
 -(AISCaharcterSW *)charactersForDistance:(double)distance
 {
     AISCaharcterSW *character = [AISCaharcterSW new];
+    
     character.characterDescription = @"Ты падаван джедай";
     character.characterImage = [UIImage imageNamed:@"LukeSkywalkerImage"];
+    
     if (distance > 2000) {
         character.characterDescription = @"Ты рыцарь джедай";
         character.characterImage = [UIImage imageNamed:@"obiwankenobiImage"];
