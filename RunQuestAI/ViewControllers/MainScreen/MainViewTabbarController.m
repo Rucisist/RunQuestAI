@@ -47,7 +47,7 @@
 {
     self.beginRunViewController = [BeginRunViewController new];
     self.statsViewController = [StatsViewController new];
-    self.prisesCollectionViewController = [PrisesCollectionViewController new];
+    //self.prisesCollectionViewController = [PrisesCollectionViewController new];
     self.prisesPagesViewController = [PrisesPagesViewController new];
     
 
@@ -55,14 +55,16 @@
     UITabBarItem *firstItem = [[UITabBarItem alloc] initWithTitle:@"run" image:[UIImage imageNamed:@"road"] tag:0];
     UITabBarItem *rightTabBarItem = [[UITabBarItem alloc] initWithTitle:@"stats" image:[UIImage imageNamed:@"runbuttonImageLittle"] tag:1];
     UITabBarItem *thirdTabBarItem = [[UITabBarItem alloc] initWithTitle:@"prises" image:[UIImage imageNamed:@"medal"] tag:2];
+    //UITabBarItem *forthTabBarItem = [[UITabBarItem alloc] initWithTitle:@"prises" image:[UIImage imageNamed:@"medal"] tag:3];
+    
     
     self.beginRunViewController.tabBarItem = firstItem;
 //    self.characteristicsViewController.tabBarItem = rightTabBarItem;
     self.statsViewController.tabBarItem = rightTabBarItem;
-    self.prisesCollectionViewController.tabBarItem = thirdTabBarItem;
-    //self.prisesPagesViewController.tabBarItem = forthTabBarItem;
+    //self.prisesCollectionViewController.tabBarItem = thirdTabBarItem;
+    self.prisesPagesViewController.tabBarItem = thirdTabBarItem;
     
-    NSArray *tabBarControllers = @[self.beginRunViewController, self.statsViewController, self.prisesCollectionViewController];
+    NSArray *tabBarControllers = @[self.beginRunViewController, self.statsViewController, self.prisesPagesViewController];
     
     self.viewControllers = tabBarControllers;
 }

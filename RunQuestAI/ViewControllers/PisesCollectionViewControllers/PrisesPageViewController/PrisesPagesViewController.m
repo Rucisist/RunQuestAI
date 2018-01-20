@@ -9,11 +9,12 @@
 #import "PrisesPagesViewController.h"
 #import "PrisesCollectionViewController.h"
 #import "StatsViewController.h"
+#import "TypeOfPersonViewController.h"
 
 @interface PrisesPagesViewController ()
 
 @property (nonatomic, assign) NSUInteger index;
-@property (nonatomic, strong) StatsViewController *statsViewController;
+@property (nonatomic, strong) TypeOfPersonViewController *typeOfPersonViewController;
 @property (nonatomic, strong) PrisesCollectionViewController *prisesCollectionViewController;
 
 @end
@@ -27,7 +28,7 @@
     
     self.index = 0;
     
-    self.statsViewController = [StatsViewController new];
+    self.typeOfPersonViewController = [TypeOfPersonViewController new];
     self.prisesCollectionViewController = [PrisesCollectionViewController new];
     
     UIPageControl *pageControl = [UIPageControl appearance];
@@ -76,7 +77,7 @@
     }
     else
     {
-        return [StatsViewController new];
+        return [TypeOfPersonViewController new];
     }
 }
 

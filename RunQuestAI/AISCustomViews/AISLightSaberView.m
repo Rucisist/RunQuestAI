@@ -10,8 +10,8 @@
 #import "AISUserDefaultsService.h"
 #import "AISTranslationUnitsModel.h"
 
-static double distanceToCompleteHelper = 10000.0;
-static double distanceToCompleteForRedSaber = 50000.0;
+static double distanceToCompleteHelper = 50000.0;
+static double distanceToCompleteForRedSaber = 100000.0;
 
 @interface AISLightSaberView()
 

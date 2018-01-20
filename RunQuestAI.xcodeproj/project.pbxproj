@@ -45,6 +45,14 @@
 		BF4CE9F42012D23D000BEC8A /* AISLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */; };
 		BF4CE9F62012D845000BEC8A /* redSaber.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F52012D844000BEC8A /* redSaber.png */; };
 		BF4CE9F92012EB33000BEC8A /* lightsaber-1980163_960_720.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */; };
+		BF4CE9FC2012F52B000BEC8A /* TypeOfPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9FB2012F52B000BEC8A /* TypeOfPersonViewController.m */; };
+		BF4CE9FF2012F575000BEC8A /* AISCaharcterSW.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9FE2012F575000BEC8A /* AISCaharcterSW.m */; };
+		BF4CEA022012F6E8000BEC8A /* AISHelperForCharactersSW.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CEA012012F6E8000BEC8A /* AISHelperForCharactersSW.m */; };
+		BF4CEA082012FBE6000BEC8A /* darth_vader_PNG14.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CEA032012FBE4000BEC8A /* darth_vader_PNG14.png */; };
+		BF4CEA092012FBE6000BEC8A /* Luke-Skywalker-01-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CEA042012FBE5000BEC8A /* Luke-Skywalker-01-icon.png */; };
+		BF4CEA0A2012FBE6000BEC8A /* countdooku_detail.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CEA052012FBE5000BEC8A /* countdooku_detail.png */; };
+		BF4CEA0B2012FBE6000BEC8A /* obiwankenobi_detail.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CEA062012FBE5000BEC8A /* obiwankenobi_detail.png */; };
+		BF4CEA0C2012FBE6000BEC8A /* Master_Yoda.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CEA072012FBE6000BEC8A /* Master_Yoda.png */; };
 		BF7D3479200E2837007D33B2 /* MainViewTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3478200E2837007D33B2 /* MainViewTabbarController.m */; };
 		BF7D3482200E2A3F007D33B2 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3481200E2A3F007D33B2 /* StatsViewController.m */; };
 		BF7D3485200E36C4007D33B2 /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3484200E36C4007D33B2 /* StatsTableViewCell.m */; };
@@ -153,6 +161,17 @@
 		BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISLoadViewController.m; sourceTree = "<group>"; };
 		BF4CE9F52012D844000BEC8A /* redSaber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redSaber.png; sourceTree = "<group>"; };
 		BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightsaber-1980163_960_720.png"; sourceTree = "<group>"; };
+		BF4CE9FA2012F52B000BEC8A /* TypeOfPersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeOfPersonViewController.h; sourceTree = "<group>"; };
+		BF4CE9FB2012F52B000BEC8A /* TypeOfPersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeOfPersonViewController.m; sourceTree = "<group>"; };
+		BF4CE9FD2012F575000BEC8A /* AISCaharcterSW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCaharcterSW.h; sourceTree = "<group>"; };
+		BF4CE9FE2012F575000BEC8A /* AISCaharcterSW.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCaharcterSW.m; sourceTree = "<group>"; };
+		BF4CEA002012F6E8000BEC8A /* AISHelperForCharactersSW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISHelperForCharactersSW.h; sourceTree = "<group>"; };
+		BF4CEA012012F6E8000BEC8A /* AISHelperForCharactersSW.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISHelperForCharactersSW.m; sourceTree = "<group>"; };
+		BF4CEA032012FBE4000BEC8A /* darth_vader_PNG14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darth_vader_PNG14.png; sourceTree = "<group>"; };
+		BF4CEA042012FBE5000BEC8A /* Luke-Skywalker-01-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Luke-Skywalker-01-icon.png"; sourceTree = "<group>"; };
+		BF4CEA052012FBE5000BEC8A /* countdooku_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = countdooku_detail.png; sourceTree = "<group>"; };
+		BF4CEA062012FBE5000BEC8A /* obiwankenobi_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obiwankenobi_detail.png; sourceTree = "<group>"; };
+		BF4CEA072012FBE6000BEC8A /* Master_Yoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Master_Yoda.png; sourceTree = "<group>"; };
 		BF7D3477200E2837007D33B2 /* MainViewTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewTabbarController.h; sourceTree = "<group>"; };
 		BF7D3478200E2837007D33B2 /* MainViewTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewTabbarController.m; sourceTree = "<group>"; };
 		BF7D3480200E2A3F007D33B2 /* StatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
@@ -235,6 +254,12 @@
 			children = (
 				BF4CE9BB20128F0B000BEC8A /* PrisesPageViewController */,
 				BF26D485200F970900D70121 /* PrisesCollectionViewController.h */,
+				BF4CE9FA2012F52B000BEC8A /* TypeOfPersonViewController.h */,
+				BF4CE9FB2012F52B000BEC8A /* TypeOfPersonViewController.m */,
+				BF4CEA002012F6E8000BEC8A /* AISHelperForCharactersSW.h */,
+				BF4CEA012012F6E8000BEC8A /* AISHelperForCharactersSW.m */,
+				BF4CE9FD2012F575000BEC8A /* AISCaharcterSW.h */,
+				BF4CE9FE2012F575000BEC8A /* AISCaharcterSW.m */,
 				BF26D486200F970900D70121 /* PrisesCollectionViewController.m */,
 				BF26D48C200F9BF300D70121 /* PrisesCollectionViewCell.h */,
 				BF26D48D200F9BF300D70121 /* PrisesCollectionViewCell.m */,
@@ -349,6 +374,11 @@
 		BF4CE9BC20128F69000BEC8A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BF4CEA052012FBE5000BEC8A /* countdooku_detail.png */,
+				BF4CEA032012FBE4000BEC8A /* darth_vader_PNG14.png */,
+				BF4CEA042012FBE5000BEC8A /* Luke-Skywalker-01-icon.png */,
+				BF4CEA072012FBE6000BEC8A /* Master_Yoda.png */,
+				BF4CEA062012FBE5000BEC8A /* obiwankenobi_detail.png */,
 				BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */,
 				BF4CE9F52012D844000BEC8A /* redSaber.png */,
 				BF4CE9C120128FF4000BEC8A /* eq6v-MGxOuUmin.jpg */,
@@ -618,15 +648,20 @@
 			files = (
 				BF4CE99F20127A34000BEC8A /* star_wars_symbol__06295.1490486204.png in Resources */,
 				BF4CE9F62012D845000BEC8A /* redSaber.png in Resources */,
+				BF4CEA0C2012FBE6000BEC8A /* Master_Yoda.png in Resources */,
+				BF4CEA0B2012FBE6000BEC8A /* obiwankenobi_detail.png in Resources */,
 				BF4CE99D20127A34000BEC8A /* SWLogo.png in Resources */,
 				BF4CE9A120127B74000BEC8A /* 10km.gif in Resources */,
 				BF83EE292008B0F3000EBA5C /* LaunchScreen.storyboard in Resources */,
+				BF4CEA082012FBE6000BEC8A /* darth_vader_PNG14.png in Resources */,
 				BF83EE262008B0F3000EBA5C /* Assets.xcassets in Resources */,
 				BF4CE9A4201282CA000BEC8A /* road.png in Resources */,
 				BF3065F4200CF3F500F3058E /* eq6v-MGxOuU.jpg in Resources */,
+				BF4CEA0A2012FBE6000BEC8A /* countdooku_detail.png in Resources */,
 				BF26D49720100ABE00D70121 /* lightsaber-1980155_960_720.png in Resources */,
 				BF4CE9A5201282CA000BEC8A /* medal.png in Resources */,
 				BF4CE9F92012EB33000BEC8A /* lightsaber-1980163_960_720.png in Resources */,
+				BF4CEA092012FBE6000BEC8A /* Luke-Skywalker-01-icon.png in Resources */,
 				BFC16169201167D500EF12BC /* TimeToRun.m4a in Resources */,
 				BF4CE9A72012844D000BEC8A /* SW1.jpg in Resources */,
 				BF4CE99C20127A34000BEC8A /* GELogo.png in Resources */,
@@ -806,11 +841,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4CE9FF2012F575000BEC8A /* AISCaharcterSW.m in Sources */,
 				BFBE0CBF200E8D9500C3F019 /* RunStaticsViewController.m in Sources */,
 				BF4CE9EE20129210000BEC8A /* Run+CoreDataClass.m in Sources */,
 				BFC1615820114D6900EF12BC /* AISSystemSpeaker.m in Sources */,
 				BF26D4A6201067BD00D70121 /* AISRunTarget.m in Sources */,
+				BF4CE9FC2012F52B000BEC8A /* TypeOfPersonViewController.m in Sources */,
 				BF26D48E200F9BF300D70121 /* PrisesCollectionViewCell.m in Sources */,
+				BF4CEA022012F6E8000BEC8A /* AISHelperForCharactersSW.m in Sources */,
 				BF26D4952010051B00D70121 /* AISLightSaberView.m in Sources */,
 				BF26D487200F970900D70121 /* PrisesCollectionViewController.m in Sources */,
 				BF7D3479200E2837007D33B2 /* MainViewTabbarController.m in Sources */,
