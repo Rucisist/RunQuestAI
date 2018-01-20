@@ -72,7 +72,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    if ([viewController isKindOfClass:[StatsViewController class]]) {
+    if ([viewController isKindOfClass:[TypeOfPersonViewController class]]) {
         return nil;
     }
     else
