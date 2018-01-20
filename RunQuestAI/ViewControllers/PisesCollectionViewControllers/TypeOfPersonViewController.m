@@ -57,7 +57,7 @@
     self.characterDescriptionLabel.text = character.characterDescription;
     self.characterDescriptionLabel.frame = CGRectMake(0, 30, CGRectGetWidth(self.view.frame), 100);
     self.characterDescriptionLabel.font = [UIFont fontWithName:@"Helvetica" size:32];
-    self.characterDescriptionLabel.lines = 0;
+    self.characterDescriptionLabel.numberOfLines = 0;
     self.characterDescriptionLabel.textColor = [UIColor blackColor];
     self.characterDescriptionLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.characterDescriptionLabel];
