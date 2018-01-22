@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "AISDownloadServiceDelegate.h"
+#import <GoogleMaps/GoogleMaps.h>
 
-@interface AISRunMissionMapViewController : UIViewController <CLLocationManagerDelegate>
+@interface AISRunMissionMapViewController : UIViewController <CLLocationManagerDelegate, AISDownloadServiceDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *lastLocation;
 
--(instancetype)initWithRoute: (NSMutableArray *) locations;
+@property (nonatomic, strong) GMSMapView *mapView;
+
+-(instancetype)initWithRoute:(NSMutableArray *)locations;
 
 @end
