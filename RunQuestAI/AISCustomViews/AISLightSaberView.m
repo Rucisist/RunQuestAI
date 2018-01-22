@@ -10,8 +10,8 @@
 #import "AISUserDefaultsService.h"
 #import "AISTranslationUnitsModel.h"
 
-static double distanceToCompleteHelper = 50000.0;
-static double distanceToCompleteForRedSaber = 100000.0;
+static const double distanceToCompleteHelper = 50000.0;
+static const double distanceToCompleteForRedSaber = 100000.0;
 
 @interface AISLightSaberView()
 
@@ -117,12 +117,5 @@ static double distanceToCompleteForRedSaber = 100000.0;
     
     self.allDistanceLabel.text = [NSString stringWithFormat:@"%@ / %@", allDistanceString, distanceToCompleteString];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

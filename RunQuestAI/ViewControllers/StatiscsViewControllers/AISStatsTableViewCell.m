@@ -8,6 +8,10 @@
 
 #import "AISStatsTableViewCell.h"
 
+static const CGFloat offsetX = 20;
+static const CGFloat offsetY = 0;
+static const CGFloat labelHeight = 40;
+
 @implementation AISStatsTableViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -15,9 +19,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
-        CGFloat offsetX = 20;
-        CGFloat offsetY = 0;
-        CGFloat labelHeight = 40;
         CGFloat labelWidth = self.contentView.frame.size.width;
         
         _runInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(offsetX, offsetY, labelWidth, labelHeight)];

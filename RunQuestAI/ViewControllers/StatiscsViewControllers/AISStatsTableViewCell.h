@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface AISStatsTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *runInfoLabel;

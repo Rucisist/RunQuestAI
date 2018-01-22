@@ -14,7 +14,6 @@
 {
     CAShapeLayer *shape = [CAShapeLayer layer];
 
-
     UIBezierPath *aPath = [UIBezierPath bezierPath];
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
