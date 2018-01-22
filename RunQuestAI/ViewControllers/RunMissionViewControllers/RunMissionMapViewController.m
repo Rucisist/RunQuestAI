@@ -15,6 +15,7 @@
 @property (nonatomic, strong) GMSMapView *mapView;
 @property (nonatomic, strong) GMSMutablePath *path;
 @property (nonatomic, strong) GMSPolyline *runTrack;
+@property (nonatomic, strong) NSMutableArray *locationsArray;
 
 @end
 
@@ -31,14 +32,45 @@
         _runTrack = [GMSPolyline new];
         
         CLLocation *location = [CLLocation new];
+        CLLocation *lastLocation = [CLLocation new];
+        lastLocation = locations.firstObject;
+        
+        double deltaDistance = 0;
+        
+        GMSMutablePath *somePath = [GMSMutablePath new];
+        GMSPolyline *somePolyline = [GMSPolyline new];
+        
+        NSMutableArray<GMSPolyline *> *someArray = [NSMutableArray new];
         
         for (location in locations)
         {
-            [self.path addCoordinate:location.coordinate];
+            deltaDistance = [lastLocation distanceFromLocation:location];
+            if (deltaDistance <= 20.0)
+            {
+                [somePath addCoordinate:location.coordinate];
+                NSLog(@"%f", deltaDistance);
+            }
+            else
+            {
+                [somePath removeLastCoordinate];
+                GMSPolyline *newPolyline = [GMSPolyline polylineWithPath:somePath];
+                [someArray addObject:newPolyline];
+                [somePath removeAllCoordinates];
+            }
+            
+            lastLocation = location;
+            
         }
-
-        self.runTrack.path = self.path;
-        self.runTrack.map = self.mapView;
+        
+        GMSPolyline *sP = [GMSPolyline new];
+        
+        for (sP in someArray)
+        {
+            sP.map = self.mapView;
+        }
+        
+        somePolyline.path = [somePath mutableCopy];
+        somePolyline.map = self.mapView;
     }
     return self;
 }
@@ -60,12 +92,19 @@
 
 -(void)configureUI
 {
+    NSLog(@"gsdfkgjsdflkgjsdflgksfdjglsdfkgjdfslgkfdsjglsdfkgjdfslgkdsfjg%@", self.locationsArray);
     self.view.backgroundColor = [UIColor whiteColor];
-    UIButton *closeButton = [[UIButton alloc] initWithFrame: CGRectMake(40, 20, 50, 50)];
-    closeButton.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:closeButton];
-    [self.view bringSubviewToFront:closeButton];
-    [closeButton addTarget:self action:@selector(closeMapsController) forControlEvents:UIControlEventTouchUpInside];
+    [self paintPath];
+}
+
+-(void) paintPath
+{
+
+}
+
+-(void)addPathToMap:(GMSMutablePath *)path
+{
+
 }
 
 -(void)closeMapsController

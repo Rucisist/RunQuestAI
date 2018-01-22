@@ -27,8 +27,11 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 @interface RunMissionCharacteristicsViewController ()
 
 @property int seconds;
+@property int lastSecond;
 @property float distance;
 @property float distanceToAim;
+@property (nonatomic) BOOL isPaused;
+@property (nonatomic) BOOL beenOnPause;
 @property (nonatomic) CGRect viewFrame;
 
 @property (nonatomic, strong) NSMutableArray *locations;
@@ -214,6 +217,7 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 -(void)resumeButtonPressed
 {
+    self.isPaused = NO;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
     [self.locationManager startUpdatingLocation];
     [self animationForResumeButton];
@@ -221,6 +225,8 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 -(void)pauseButtonPressed
 {
+    self.beenOnPause = YES;
+    self.isPaused = YES;
     [self pauseUpdatingLocations];
     [self animationForPauseButton];
 }
@@ -257,6 +263,9 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     
     self.distance = 0;
     self.locations = [NSMutableArray array];
+    
+    self.isPaused = NO;
+    self.beenOnPause = NO;
     
     [self startLocationUpdates];
 }
@@ -596,7 +605,14 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
             if (self.locations.count > 0)
             {
-                self.distance += [newLocation distanceFromLocation:self.locations.lastObject];
+                if (!self.beenOnPause)
+                {
+                    self.distance += [newLocation distanceFromLocation:self.locations.lastObject];
+                }
+                else
+                {
+                    self.beenOnPause = NO;
+                }
                 
                 self.distanceToAim = [newLocation distanceFromLocation:self.targetLocation];
                 
@@ -605,8 +621,12 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
                 coords[1] = newLocation.coordinate;
                 
             }
-    
-            [self.locations addObject:newLocation];
+            
+            if (!self.isPaused)
+            {
+                [self.locations addObject:newLocation];
+            }
+            
         }
     }
 }

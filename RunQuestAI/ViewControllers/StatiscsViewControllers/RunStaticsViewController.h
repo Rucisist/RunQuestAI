@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Run+CoreDataProperties.h"
+#import "Run+CoreDataClass.h"
 #import "Location+CoreDataProperties.h"
 
 @interface RunStaticsViewController : UIViewController

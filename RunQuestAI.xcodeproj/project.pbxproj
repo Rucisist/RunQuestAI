@@ -28,6 +28,10 @@
 		BF3065F2200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F1200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m */; };
 		BF3065F4200CF3F500F3058E /* eq6v-MGxOuU.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF3065F3200CF3F500F3058E /* eq6v-MGxOuU.jpg */; };
 		BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F8200D3B0700F3058E /* AISTranslationUnitsModel.m */; };
+		BF39BC1D2014CB9C00919F1D /* Location+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC172014CB9C00919F1D /* Location+CoreDataClass.m */; };
+		BF39BC1E2014CB9C00919F1D /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC182014CB9C00919F1D /* Location+CoreDataProperties.m */; };
+		BF39BC1F2014CB9C00919F1D /* Run+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC1B2014CB9C00919F1D /* Run+CoreDataClass.m */; };
+		BF39BC202014CB9C00919F1D /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC1C2014CB9C00919F1D /* Run+CoreDataProperties.m */; };
 		BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE99620124F97000BEC8A /* AISCustomRunView.m */; };
 		BF4CE99C20127A34000BEC8A /* GELogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE99820127A31000BEC8A /* GELogo.png */; };
 		BF4CE99D20127A34000BEC8A /* SWLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE99920127A31000BEC8A /* SWLogo.png */; };
@@ -38,10 +42,6 @@
 		BF4CE9A5201282CA000BEC8A /* medal.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9A3201282CA000BEC8A /* medal.png */; };
 		BF4CE9A72012844D000BEC8A /* SW1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9A62012844D000BEC8A /* SW1.jpg */; };
 		BF4CE9A920128901000BEC8A /* AISRunTargetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9A820128901000BEC8A /* AISRunTargetTest.m */; };
-		BF4CE9EE20129210000BEC8A /* Run+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9E820129210000BEC8A /* Run+CoreDataClass.m */; };
-		BF4CE9EF20129210000BEC8A /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9E920129210000BEC8A /* Run+CoreDataProperties.m */; };
-		BF4CE9F020129210000BEC8A /* Location+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9EC20129210000BEC8A /* Location+CoreDataClass.m */; };
-		BF4CE9F120129210000BEC8A /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9ED20129210000BEC8A /* Location+CoreDataProperties.m */; };
 		BF4CE9F42012D23D000BEC8A /* AISLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */; };
 		BF4CE9F62012D845000BEC8A /* redSaber.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F52012D844000BEC8A /* redSaber.png */; };
 		BF4CE9F92012EB33000BEC8A /* lightsaber-1980163_960_720.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */; };
@@ -135,6 +135,14 @@
 		BF3065F3200CF3F500F3058E /* eq6v-MGxOuU.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eq6v-MGxOuU.jpg"; sourceTree = "<group>"; };
 		BF3065F7200D3B0700F3058E /* AISTranslationUnitsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISTranslationUnitsModel.h; sourceTree = "<group>"; };
 		BF3065F8200D3B0700F3058E /* AISTranslationUnitsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTranslationUnitsModel.m; sourceTree = "<group>"; };
+		BF39BC152014CB9C00919F1D /* Location+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BF39BC162014CB9C00919F1D /* Location+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataClass.h"; sourceTree = "<group>"; };
+		BF39BC172014CB9C00919F1D /* Location+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataClass.m"; sourceTree = "<group>"; };
+		BF39BC182014CB9C00919F1D /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BF39BC192014CB9C00919F1D /* Run+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BF39BC1A2014CB9C00919F1D /* Run+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataClass.h"; sourceTree = "<group>"; };
+		BF39BC1B2014CB9C00919F1D /* Run+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataClass.m"; sourceTree = "<group>"; };
+		BF39BC1C2014CB9C00919F1D /* Run+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BF4CE99520124F97000BEC8A /* AISCustomRunView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCustomRunView.h; sourceTree = "<group>"; };
 		BF4CE99620124F97000BEC8A /* AISCustomRunView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCustomRunView.m; sourceTree = "<group>"; };
 		BF4CE99820127A31000BEC8A /* GELogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GELogo.png; sourceTree = "<group>"; };
@@ -149,14 +157,6 @@
 		BF4CE9BD20128F6A000BEC8A /* eq6v-MGxOuUmin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eq6v-MGxOuUmin.jpg"; sourceTree = "<group>"; };
 		BF4CE9C020128FEE000BEC8A /* eq6v-MGxOuUmin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eq6v-MGxOuUmin.jpg"; sourceTree = "<group>"; };
 		BF4CE9C120128FF4000BEC8A /* eq6v-MGxOuUmin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "eq6v-MGxOuUmin.jpg"; path = "../../../../../eq6v-MGxOuUmin.jpg"; sourceTree = "<group>"; };
-		BF4CE9E620129210000BEC8A /* Run+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BF4CE9E720129210000BEC8A /* Run+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataClass.h"; sourceTree = "<group>"; };
-		BF4CE9E820129210000BEC8A /* Run+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataClass.m"; sourceTree = "<group>"; };
-		BF4CE9E920129210000BEC8A /* Run+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BF4CE9EA20129210000BEC8A /* Location+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BF4CE9EB20129210000BEC8A /* Location+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataClass.h"; sourceTree = "<group>"; };
-		BF4CE9EC20129210000BEC8A /* Location+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataClass.m"; sourceTree = "<group>"; };
-		BF4CE9ED20129210000BEC8A /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BF4CE9F22012D23D000BEC8A /* AISLoadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISLoadViewController.h; sourceTree = "<group>"; };
 		BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISLoadViewController.m; sourceTree = "<group>"; };
 		BF4CE9F52012D844000BEC8A /* redSaber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redSaber.png; sourceTree = "<group>"; };
@@ -448,14 +448,14 @@
 		BF83EE0D2008B0F3000EBA5C = {
 			isa = PBXGroup;
 			children = (
-				BF4CE9E620129210000BEC8A /* Run+CoreDataProperties.h */,
-				BF4CE9E720129210000BEC8A /* Run+CoreDataClass.h */,
-				BF4CE9E820129210000BEC8A /* Run+CoreDataClass.m */,
-				BF4CE9E920129210000BEC8A /* Run+CoreDataProperties.m */,
-				BF4CE9EA20129210000BEC8A /* Location+CoreDataProperties.h */,
-				BF4CE9EB20129210000BEC8A /* Location+CoreDataClass.h */,
-				BF4CE9EC20129210000BEC8A /* Location+CoreDataClass.m */,
-				BF4CE9ED20129210000BEC8A /* Location+CoreDataProperties.m */,
+				BF39BC152014CB9C00919F1D /* Location+CoreDataProperties.h */,
+				BF39BC162014CB9C00919F1D /* Location+CoreDataClass.h */,
+				BF39BC172014CB9C00919F1D /* Location+CoreDataClass.m */,
+				BF39BC182014CB9C00919F1D /* Location+CoreDataProperties.m */,
+				BF39BC192014CB9C00919F1D /* Run+CoreDataProperties.h */,
+				BF39BC1A2014CB9C00919F1D /* Run+CoreDataClass.h */,
+				BF39BC1B2014CB9C00919F1D /* Run+CoreDataClass.m */,
+				BF39BC1C2014CB9C00919F1D /* Run+CoreDataProperties.m */,
 				BF83EE182008B0F3000EBA5C /* RunQuestAI */,
 				BF83EE342008B0F3000EBA5C /* RunQuestAITests */,
 				BF83EE3F2008B0F3000EBA5C /* RunQuestAIUITests */,
@@ -843,8 +843,8 @@
 			files = (
 				BF4CE9FF2012F575000BEC8A /* AISCaharcterSW.m in Sources */,
 				BFBE0CBF200E8D9500C3F019 /* RunStaticsViewController.m in Sources */,
-				BF4CE9EE20129210000BEC8A /* Run+CoreDataClass.m in Sources */,
 				BFC1615820114D6900EF12BC /* AISSystemSpeaker.m in Sources */,
+				BF39BC202014CB9C00919F1D /* Run+CoreDataProperties.m in Sources */,
 				BF26D4A6201067BD00D70121 /* AISRunTarget.m in Sources */,
 				BF4CE9FC2012F52B000BEC8A /* TypeOfPersonViewController.m in Sources */,
 				BF26D48E200F9BF300D70121 /* PrisesCollectionViewCell.m in Sources */,
@@ -852,16 +852,18 @@
 				BF26D4952010051B00D70121 /* AISLightSaberView.m in Sources */,
 				BF26D487200F970900D70121 /* PrisesCollectionViewController.m in Sources */,
 				BF7D3479200E2837007D33B2 /* MainViewTabbarController.m in Sources */,
+				BF39BC1E2014CB9C00919F1D /* Location+CoreDataProperties.m in Sources */,
 				BF3065EF200CB5BB00F3058E /* RunMissionMapViewController.m in Sources */,
 				BF3065F2200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m in Sources */,
 				BF3065D0200BDBAC00F3058E /* BeginRunViewController.m in Sources */,
 				BF26D4A92010697D00D70121 /* AISTargetAllocator.m in Sources */,
-				BF4CE9F120129210000BEC8A /* Location+CoreDataProperties.m in Sources */,
 				BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */,
 				BF26D483200F893200D70121 /* AISUserDefaultsService.m in Sources */,
+				BF39BC1D2014CB9C00919F1D /* Location+CoreDataClass.m in Sources */,
 				BF7D3482200E2A3F007D33B2 /* StatsViewController.m in Sources */,
 				BF26D4A020103FF200D70121 /* PrisesPagesViewController.m in Sources */,
 				BF26D4AD20107DA400D70121 /* AISButtonsForTheBeginRunView.m in Sources */,
+				BF39BC1F2014CB9C00919F1D /* Run+CoreDataClass.m in Sources */,
 				BF26D480200F74EF00D70121 /* SettingsViewController.m in Sources */,
 				BF26D492200FDEB900D70121 /* AISDataService.m in Sources */,
 				BF26D4A32010678C00D70121 /* AISTargetAllocatorHelper.m in Sources */,
@@ -871,9 +873,7 @@
 				BF83EE2C2008B0F3000EBA5C /* main.m in Sources */,
 				BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */,
 				BF83EE1B2008B0F3000EBA5C /* AppDelegate.m in Sources */,
-				BF4CE9F020129210000BEC8A /* Location+CoreDataClass.m in Sources */,
 				BF26D48A200F990100D70121 /* PrisesCollectionReusableView.m in Sources */,
-				BF4CE9EF20129210000BEC8A /* Run+CoreDataProperties.m in Sources */,
 				BF4CE9F42012D23D000BEC8A /* AISLoadViewController.m in Sources */,
 				BF3065EC200CB4A800F3058E /* RunMissionInProgressTabBarController.m in Sources */,
 				BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */,
@@ -1036,6 +1036,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7WJ756XHJ;
 				INFOPLIST_FILE = RunQuestAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AI.RunQuestAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1051,6 +1052,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7WJ756XHJ;
 				INFOPLIST_FILE = RunQuestAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AI.RunQuestAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
