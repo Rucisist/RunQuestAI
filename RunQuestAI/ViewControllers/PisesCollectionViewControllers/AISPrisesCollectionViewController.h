@@ -11,8 +11,5 @@
 @interface AISPrisesCollectionViewController : UIViewController <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, copy) NSArray *album;
-@property (nonatomic, copy) NSArray *albumDescription;
-@property (nonatomic, copy) NSArray *albumHelper;
 
 @end

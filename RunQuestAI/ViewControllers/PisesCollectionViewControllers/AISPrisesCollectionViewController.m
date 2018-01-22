@@ -9,10 +9,22 @@
 #import "AISPrisesCollectionViewController.h"
 #import "AISPrisesCollectionReusableView.h"
 #import "AISPrisesCollectionViewCell.h"
+#import "AISPrisesDescription.h"
+
+static CGFloat AISitemSize = 150;
+static CGFloat AISMinimumLineSpacing = 20;
+static CGFloat AISMinimumInteritemSpacing = 20;
+static double AISMetersInKM = 1000;
 
 @interface AISPrisesCollectionViewController ()
 
 @property (nonatomic, strong) NSNumber *allDistance;
+
+@property (nonatomic, copy) NSArray *album;
+@property (nonatomic, copy) NSArray *albumDescription;
+@property (nonatomic, copy) NSArray *albumHelper;
+
+@property (nonatomic, strong) AISPrisesDescription *prisesDescription;
 
 @end
 
@@ -21,31 +33,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.album = @[@"alliance",@"GELogo",@"runbuttonImage",@"SWLogo"];
-    self.albumDescription = @[@"пробежать 1 км", @"пробежать 10 км", @"пробежать 50 км", @"пробежать 100 км"];
-    self.albumHelper = @[@1, @10, @50, @100];
+    self.prisesDescription = [AISPrisesDescription new];
     
-    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-    layout.itemSize = CGSizeMake(150, 150);
-    layout.minimumLineSpacing = 20;
-    layout.minimumInteritemSpacing = 20;
-
-    [layout setFooterReferenceSize:CGSizeMake(100, 50)];
-    [layout setHeaderReferenceSize:CGSizeMake(150, 25)];
+    self.album = self.prisesDescription.album;
+    self.albumDescription = self.prisesDescription.albumDescription;
+    self.albumHelper = self.prisesDescription.albumHelper;
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame    collectionViewLayout:layout];
-    
-    self.collectionView.backgroundColor = UIColor.whiteColor;
-    self.collectionView.dataSource = self;
-    self.collectionView.delegate = self;
-    
-    [self.collectionView registerClass:[AISPrisesCollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
-    [self.collectionView registerClass:[AISPrisesCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
-    [self.collectionView registerClass:[AISPrisesCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
-    
-    self.collectionView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.collectionView];
-    
+    [self configureCells];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -54,9 +48,28 @@
     self.allDistance = [NSNumber numberWithDouble:[userDefaults doubleForKey:@"allDistance"]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)registerCellClass
+{
+    [self.collectionView registerClass:[AISPrisesCollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
+}
+
+-(void)configureCells
+{
+    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+    layout.itemSize = CGSizeMake(AISitemSize, AISitemSize);
+    layout.minimumLineSpacing = AISMinimumLineSpacing;
+    layout.minimumInteritemSpacing = AISMinimumInteritemSpacing;
+    
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame    collectionViewLayout:layout];
+    
+    self.collectionView.backgroundColor = UIColor.whiteColor;
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    
+    self.collectionView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.collectionView];
+    
+    [self registerCellClass];
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -67,7 +80,7 @@
     
     cell.contentView.layer.masksToBounds = YES;
     
-    if (self.allDistance.doubleValue / 1000 >= [self.albumHelper[indexPath.row] doubleValue])
+    if (self.allDistance.doubleValue / AISMetersInKM >= [self.albumHelper[indexPath.row] doubleValue])
     {
         cell.priseImage.alpha = 1.0;
     }

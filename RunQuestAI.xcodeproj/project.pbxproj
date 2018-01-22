@@ -32,6 +32,7 @@
 		BF39BC1E2014CB9C00919F1D /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC182014CB9C00919F1D /* Location+CoreDataProperties.m */; };
 		BF39BC1F2014CB9C00919F1D /* Run+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC1B2014CB9C00919F1D /* Run+CoreDataClass.m */; };
 		BF39BC202014CB9C00919F1D /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC1C2014CB9C00919F1D /* Run+CoreDataProperties.m */; };
+		BF39BC23201649F700919F1D /* AISPrisesDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC22201649F700919F1D /* AISPrisesDescription.m */; };
 		BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE99620124F97000BEC8A /* AISCustomRunView.m */; };
 		BF4CE99C20127A34000BEC8A /* GELogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE99820127A31000BEC8A /* GELogo.png */; };
 		BF4CE99D20127A34000BEC8A /* SWLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE99920127A31000BEC8A /* SWLogo.png */; };
@@ -42,7 +43,6 @@
 		BF4CE9A5201282CA000BEC8A /* medal.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9A3201282CA000BEC8A /* medal.png */; };
 		BF4CE9A72012844D000BEC8A /* SW1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9A62012844D000BEC8A /* SW1.jpg */; };
 		BF4CE9A920128901000BEC8A /* AISRunTargetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9A820128901000BEC8A /* AISRunTargetTest.m */; };
-		BF4CE9F42012D23D000BEC8A /* AISLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */; };
 		BF4CE9F62012D845000BEC8A /* redSaber.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F52012D844000BEC8A /* redSaber.png */; };
 		BF4CE9F92012EB33000BEC8A /* lightsaber-1980163_960_720.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */; };
 		BF4CE9FC2012F52B000BEC8A /* AISTypeOfPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9FB2012F52B000BEC8A /* AISTypeOfPersonViewController.m */; };
@@ -143,6 +143,8 @@
 		BF39BC1A2014CB9C00919F1D /* Run+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataClass.h"; sourceTree = "<group>"; };
 		BF39BC1B2014CB9C00919F1D /* Run+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataClass.m"; sourceTree = "<group>"; };
 		BF39BC1C2014CB9C00919F1D /* Run+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BF39BC21201649F700919F1D /* AISPrisesDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISPrisesDescription.h; sourceTree = "<group>"; };
+		BF39BC22201649F700919F1D /* AISPrisesDescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPrisesDescription.m; sourceTree = "<group>"; };
 		BF4CE99520124F97000BEC8A /* AISCustomRunView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCustomRunView.h; sourceTree = "<group>"; };
 		BF4CE99620124F97000BEC8A /* AISCustomRunView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCustomRunView.m; sourceTree = "<group>"; };
 		BF4CE99820127A31000BEC8A /* GELogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GELogo.png; sourceTree = "<group>"; };
@@ -157,8 +159,6 @@
 		BF4CE9BD20128F6A000BEC8A /* eq6v-MGxOuUmin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eq6v-MGxOuUmin.jpg"; sourceTree = "<group>"; };
 		BF4CE9C020128FEE000BEC8A /* eq6v-MGxOuUmin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eq6v-MGxOuUmin.jpg"; sourceTree = "<group>"; };
 		BF4CE9C120128FF4000BEC8A /* eq6v-MGxOuUmin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "eq6v-MGxOuUmin.jpg"; path = "../../../../../eq6v-MGxOuUmin.jpg"; sourceTree = "<group>"; };
-		BF4CE9F22012D23D000BEC8A /* AISLoadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISLoadViewController.h; sourceTree = "<group>"; };
-		BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISLoadViewController.m; sourceTree = "<group>"; };
 		BF4CE9F52012D844000BEC8A /* redSaber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redSaber.png; sourceTree = "<group>"; };
 		BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightsaber-1980163_960_720.png"; sourceTree = "<group>"; };
 		BF4CE9FA2012F52B000BEC8A /* AISTypeOfPersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISTypeOfPersonViewController.h; sourceTree = "<group>"; };
@@ -255,6 +255,8 @@
 				BF4CE9BB20128F0B000BEC8A /* PrisesPageViewController */,
 				BF26D485200F970900D70121 /* AISPrisesCollectionViewController.h */,
 				BF26D486200F970900D70121 /* AISPrisesCollectionViewController.m */,
+				BF39BC21201649F700919F1D /* AISPrisesDescription.h */,
+				BF39BC22201649F700919F1D /* AISPrisesDescription.m */,
 				BF4CE9FA2012F52B000BEC8A /* AISTypeOfPersonViewController.h */,
 				BF4CE9FB2012F52B000BEC8A /* AISTypeOfPersonViewController.m */,
 				BF4CEA002012F6E8000BEC8A /* AISHelperForCharactersSW.h */,
@@ -321,8 +323,6 @@
 				BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */,
 				BF26D47E200F74EF00D70121 /* SettingsViewController.h */,
 				BF26D47F200F74EF00D70121 /* SettingsViewController.m */,
-				BF4CE9F22012D23D000BEC8A /* AISLoadViewController.h */,
-				BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */,
 			);
 			path = StarterRunViewControllers;
 			sourceTree = "<group>";
@@ -865,6 +865,7 @@
 				BF26D4AD20107DA400D70121 /* AISButtonsForTheBeginRunView.m in Sources */,
 				BF39BC1F2014CB9C00919F1D /* Run+CoreDataClass.m in Sources */,
 				BF26D480200F74EF00D70121 /* SettingsViewController.m in Sources */,
+				BF39BC23201649F700919F1D /* AISPrisesDescription.m in Sources */,
 				BF26D492200FDEB900D70121 /* AISDataService.m in Sources */,
 				BF26D4A32010678C00D70121 /* AISTargetAllocatorHelper.m in Sources */,
 				BF3065E9200C144F00F3058E /* AISCountdownRunMissionViewController.m in Sources */,
@@ -874,7 +875,6 @@
 				BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */,
 				BF83EE1B2008B0F3000EBA5C /* AppDelegate.m in Sources */,
 				BF26D48A200F990100D70121 /* AISPrisesCollectionReusableView.m in Sources */,
-				BF4CE9F42012D23D000BEC8A /* AISLoadViewController.m in Sources */,
 				BF3065EC200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m in Sources */,
 				BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */,
 			);

@@ -14,5 +14,4 @@
 @property (nonatomic,strong) NSArray *arrPageTitles;
 @property (nonatomic,strong) NSArray *arrPageImages;
 
-
 @end

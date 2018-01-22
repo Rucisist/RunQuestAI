@@ -10,7 +10,6 @@
 #import "AISBeginRunViewController.h"
 #import "AISCountdownRunMissionViewController.h"
 #import "AISMainViewTabbarController.h"
-#import "AISLoadViewController.h"
 @import GoogleMaps;
 
 @interface AppDelegate ()
