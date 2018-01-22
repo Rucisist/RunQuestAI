@@ -10,20 +10,24 @@
 #import "AISRunMissionInProgressTabBarController.h"
 #import "AISRunMissionCharacteristicsViewController.h"
 
-static const int countdownTime = 6;
+static const int AIScountdownTime = 6;
+static const CGFloat AIScountdownLabelWidth = 200;
+static const CGFloat AIScountdownLabelHeight = 100;
+static const CGFloat AISYOffset = 50;
+
 
 @interface AISCountdownRunMissionViewController ()
 
 @property (nonatomic) NSUInteger counter;
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, weak) NSTimer *timer;
 @property (nonatomic, strong) UILabel *countdownLabel;
 @property (nonatomic, strong) UILabel *countdownLabelHelper;
 @property (nonatomic, strong) UIView *GMapView;
 
 @end
 
-@implementation AISCountdownRunMissionViewController
 
+@implementation AISCountdownRunMissionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,16 +41,8 @@ static const int countdownTime = 6;
     [self.navigationController setNavigationBarHidden:YES];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 -(void)countdown
 {
-    NSLog(@"%lu", (unsigned long)self.counter);
     if (self.counter > 1)
     {
         self.counter = self.counter - 1;
@@ -67,11 +63,11 @@ static const int countdownTime = 6;
     CGFloat frameWidth = CGRectGetWidth(screenFrame);
     CGFloat frameHeight = CGRectGetHeight(screenFrame);
 
-    self.counter = countdownTime;
+    self.counter = AIScountdownTime;
     
-    self.countdownLabel = [[UILabel alloc] initWithFrame:CGRectMake(frameWidth / 2 - 100, frameHeight / 2 - 50, 200, 100)];
+    self.countdownLabel = [[UILabel alloc] initWithFrame:CGRectMake(frameWidth / 2 - AIScountdownLabelWidth / 2, frameHeight / 2 - AIScountdownLabelHeight / 2, AIScountdownLabelWidth, AIScountdownLabelHeight)];
     
-    self.countdownLabelHelper = [[UILabel alloc] initWithFrame:CGRectMake(frameWidth / 2 - 100, frameHeight / 2 - 50, 200, 100)];
+    self.countdownLabelHelper = [[UILabel alloc] initWithFrame:CGRectMake(frameWidth / 2 - AIScountdownLabelWidth / 2, frameHeight / 2 - AIScountdownLabelHeight / 2, AIScountdownLabelWidth, AIScountdownLabelHeight)];
     
     [self.countdownLabel setFont:[UIFont boldSystemFontOfSize:70]];
     [self.countdownLabelHelper setFont:[UIFont boldSystemFontOfSize:70]];
@@ -81,7 +77,7 @@ static const int countdownTime = 6;
     
     self.countdownLabel.textColor = [UIColor whiteColor];
     self.countdownLabelHelper.textColor = [UIColor whiteColor];
-    self.countdownLabel.text = [NSString stringWithFormat:@"%d", countdownTime - 1];
+    self.countdownLabel.text = [NSString stringWithFormat:@"%d", AIScountdownTime - 1];
     self.countdownLabelHelper.text = @"";
     
     [self.view addSubview:self.countdownLabel];
@@ -122,7 +118,7 @@ static const int countdownTime = 6;
     CGFloat frameWidth = CGRectGetWidth(screenFrame);
     CGFloat frameHeight = CGRectGetHeight(screenFrame);
     
-    self.countdownLabel.frame = CGRectMake(frameWidth / 2 - 100, frameHeight / 2 - 50, 200, 100);
+    self.countdownLabel.frame = CGRectMake(frameWidth / 2 - AIScountdownLabelWidth / 2, frameHeight / 2 - AIScountdownLabelHeight / 2, AIScountdownLabelWidth, AIScountdownLabelHeight);
     self.countdownLabel.textColor = [UIColor whiteColor];
     
     self.countdownLabel.alpha = 1.0;
@@ -134,7 +130,7 @@ static const int countdownTime = 6;
     CGFloat frameWidth = CGRectGetWidth(screenFrame);
     CGFloat frameHeight = CGRectGetHeight(screenFrame);
     
-    self.countdownLabelHelper.frame = CGRectMake(frameWidth / 2 - 100, frameHeight / 2 - 50 - 50, 200, 100);
+    self.countdownLabelHelper.frame = CGRectMake(frameWidth / 2 - AIScountdownLabelWidth / 2, frameHeight / 2 - AIScountdownLabelHeight / 2 - AISYOffset, AIScountdownLabelWidth, AIScountdownLabelHeight);
     
     self.countdownLabelHelper.textColor = [UIColor whiteColor];
     
