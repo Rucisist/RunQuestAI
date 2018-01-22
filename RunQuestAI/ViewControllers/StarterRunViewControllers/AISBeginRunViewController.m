@@ -32,11 +32,9 @@ static CGFloat AISoffsetFromBottom = 200;
 @property (nonatomic, strong) AISLightSaberView *lightSaberView;
 @property (nonatomic, strong) AISButtonsForTheBeginRunView *buttonPannel;
 
-
 @end
 
 @implementation AISBeginRunViewController
-
 
 
 - (void)viewDidLoad
@@ -60,17 +58,20 @@ static CGFloat AISoffsetFromBottom = 200;
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES];
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 -(void)configureUI
 {
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self configurateStartButton];
+    [self configureSaberView];
+    
+    self.AllDistanceLabel = [UILabel new];
+}
+
+-(void)configurateStartButton
+{
     CGRect screenFrame = self.view.frame;
     CGFloat frameWidth = CGRectGetWidth(screenFrame);
     CGFloat frameHeight = CGRectGetHeight(screenFrame);
@@ -86,11 +87,7 @@ static CGFloat AISoffsetFromBottom = 200;
     
     [self.view addSubview:self.startRunButton];
     [self.startRunButton addTarget:self action:@selector(startButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self configureSaberView];
-    self.AllDistanceLabel = [UILabel new];
 }
-
 
 -(void)configureSettingsButton
 {
