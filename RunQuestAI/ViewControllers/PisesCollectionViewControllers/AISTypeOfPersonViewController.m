@@ -10,10 +10,17 @@
 #import "AISHelperForCharactersSW.h"
 #import "AISCaharcterSW.h"
 
+static const CGFloat AIScharacterDescriptionLabelXoffset = 0;
+static const CGFloat AIScharacterDescriptionLabelYoffset = 30;
+static const CGFloat AIScharacterDescriptionLabelHeight = 100;
+static const CGFloat AIStextSize = 32;
+static const CGFloat AIScharacterDescriptionLabelNumberOfLines = 0;
+
 @interface AISTypeOfPersonViewController ()
 
 @property (nonatomic, strong) UIImageView *characterImageView;
 @property (nonatomic, strong) UILabel *characterDescriptionLabel;
+@property (nonatomic, strong) AISCaharcterSW *character;
 
 @end
 
@@ -32,46 +39,50 @@
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    double allDistance = [userDefaults doubleForKey:@"allDistance"];
+    double allDistance = [self allDistanceUserDefaultsResults];
     
     AISHelperForCharactersSW *characterHelper = [AISHelperForCharactersSW new];
-    AISCaharcterSW *character = [characterHelper charactersForDistance:allDistance];
+    self.character = [characterHelper charactersForDistance:allDistance];
+
+    [self configureUI];
+}
+
+-(void)configureUI
+{
+    [self configureCharacterDescriptionLabel];
+    [self configureCharacterImageView];
+}
+
+-(void)configureCharacterDescriptionLabel
+{
+    self.characterDescriptionLabel.text = self.character.characterDescription;
+    self.characterDescriptionLabel.frame = CGRectMake(AIScharacterDescriptionLabelXoffset, AIScharacterDescriptionLabelYoffset, CGRectGetWidth(self.view.frame), AIScharacterDescriptionLabelHeight);
     
-    self.characterImageView.frame = self.view.frame;
-    self.characterImageView.image = character.characterImage;
-    self.characterImageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.view addSubview:self.characterImageView];
+    self.characterDescriptionLabel.font = [UIFont fontWithName:@"Helvetica" size:AIStextSize];
     
-    self.characterDescriptionLabel.text = character.characterDescription;
-    self.characterDescriptionLabel.frame = CGRectMake(0, 30, CGRectGetWidth(self.view.frame), 100);
-    self.characterDescriptionLabel.font = [UIFont fontWithName:@"Helvetica" size:32];
-    self.characterDescriptionLabel.numberOfLines = 0;
+    self.characterDescriptionLabel.numberOfLines = AIScharacterDescriptionLabelNumberOfLines;
+    
     self.characterDescriptionLabel.textColor = [UIColor blackColor];
     self.characterDescriptionLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.characterDescriptionLabel];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)configureCharacterImageView
+{
+    self.characterImageView.frame = self.view.frame;
+    self.characterImageView.image = self.character.characterImage;
+    self.characterImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:self.characterImageView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(double)allDistanceUserDefaultsResults
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    double allDistance = [userDefaults doubleForKey:@"allDistance"];
+    
+    return allDistance;
 }
-*/
 
 @end

@@ -252,17 +252,12 @@
 		BF26D48B200F990A00D70121 /* PisesCollectionViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF39BC2420164DBF00919F1D /* AISHelperForPrises */,
 				BF4CE9BB20128F0B000BEC8A /* PrisesPageViewController */,
 				BF26D485200F970900D70121 /* AISPrisesCollectionViewController.h */,
 				BF26D486200F970900D70121 /* AISPrisesCollectionViewController.m */,
-				BF39BC21201649F700919F1D /* AISPrisesDescription.h */,
-				BF39BC22201649F700919F1D /* AISPrisesDescription.m */,
 				BF4CE9FA2012F52B000BEC8A /* AISTypeOfPersonViewController.h */,
 				BF4CE9FB2012F52B000BEC8A /* AISTypeOfPersonViewController.m */,
-				BF4CEA002012F6E8000BEC8A /* AISHelperForCharactersSW.h */,
-				BF4CEA012012F6E8000BEC8A /* AISHelperForCharactersSW.m */,
-				BF4CE9FD2012F575000BEC8A /* AISCaharcterSW.h */,
-				BF4CE9FE2012F575000BEC8A /* AISCaharcterSW.m */,
 				BF26D48C200F9BF300D70121 /* AISPrisesCollectionViewCell.h */,
 				BF26D48D200F9BF300D70121 /* AISPrisesCollectionViewCell.m */,
 				BF26D488200F990100D70121 /* AISPrisesCollectionReusableView.h */,
@@ -305,6 +300,19 @@
 				BF83EE222008B0F3000EBA5C /* RunQuestAI.xcdatamodeld */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		BF39BC2420164DBF00919F1D /* AISHelperForPrises */ = {
+			isa = PBXGroup;
+			children = (
+				BF4CE9FD2012F575000BEC8A /* AISCaharcterSW.h */,
+				BF4CE9FE2012F575000BEC8A /* AISCaharcterSW.m */,
+				BF4CEA002012F6E8000BEC8A /* AISHelperForCharactersSW.h */,
+				BF4CEA012012F6E8000BEC8A /* AISHelperForCharactersSW.m */,
+				BF39BC21201649F700919F1D /* AISPrisesDescription.h */,
+				BF39BC22201649F700919F1D /* AISPrisesDescription.m */,
+			);
+			path = AISHelperForPrises;
 			sourceTree = "<group>";
 		};
 		BF4CE9AA20128DBA000BEC8A /* AppDelegate */ = {

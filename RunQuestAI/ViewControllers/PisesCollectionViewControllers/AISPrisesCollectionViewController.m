@@ -11,10 +11,13 @@
 #import "AISPrisesCollectionViewCell.h"
 #import "AISPrisesDescription.h"
 
-static CGFloat AISitemSize = 150;
-static CGFloat AISMinimumLineSpacing = 20;
-static CGFloat AISMinimumInteritemSpacing = 20;
-static double AISMetersInKM = 1000;
+static const CGFloat AISitemSize = 150;
+static const CGFloat AISMinimumLineSpacing = 20;
+static const CGFloat AISMinimumInteritemSpacing = 20;
+static const CGFloat AISCollectionItemCornerRadius = 20.0f;
+static const double AISMetersInKM = 1000;
+static NSString *AIScellIdentifier = @"AISprisesCollectionViewCell";
+
 
 @interface AISPrisesCollectionViewController ()
 
@@ -48,11 +51,6 @@ static double AISMetersInKM = 1000;
     self.allDistance = [NSNumber numberWithDouble:[userDefaults doubleForKey:@"allDistance"]];
 }
 
--(void)registerCellClass
-{
-    [self.collectionView registerClass:[AISPrisesCollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
-}
-
 -(void)configureCells
 {
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
@@ -72,11 +70,16 @@ static double AISMetersInKM = 1000;
     [self registerCellClass];
 }
 
+-(void)registerCellClass
+{
+    [self.collectionView registerClass:[AISPrisesCollectionViewCell class] forCellWithReuseIdentifier:AIScellIdentifier];
+}
+
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    AISPrisesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
+    AISPrisesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:AIScellIdentifier forIndexPath:indexPath];
     cell.textLabel.text = self.albumDescription[indexPath.row];
     
-    cell.contentView.layer.cornerRadius = 20.0f;
+    cell.contentView.layer.cornerRadius = AISCollectionItemCornerRadius;
     
     cell.contentView.layer.masksToBounds = YES;
     
