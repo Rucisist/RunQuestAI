@@ -6,24 +6,24 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "StatsViewController.h"
-#import "StatsTableViewCell.h"
+#import "AISStatsViewController.h"
+#import "AISStatsTableViewCell.h"
 #import "AppDelegate.h"
-#import "RunStaticsViewController.h"
+#import "AISRunStaticsViewController.h"
 #import "AISUserDefaultsService.h"
 #import "AISDataService.h"
 #import "AISTranslationUnitsModel.h"
 
-@interface StatsViewController ()
+@interface AISStatsViewController ()
 
 @property (nonatomic) double allDistance;
 @property (nonatomic, strong) UILabel *allDistanceLabel;
-@property (nonatomic, strong) StatsTableViewCell *statsTableViewCell;
+@property (nonatomic, strong) AISStatsTableViewCell *statsTableViewCell;
 @property (nonatomic, strong) AISDataService *dataService;
 
 @end
 
-@implementation StatsViewController
+@implementation AISStatsViewController
 
 - (void)viewDidLoad {
     
@@ -51,7 +51,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     
-    [self.tableView registerClass:[StatsTableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[AISStatsTableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
 -(void)configurateHeaderView
@@ -101,7 +101,7 @@
     
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    StatsTableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    AISStatsTableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Run *runObject;
     
     runObject = [self.runArray objectAtIndex:indexPath.row];
@@ -153,8 +153,8 @@
 {
     Run *runInfo;
     runInfo = [self.runArray objectAtIndex:indexPath.row];
-    RunStaticsViewController *runStatViewController;
-    runStatViewController = [[RunStaticsViewController alloc] initWithRunInfo:runInfo.timestamp];
+    AISRunStaticsViewController *runStatViewController;
+    runStatViewController = [[AISRunStaticsViewController alloc] initWithRunInfo:runInfo.timestamp];
 
     runStatViewController.runDetails = runInfo;
     

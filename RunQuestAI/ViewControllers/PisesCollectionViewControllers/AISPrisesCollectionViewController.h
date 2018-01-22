@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PrisesCollectionViewController : UIViewController <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
+@interface AISPrisesCollectionViewController : UIViewController <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, copy) NSArray *album;

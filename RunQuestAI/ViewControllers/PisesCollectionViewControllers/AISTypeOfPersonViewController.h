@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TypeOfPersonViewController : UIViewController
+@interface AISTypeOfPersonViewController : UIViewController
 
 @end

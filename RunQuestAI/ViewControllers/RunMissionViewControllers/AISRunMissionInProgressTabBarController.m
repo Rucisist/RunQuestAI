@@ -6,22 +6,22 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "RunMissionInProgressTabBarController.h"
-#import "RunMissionMapViewController.h"
-#import "RunMissionCharacteristicsViewController.h"
+#import "AISRunMissionInProgressTabBarController.h"
+#import "AISRunMissionMapViewController.h"
+#import "AISRunMissionCharacteristicsViewController.h"
 
-@interface RunMissionInProgressTabBarController ()
+@interface AISRunMissionInProgressTabBarController ()
 
-@property (nonatomic, strong) RunMissionMapViewController *mapViewController;
-@property (nonatomic, strong) RunMissionCharacteristicsViewController *characteristicsViewController;
+@property (nonatomic, strong) AISRunMissionMapViewController *mapViewController;
+@property (nonatomic, strong) AISRunMissionCharacteristicsViewController *characteristicsViewController;
 
 @end
 
-@implementation RunMissionInProgressTabBarController
+@implementation AISRunMissionInProgressTabBarController
 
 - (void)viewDidLoad {
-    self.mapViewController = [RunMissionMapViewController new];
-    self.characteristicsViewController = [RunMissionCharacteristicsViewController new];
+    self.mapViewController = [AISRunMissionMapViewController new];
+    self.characteristicsViewController = [AISRunMissionCharacteristicsViewController new];
     
     UITabBarItem *leftTabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:0];
     UITabBarItem *rightTabBarItem = [[UITabBarItem alloc] initWithTitle:@"231" image:[UIImage imageNamed:@"runbuttonImageLittle"] tag:1];

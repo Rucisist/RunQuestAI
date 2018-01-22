@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PrisesPagesViewController : UIViewController <UIPageViewControllerDataSource>
+@interface AISPrisesPagesViewController : UIViewController <UIPageViewControllerDataSource>
 
 @property (nonatomic,strong) UIPageViewController *PageViewController;
 @property (nonatomic,strong) NSArray *arrPageTitles;

@@ -6,9 +6,9 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "StatsTableViewCell.h"
+#import "AISStatsTableViewCell.h"
 
-@implementation StatsTableViewCell
+@implementation AISStatsTableViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

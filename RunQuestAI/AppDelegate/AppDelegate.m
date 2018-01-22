@@ -7,12 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "BeginRunViewController.h"
-#import "CountdownRunMissionViewController.h"
-#import "MainViewTabbarController.h"
+#import "AISBeginRunViewController.h"
+#import "AISCountdownRunMissionViewController.h"
+#import "AISMainViewTabbarController.h"
 #import "AISLoadViewController.h"
 @import GoogleMaps;
-@import GooglePlaces;
 
 @interface AppDelegate ()
 
@@ -29,7 +28,7 @@
     
     //configure window
     self.window = [UIWindow new];
-    MainViewTabbarController *rootViewController = [MainViewTabbarController new];
+    AISMainViewTabbarController *rootViewController = [AISMainViewTabbarController new];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
     //AISLoadViewController *loadView = [AISLoadViewController new];

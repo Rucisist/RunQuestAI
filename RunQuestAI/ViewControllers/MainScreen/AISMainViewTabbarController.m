@@ -6,23 +6,23 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "MainViewTabbarController.h"
-#import "BeginRunViewController.h"
-#import "StatsViewController.h"
-#import "PrisesCollectionViewController.h"
-#import "PrisesPagesViewController.h"
+#import "AISMainViewTabbarController.h"
+#import "AISBeginRunViewController.h"
+#import "AISStatsViewController.h"
+#import "AISPrisesCollectionViewController.h"
+#import "AISPrisesPagesViewController.h"
 
-@interface MainViewTabbarController ()
+@interface AISMainViewTabbarController ()
 
 @property (nonatomic, strong) UIImageView *loadingImageView;
-@property (nonatomic, strong) BeginRunViewController *beginRunViewController;
-@property (nonatomic, strong) StatsViewController *statsViewController;
-@property (nonatomic, strong) PrisesCollectionViewController *prisesCollectionViewController;
-@property (nonatomic, strong) PrisesPagesViewController *prisesPagesViewController;
+@property (nonatomic, strong) AISBeginRunViewController *beginRunViewController;
+@property (nonatomic, strong) AISStatsViewController *statsViewController;
+@property (nonatomic, strong) AISPrisesCollectionViewController *prisesCollectionViewController;
+@property (nonatomic, strong) AISPrisesPagesViewController *prisesPagesViewController;
 
 @end
 
-@implementation MainViewTabbarController
+@implementation AISMainViewTabbarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,9 +44,9 @@
 
 -(void)configureTabBarWithViewControllers
 {
-    self.beginRunViewController = [BeginRunViewController new];
-    self.statsViewController = [StatsViewController new];
-    self.prisesPagesViewController = [PrisesPagesViewController new];
+    self.beginRunViewController = [AISBeginRunViewController new];
+    self.statsViewController = [AISStatsViewController new];
+    self.prisesPagesViewController = [AISPrisesPagesViewController new];
     
     UITabBarItem *firstItem = [[UITabBarItem alloc] initWithTitle:@"run" image:[UIImage imageNamed:@"road"] tag:0];
     UITabBarItem *rightTabBarItem = [[UITabBarItem alloc] initWithTitle:@"stats" image:[UIImage imageNamed:@"runbuttonImageLittle"] tag:1];

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface RunMissionCharacteristicsViewController : UIViewController <CLLocationManagerDelegate>
+@interface AISRunMissionCharacteristicsViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 

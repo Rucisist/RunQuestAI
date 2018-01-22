@@ -6,13 +6,13 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "CountdownRunMissionViewController.h"
-#import "RunMissionInProgressTabBarController.h"
-#import "RunMissionCharacteristicsViewController.h"
+#import "AISCountdownRunMissionViewController.h"
+#import "AISRunMissionInProgressTabBarController.h"
+#import "AISRunMissionCharacteristicsViewController.h"
 
 static const int countdownTime = 6;
 
-@interface CountdownRunMissionViewController ()
+@interface AISCountdownRunMissionViewController ()
 
 @property (nonatomic) NSUInteger counter;
 @property (nonatomic, strong) NSTimer *timer;
@@ -22,7 +22,7 @@ static const int countdownTime = 6;
 
 @end
 
-@implementation CountdownRunMissionViewController
+@implementation AISCountdownRunMissionViewController
 
 
 - (void)viewDidLoad {
@@ -143,8 +143,8 @@ static const int countdownTime = 6;
 
 -(void)goToRunMissionInProgressTabBarViewController
 {
-    RunMissionCharacteristicsViewController *runMissionController;
-    runMissionController = [RunMissionCharacteristicsViewController new];
+    AISRunMissionCharacteristicsViewController *runMissionController;
+    runMissionController = [AISRunMissionCharacteristicsViewController new];
     [self.navigationController pushViewController:runMissionController animated:YES];
 }
 

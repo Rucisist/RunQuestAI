@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StatsTableViewCell : UITableViewCell
+@interface AISStatsTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *runInfoLabel;
 @property (nonatomic, strong) UILabel *distanceInfoLabel;

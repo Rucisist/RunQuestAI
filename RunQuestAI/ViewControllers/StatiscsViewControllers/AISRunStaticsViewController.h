@@ -10,7 +10,7 @@
 #import "Run+CoreDataClass.h"
 #import "Location+CoreDataProperties.h"
 
-@interface RunStaticsViewController : UIViewController
+@interface AISRunStaticsViewController : UIViewController
 
 @property (nonatomic, strong) NSDate *someDate;
 @property (nonatomic, strong) Run *runDetails;

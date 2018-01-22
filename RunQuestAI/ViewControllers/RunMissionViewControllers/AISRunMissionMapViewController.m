@@ -6,11 +6,11 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "RunMissionMapViewController.h"
+#import "AISRunMissionMapViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <GooglePlaces/GooglePlaces.h>
 
-@interface RunMissionMapViewController ()
+@interface AISRunMissionMapViewController ()
 
 @property (nonatomic, strong) GMSMapView *mapView;
 @property (nonatomic, strong) GMSMutablePath *path;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation RunMissionMapViewController
+@implementation AISRunMissionMapViewController
 
 -(instancetype)initWithRoute: (NSMutableArray *)locations
 {

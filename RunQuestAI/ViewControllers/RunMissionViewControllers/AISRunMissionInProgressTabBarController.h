@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RunMissionInProgressTabBarController : UITabBarController
+@interface AISRunMissionInProgressTabBarController : UITabBarController
 
 @end

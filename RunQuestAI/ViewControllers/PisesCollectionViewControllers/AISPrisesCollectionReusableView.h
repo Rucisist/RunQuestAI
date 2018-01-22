@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PrisesCollectionReusableView : UICollectionReusableView
+@interface AISPrisesCollectionReusableView : UICollectionReusableView
 
 @property (nonatomic, strong) UILabel *lolLabel;
 

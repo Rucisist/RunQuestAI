@@ -6,9 +6,9 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "PrisesCollectionViewCell.h"
+#import "AISPrisesCollectionViewCell.h"
 
-@implementation PrisesCollectionViewCell
+@implementation AISPrisesCollectionViewCell
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

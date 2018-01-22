@@ -6,17 +6,17 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "PrisesCollectionViewController.h"
-#import "PrisesCollectionReusableView.h"
-#import "PrisesCollectionViewCell.h"
+#import "AISPrisesCollectionViewController.h"
+#import "AISPrisesCollectionReusableView.h"
+#import "AISPrisesCollectionViewCell.h"
 
-@interface PrisesCollectionViewController ()
+@interface AISPrisesCollectionViewController ()
 
 @property (nonatomic, strong) NSNumber *allDistance;
 
 @end
 
-@implementation PrisesCollectionViewController
+@implementation AISPrisesCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,9 +39,9 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-    [self.collectionView registerClass:[PrisesCollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
-    [self.collectionView registerClass:[PrisesCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
-    [self.collectionView registerClass:[PrisesCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    [self.collectionView registerClass:[AISPrisesCollectionViewCell class] forCellWithReuseIdentifier:@"identifier"];
+    [self.collectionView registerClass:[AISPrisesCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
+    [self.collectionView registerClass:[AISPrisesCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     
     self.collectionView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.collectionView];
@@ -60,7 +60,7 @@
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    PrisesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
+    AISPrisesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
     cell.textLabel.text = self.albumDescription[indexPath.row];
     
     cell.contentView.layer.cornerRadius = 20.0f;

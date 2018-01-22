@@ -6,15 +6,15 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "RunMissionCharacteristicsViewController.h"
+#import "AISRunMissionCharacteristicsViewController.h"
 #import "AISTranslationUnitsModel.h"
 #import "Location+CoreDataProperties.h"
 #import "Run+CoreDataProperties.h"
-#import "MainViewTabbarController.h"
+#import "AISMainViewTabbarController.h"
 #import "AppDelegate.h"
 #import "AISDataService.h"
 #import "AISTargetAllocatorHelper.h"
-#import "RunMissionMapViewController.h"
+#import "AISRunMissionMapViewController.h"
 #import "AISSystemSpeaker.h"
 #import "AISRealVoicesPlayer.h"
 #import "AISCustomRunView.h"
@@ -24,7 +24,7 @@ static CGFloat paceTimeDTAlabelHeight = 50;
 static CGFloat pauseButtonDiameter = 100;
 static CGFloat pauseButtonSpaceFromCenter = 100;
 
-@interface RunMissionCharacteristicsViewController ()
+@interface AISRunMissionCharacteristicsViewController ()
 
 @property int seconds;
 @property int lastSecond;
@@ -59,7 +59,7 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 @end
 
-@implementation RunMissionCharacteristicsViewController
+@implementation AISRunMissionCharacteristicsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -124,7 +124,7 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 
 -(void)openMapViewAndPaintaRouteWith
 {
-    RunMissionMapViewController *mapViewController = [[RunMissionMapViewController alloc] initWithRoute:self.locations];
+    AISRunMissionMapViewController *mapViewController = [[AISRunMissionMapViewController alloc] initWithRoute:self.locations];
     [self.navigationController pushViewController:mapViewController animated:YES];
 }
 

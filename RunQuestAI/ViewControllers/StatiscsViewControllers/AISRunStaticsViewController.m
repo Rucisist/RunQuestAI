@@ -6,13 +6,13 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "RunStaticsViewController.h"
+#import "AISRunStaticsViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 static CGFloat AISTopMapViewOffset = 10;
 static CGFloat AISBottomMapViewOffset = 200;
 
-@interface RunStaticsViewController ()
+@interface AISRunStaticsViewController ()
 
 @property (nonatomic, strong) GMSMapView *mapView;
 @property (nonatomic, strong) GMSMutablePath *path;
@@ -24,7 +24,7 @@ static CGFloat AISBottomMapViewOffset = 200;
 
 @end
 
-@implementation RunStaticsViewController
+@implementation AISRunStaticsViewController
 
 
 -(instancetype)initWithRunInfo:(NSDate *)date

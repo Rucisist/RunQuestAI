@@ -10,22 +10,22 @@
 		2571F50F076404FF33C9E73A /* libPods-RunQuestAIUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05691F8E0C67F5DC9EF60BFB /* libPods-RunQuestAIUITests.a */; };
 		BF26D480200F74EF00D70121 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D47F200F74EF00D70121 /* SettingsViewController.m */; };
 		BF26D483200F893200D70121 /* AISUserDefaultsService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D482200F893200D70121 /* AISUserDefaultsService.m */; };
-		BF26D487200F970900D70121 /* PrisesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D486200F970900D70121 /* PrisesCollectionViewController.m */; };
-		BF26D48A200F990100D70121 /* PrisesCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D489200F990100D70121 /* PrisesCollectionReusableView.m */; };
-		BF26D48E200F9BF300D70121 /* PrisesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D48D200F9BF300D70121 /* PrisesCollectionViewCell.m */; };
+		BF26D487200F970900D70121 /* AISPrisesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D486200F970900D70121 /* AISPrisesCollectionViewController.m */; };
+		BF26D48A200F990100D70121 /* AISPrisesCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D489200F990100D70121 /* AISPrisesCollectionReusableView.m */; };
+		BF26D48E200F9BF300D70121 /* AISPrisesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D48D200F9BF300D70121 /* AISPrisesCollectionViewCell.m */; };
 		BF26D492200FDEB900D70121 /* AISDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D491200FDEB900D70121 /* AISDataService.m */; };
 		BF26D4952010051B00D70121 /* AISLightSaberView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4942010051B00D70121 /* AISLightSaberView.m */; };
 		BF26D49720100ABE00D70121 /* lightsaber-1980155_960_720.png in Resources */ = {isa = PBXBuildFile; fileRef = BF26D49620100ABE00D70121 /* lightsaber-1980155_960_720.png */; };
-		BF26D4A020103FF200D70121 /* PrisesPagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D49F20103FF200D70121 /* PrisesPagesViewController.m */; };
+		BF26D4A020103FF200D70121 /* AISPrisesPagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D49F20103FF200D70121 /* AISPrisesPagesViewController.m */; };
 		BF26D4A32010678C00D70121 /* AISTargetAllocatorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4A22010678C00D70121 /* AISTargetAllocatorHelper.m */; };
 		BF26D4A6201067BD00D70121 /* AISRunTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4A5201067BD00D70121 /* AISRunTarget.m */; };
 		BF26D4A92010697D00D70121 /* AISTargetAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4A82010697D00D70121 /* AISTargetAllocator.m */; };
 		BF26D4AD20107DA400D70121 /* AISButtonsForTheBeginRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4AC20107DA400D70121 /* AISButtonsForTheBeginRunView.m */; };
-		BF3065D0200BDBAC00F3058E /* BeginRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065CF200BDBAC00F3058E /* BeginRunViewController.m */; };
-		BF3065E9200C144F00F3058E /* CountdownRunMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065E8200C144F00F3058E /* CountdownRunMissionViewController.m */; };
-		BF3065EC200CB4A800F3058E /* RunMissionInProgressTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EB200CB4A800F3058E /* RunMissionInProgressTabBarController.m */; };
-		BF3065EF200CB5BB00F3058E /* RunMissionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EE200CB5BB00F3058E /* RunMissionMapViewController.m */; };
-		BF3065F2200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F1200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m */; };
+		BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */; };
+		BF3065E9200C144F00F3058E /* AISCountdownRunMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */; };
+		BF3065EC200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EB200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m */; };
+		BF3065EF200CB5BB00F3058E /* AISRunMissionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */; };
+		BF3065F2200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F1200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m */; };
 		BF3065F4200CF3F500F3058E /* eq6v-MGxOuU.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF3065F3200CF3F500F3058E /* eq6v-MGxOuU.jpg */; };
 		BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F8200D3B0700F3058E /* AISTranslationUnitsModel.m */; };
 		BF39BC1D2014CB9C00919F1D /* Location+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC172014CB9C00919F1D /* Location+CoreDataClass.m */; };
@@ -45,7 +45,7 @@
 		BF4CE9F42012D23D000BEC8A /* AISLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */; };
 		BF4CE9F62012D845000BEC8A /* redSaber.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F52012D844000BEC8A /* redSaber.png */; };
 		BF4CE9F92012EB33000BEC8A /* lightsaber-1980163_960_720.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */; };
-		BF4CE9FC2012F52B000BEC8A /* TypeOfPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9FB2012F52B000BEC8A /* TypeOfPersonViewController.m */; };
+		BF4CE9FC2012F52B000BEC8A /* AISTypeOfPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9FB2012F52B000BEC8A /* AISTypeOfPersonViewController.m */; };
 		BF4CE9FF2012F575000BEC8A /* AISCaharcterSW.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE9FE2012F575000BEC8A /* AISCaharcterSW.m */; };
 		BF4CEA022012F6E8000BEC8A /* AISHelperForCharactersSW.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CEA012012F6E8000BEC8A /* AISHelperForCharactersSW.m */; };
 		BF4CEA082012FBE6000BEC8A /* darth_vader_PNG14.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CEA032012FBE4000BEC8A /* darth_vader_PNG14.png */; };
@@ -53,9 +53,9 @@
 		BF4CEA0A2012FBE6000BEC8A /* countdooku_detail.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CEA052012FBE5000BEC8A /* countdooku_detail.png */; };
 		BF4CEA0B2012FBE6000BEC8A /* obiwankenobi_detail.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CEA062012FBE5000BEC8A /* obiwankenobi_detail.png */; };
 		BF4CEA0C2012FBE6000BEC8A /* Master_Yoda.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CEA072012FBE6000BEC8A /* Master_Yoda.png */; };
-		BF7D3479200E2837007D33B2 /* MainViewTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3478200E2837007D33B2 /* MainViewTabbarController.m */; };
-		BF7D3482200E2A3F007D33B2 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3481200E2A3F007D33B2 /* StatsViewController.m */; };
-		BF7D3485200E36C4007D33B2 /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3484200E36C4007D33B2 /* StatsTableViewCell.m */; };
+		BF7D3479200E2837007D33B2 /* AISMainViewTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3478200E2837007D33B2 /* AISMainViewTabbarController.m */; };
+		BF7D3482200E2A3F007D33B2 /* AISStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3481200E2A3F007D33B2 /* AISStatsViewController.m */; };
+		BF7D3485200E36C4007D33B2 /* AISStatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3484200E36C4007D33B2 /* AISStatsTableViewCell.m */; };
 		BF83EE1B2008B0F3000EBA5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF83EE1A2008B0F3000EBA5C /* AppDelegate.m */; };
 		BF83EE242008B0F3000EBA5C /* RunQuestAI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF83EE222008B0F3000EBA5C /* RunQuestAI.xcdatamodeld */; };
 		BF83EE262008B0F3000EBA5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF83EE252008B0F3000EBA5C /* Assets.xcassets */; };
@@ -63,7 +63,7 @@
 		BF83EE2C2008B0F3000EBA5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF83EE2B2008B0F3000EBA5C /* main.m */; };
 		BF83EE362008B0F3000EBA5C /* RunQuestAITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF83EE352008B0F3000EBA5C /* RunQuestAITests.m */; };
 		BF83EE412008B0F3000EBA5C /* RunQuestAIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF83EE402008B0F3000EBA5C /* RunQuestAIUITests.m */; };
-		BFBE0CBF200E8D9500C3F019 /* RunStaticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBE0CBE200E8D9500C3F019 /* RunStaticsViewController.m */; };
+		BFBE0CBF200E8D9500C3F019 /* AISRunStaticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBE0CBE200E8D9500C3F019 /* AISRunStaticsViewController.m */; };
 		BFC1615820114D6900EF12BC /* AISSystemSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC1615720114D6900EF12BC /* AISSystemSpeaker.m */; };
 		BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC1615A20115B6500EF12BC /* AISRealVoicesPlayer.m */; };
 		BFC16169201167D500EF12BC /* TimeToRun.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BFC1615C20115D0C00EF12BC /* TimeToRun.m4a */; };
@@ -101,19 +101,19 @@
 		BF26D47F200F74EF00D70121 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BF26D481200F893200D70121 /* AISUserDefaultsService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISUserDefaultsService.h; sourceTree = "<group>"; };
 		BF26D482200F893200D70121 /* AISUserDefaultsService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISUserDefaultsService.m; sourceTree = "<group>"; };
-		BF26D485200F970900D70121 /* PrisesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisesCollectionViewController.h; sourceTree = "<group>"; };
-		BF26D486200F970900D70121 /* PrisesCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisesCollectionViewController.m; sourceTree = "<group>"; };
-		BF26D488200F990100D70121 /* PrisesCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisesCollectionReusableView.h; sourceTree = "<group>"; };
-		BF26D489200F990100D70121 /* PrisesCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisesCollectionReusableView.m; sourceTree = "<group>"; };
-		BF26D48C200F9BF300D70121 /* PrisesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisesCollectionViewCell.h; sourceTree = "<group>"; };
-		BF26D48D200F9BF300D70121 /* PrisesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisesCollectionViewCell.m; sourceTree = "<group>"; };
+		BF26D485200F970900D70121 /* AISPrisesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISPrisesCollectionViewController.h; sourceTree = "<group>"; };
+		BF26D486200F970900D70121 /* AISPrisesCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPrisesCollectionViewController.m; sourceTree = "<group>"; };
+		BF26D488200F990100D70121 /* AISPrisesCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISPrisesCollectionReusableView.h; sourceTree = "<group>"; };
+		BF26D489200F990100D70121 /* AISPrisesCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPrisesCollectionReusableView.m; sourceTree = "<group>"; };
+		BF26D48C200F9BF300D70121 /* AISPrisesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISPrisesCollectionViewCell.h; sourceTree = "<group>"; };
+		BF26D48D200F9BF300D70121 /* AISPrisesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPrisesCollectionViewCell.m; sourceTree = "<group>"; };
 		BF26D490200FDEB900D70121 /* AISDataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISDataService.h; sourceTree = "<group>"; };
 		BF26D491200FDEB900D70121 /* AISDataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISDataService.m; sourceTree = "<group>"; };
 		BF26D4932010051B00D70121 /* AISLightSaberView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISLightSaberView.h; sourceTree = "<group>"; };
 		BF26D4942010051B00D70121 /* AISLightSaberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISLightSaberView.m; sourceTree = "<group>"; };
 		BF26D49620100ABE00D70121 /* lightsaber-1980155_960_720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightsaber-1980155_960_720.png"; sourceTree = "<group>"; };
-		BF26D49E20103FF200D70121 /* PrisesPagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisesPagesViewController.h; sourceTree = "<group>"; };
-		BF26D49F20103FF200D70121 /* PrisesPagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisesPagesViewController.m; sourceTree = "<group>"; };
+		BF26D49E20103FF200D70121 /* AISPrisesPagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISPrisesPagesViewController.h; sourceTree = "<group>"; };
+		BF26D49F20103FF200D70121 /* AISPrisesPagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPrisesPagesViewController.m; sourceTree = "<group>"; };
 		BF26D4A12010678C00D70121 /* AISTargetAllocatorHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISTargetAllocatorHelper.h; sourceTree = "<group>"; };
 		BF26D4A22010678C00D70121 /* AISTargetAllocatorHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTargetAllocatorHelper.m; sourceTree = "<group>"; };
 		BF26D4A4201067BD00D70121 /* AISRunTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunTarget.h; sourceTree = "<group>"; };
@@ -122,16 +122,16 @@
 		BF26D4A82010697D00D70121 /* AISTargetAllocator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTargetAllocator.m; sourceTree = "<group>"; };
 		BF26D4AB20107DA400D70121 /* AISButtonsForTheBeginRunView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISButtonsForTheBeginRunView.h; sourceTree = "<group>"; };
 		BF26D4AC20107DA400D70121 /* AISButtonsForTheBeginRunView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISButtonsForTheBeginRunView.m; sourceTree = "<group>"; };
-		BF3065CE200BDBAC00F3058E /* BeginRunViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeginRunViewController.h; sourceTree = "<group>"; };
-		BF3065CF200BDBAC00F3058E /* BeginRunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeginRunViewController.m; sourceTree = "<group>"; };
-		BF3065E7200C144F00F3058E /* CountdownRunMissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownRunMissionViewController.h; sourceTree = "<group>"; };
-		BF3065E8200C144F00F3058E /* CountdownRunMissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountdownRunMissionViewController.m; sourceTree = "<group>"; };
-		BF3065EA200CB4A800F3058E /* RunMissionInProgressTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunMissionInProgressTabBarController.h; sourceTree = "<group>"; };
-		BF3065EB200CB4A800F3058E /* RunMissionInProgressTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunMissionInProgressTabBarController.m; sourceTree = "<group>"; };
-		BF3065ED200CB5BB00F3058E /* RunMissionMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunMissionMapViewController.h; sourceTree = "<group>"; };
-		BF3065EE200CB5BB00F3058E /* RunMissionMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunMissionMapViewController.m; sourceTree = "<group>"; };
-		BF3065F0200CB7FA00F3058E /* RunMissionCharacteristicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunMissionCharacteristicsViewController.h; sourceTree = "<group>"; };
-		BF3065F1200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunMissionCharacteristicsViewController.m; sourceTree = "<group>"; };
+		BF3065CE200BDBAC00F3058E /* AISBeginRunViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISBeginRunViewController.h; sourceTree = "<group>"; };
+		BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISBeginRunViewController.m; sourceTree = "<group>"; };
+		BF3065E7200C144F00F3058E /* AISCountdownRunMissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCountdownRunMissionViewController.h; sourceTree = "<group>"; };
+		BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCountdownRunMissionViewController.m; sourceTree = "<group>"; };
+		BF3065EA200CB4A800F3058E /* AISRunMissionInProgressTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunMissionInProgressTabBarController.h; sourceTree = "<group>"; };
+		BF3065EB200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunMissionInProgressTabBarController.m; sourceTree = "<group>"; };
+		BF3065ED200CB5BB00F3058E /* AISRunMissionMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunMissionMapViewController.h; sourceTree = "<group>"; };
+		BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunMissionMapViewController.m; sourceTree = "<group>"; };
+		BF3065F0200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunMissionCharacteristicsViewController.h; sourceTree = "<group>"; };
+		BF3065F1200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunMissionCharacteristicsViewController.m; sourceTree = "<group>"; };
 		BF3065F3200CF3F500F3058E /* eq6v-MGxOuU.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eq6v-MGxOuU.jpg"; sourceTree = "<group>"; };
 		BF3065F7200D3B0700F3058E /* AISTranslationUnitsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISTranslationUnitsModel.h; sourceTree = "<group>"; };
 		BF3065F8200D3B0700F3058E /* AISTranslationUnitsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTranslationUnitsModel.m; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 		BF4CE9F32012D23D000BEC8A /* AISLoadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISLoadViewController.m; sourceTree = "<group>"; };
 		BF4CE9F52012D844000BEC8A /* redSaber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redSaber.png; sourceTree = "<group>"; };
 		BF4CE9F82012EB32000BEC8A /* lightsaber-1980163_960_720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightsaber-1980163_960_720.png"; sourceTree = "<group>"; };
-		BF4CE9FA2012F52B000BEC8A /* TypeOfPersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeOfPersonViewController.h; sourceTree = "<group>"; };
-		BF4CE9FB2012F52B000BEC8A /* TypeOfPersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeOfPersonViewController.m; sourceTree = "<group>"; };
+		BF4CE9FA2012F52B000BEC8A /* AISTypeOfPersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISTypeOfPersonViewController.h; sourceTree = "<group>"; };
+		BF4CE9FB2012F52B000BEC8A /* AISTypeOfPersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTypeOfPersonViewController.m; sourceTree = "<group>"; };
 		BF4CE9FD2012F575000BEC8A /* AISCaharcterSW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCaharcterSW.h; sourceTree = "<group>"; };
 		BF4CE9FE2012F575000BEC8A /* AISCaharcterSW.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCaharcterSW.m; sourceTree = "<group>"; };
 		BF4CEA002012F6E8000BEC8A /* AISHelperForCharactersSW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISHelperForCharactersSW.h; sourceTree = "<group>"; };
@@ -172,12 +172,12 @@
 		BF4CEA052012FBE5000BEC8A /* countdooku_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = countdooku_detail.png; sourceTree = "<group>"; };
 		BF4CEA062012FBE5000BEC8A /* obiwankenobi_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obiwankenobi_detail.png; sourceTree = "<group>"; };
 		BF4CEA072012FBE6000BEC8A /* Master_Yoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Master_Yoda.png; sourceTree = "<group>"; };
-		BF7D3477200E2837007D33B2 /* MainViewTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewTabbarController.h; sourceTree = "<group>"; };
-		BF7D3478200E2837007D33B2 /* MainViewTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewTabbarController.m; sourceTree = "<group>"; };
-		BF7D3480200E2A3F007D33B2 /* StatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
-		BF7D3481200E2A3F007D33B2 /* StatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
-		BF7D3483200E36C4007D33B2 /* StatsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsTableViewCell.h; sourceTree = "<group>"; };
-		BF7D3484200E36C4007D33B2 /* StatsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsTableViewCell.m; sourceTree = "<group>"; };
+		BF7D3477200E2837007D33B2 /* AISMainViewTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISMainViewTabbarController.h; sourceTree = "<group>"; };
+		BF7D3478200E2837007D33B2 /* AISMainViewTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISMainViewTabbarController.m; sourceTree = "<group>"; };
+		BF7D3480200E2A3F007D33B2 /* AISStatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISStatsViewController.h; sourceTree = "<group>"; };
+		BF7D3481200E2A3F007D33B2 /* AISStatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISStatsViewController.m; sourceTree = "<group>"; };
+		BF7D3483200E36C4007D33B2 /* AISStatsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISStatsTableViewCell.h; sourceTree = "<group>"; };
+		BF7D3484200E36C4007D33B2 /* AISStatsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISStatsTableViewCell.m; sourceTree = "<group>"; };
 		BF83EE162008B0F3000EBA5C /* RunQuestAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunQuestAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF83EE192008B0F3000EBA5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF83EE1A2008B0F3000EBA5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 		BF83EE3C2008B0F3000EBA5C /* RunQuestAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunQuestAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF83EE402008B0F3000EBA5C /* RunQuestAIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunQuestAIUITests.m; sourceTree = "<group>"; };
 		BF83EE422008B0F3000EBA5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFBE0CBD200E8D9500C3F019 /* RunStaticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunStaticsViewController.h; sourceTree = "<group>"; };
-		BFBE0CBE200E8D9500C3F019 /* RunStaticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunStaticsViewController.m; sourceTree = "<group>"; };
+		BFBE0CBD200E8D9500C3F019 /* AISRunStaticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunStaticsViewController.h; sourceTree = "<group>"; };
+		BFBE0CBE200E8D9500C3F019 /* AISRunStaticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunStaticsViewController.m; sourceTree = "<group>"; };
 		BFC1615620114D6900EF12BC /* AISSystemSpeaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISSystemSpeaker.h; sourceTree = "<group>"; };
 		BFC1615720114D6900EF12BC /* AISSystemSpeaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISSystemSpeaker.m; sourceTree = "<group>"; };
 		BFC1615920115B6500EF12BC /* AISRealVoicesPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRealVoicesPlayer.h; sourceTree = "<group>"; };
@@ -253,18 +253,18 @@
 			isa = PBXGroup;
 			children = (
 				BF4CE9BB20128F0B000BEC8A /* PrisesPageViewController */,
-				BF26D485200F970900D70121 /* PrisesCollectionViewController.h */,
-				BF4CE9FA2012F52B000BEC8A /* TypeOfPersonViewController.h */,
-				BF4CE9FB2012F52B000BEC8A /* TypeOfPersonViewController.m */,
+				BF26D485200F970900D70121 /* AISPrisesCollectionViewController.h */,
+				BF26D486200F970900D70121 /* AISPrisesCollectionViewController.m */,
+				BF4CE9FA2012F52B000BEC8A /* AISTypeOfPersonViewController.h */,
+				BF4CE9FB2012F52B000BEC8A /* AISTypeOfPersonViewController.m */,
 				BF4CEA002012F6E8000BEC8A /* AISHelperForCharactersSW.h */,
 				BF4CEA012012F6E8000BEC8A /* AISHelperForCharactersSW.m */,
 				BF4CE9FD2012F575000BEC8A /* AISCaharcterSW.h */,
 				BF4CE9FE2012F575000BEC8A /* AISCaharcterSW.m */,
-				BF26D486200F970900D70121 /* PrisesCollectionViewController.m */,
-				BF26D48C200F9BF300D70121 /* PrisesCollectionViewCell.h */,
-				BF26D48D200F9BF300D70121 /* PrisesCollectionViewCell.m */,
-				BF26D488200F990100D70121 /* PrisesCollectionReusableView.h */,
-				BF26D489200F990100D70121 /* PrisesCollectionReusableView.m */,
+				BF26D48C200F9BF300D70121 /* AISPrisesCollectionViewCell.h */,
+				BF26D48D200F9BF300D70121 /* AISPrisesCollectionViewCell.m */,
+				BF26D488200F990100D70121 /* AISPrisesCollectionReusableView.h */,
+				BF26D489200F990100D70121 /* AISPrisesCollectionReusableView.m */,
 			);
 			path = PisesCollectionViewControllers;
 			sourceTree = "<group>";
@@ -272,8 +272,8 @@
 		BF26D48F200F9E6000D70121 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				BF7D3477200E2837007D33B2 /* MainViewTabbarController.h */,
-				BF7D3478200E2837007D33B2 /* MainViewTabbarController.m */,
+				BF7D3477200E2837007D33B2 /* AISMainViewTabbarController.h */,
+				BF7D3478200E2837007D33B2 /* AISMainViewTabbarController.m */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -317,8 +317,8 @@
 		BF4CE9AB20128DD1000BEC8A /* StarterRunViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF3065CE200BDBAC00F3058E /* BeginRunViewController.h */,
-				BF3065CF200BDBAC00F3058E /* BeginRunViewController.m */,
+				BF3065CE200BDBAC00F3058E /* AISBeginRunViewController.h */,
+				BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */,
 				BF26D47E200F74EF00D70121 /* SettingsViewController.h */,
 				BF26D47F200F74EF00D70121 /* SettingsViewController.m */,
 				BF4CE9F22012D23D000BEC8A /* AISLoadViewController.h */,
@@ -339,12 +339,12 @@
 		BF4CE9AD20128E18000BEC8A /* StatiscsViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF7D3480200E2A3F007D33B2 /* StatsViewController.h */,
-				BF7D3481200E2A3F007D33B2 /* StatsViewController.m */,
-				BFBE0CBD200E8D9500C3F019 /* RunStaticsViewController.h */,
-				BFBE0CBE200E8D9500C3F019 /* RunStaticsViewController.m */,
-				BF7D3483200E36C4007D33B2 /* StatsTableViewCell.h */,
-				BF7D3484200E36C4007D33B2 /* StatsTableViewCell.m */,
+				BF7D3480200E2A3F007D33B2 /* AISStatsViewController.h */,
+				BF7D3481200E2A3F007D33B2 /* AISStatsViewController.m */,
+				BFBE0CBD200E8D9500C3F019 /* AISRunStaticsViewController.h */,
+				BFBE0CBE200E8D9500C3F019 /* AISRunStaticsViewController.m */,
+				BF7D3483200E36C4007D33B2 /* AISStatsTableViewCell.h */,
+				BF7D3484200E36C4007D33B2 /* AISStatsTableViewCell.m */,
 			);
 			path = StatiscsViewControllers;
 			sourceTree = "<group>";
@@ -365,8 +365,8 @@
 		BF4CE9BB20128F0B000BEC8A /* PrisesPageViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BF26D49E20103FF200D70121 /* PrisesPagesViewController.h */,
-				BF26D49F20103FF200D70121 /* PrisesPagesViewController.m */,
+				BF26D49E20103FF200D70121 /* AISPrisesPagesViewController.h */,
+				BF26D49F20103FF200D70121 /* AISPrisesPagesViewController.m */,
 			);
 			path = PrisesPageViewController;
 			sourceTree = "<group>";
@@ -433,14 +433,14 @@
 		BF7D347A200E28A4007D33B2 /* RunMissionViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF3065ED200CB5BB00F3058E /* RunMissionMapViewController.h */,
-				BF3065EE200CB5BB00F3058E /* RunMissionMapViewController.m */,
-				BF3065E7200C144F00F3058E /* CountdownRunMissionViewController.h */,
-				BF3065E8200C144F00F3058E /* CountdownRunMissionViewController.m */,
-				BF3065EA200CB4A800F3058E /* RunMissionInProgressTabBarController.h */,
-				BF3065EB200CB4A800F3058E /* RunMissionInProgressTabBarController.m */,
-				BF3065F0200CB7FA00F3058E /* RunMissionCharacteristicsViewController.h */,
-				BF3065F1200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m */,
+				BF3065ED200CB5BB00F3058E /* AISRunMissionMapViewController.h */,
+				BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */,
+				BF3065E7200C144F00F3058E /* AISCountdownRunMissionViewController.h */,
+				BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */,
+				BF3065EA200CB4A800F3058E /* AISRunMissionInProgressTabBarController.h */,
+				BF3065EB200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m */,
+				BF3065F0200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.h */,
+				BF3065F1200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m */,
 			);
 			path = RunMissionViewControllers;
 			sourceTree = "<group>";
@@ -842,40 +842,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4CE9FF2012F575000BEC8A /* AISCaharcterSW.m in Sources */,
-				BFBE0CBF200E8D9500C3F019 /* RunStaticsViewController.m in Sources */,
+				BFBE0CBF200E8D9500C3F019 /* AISRunStaticsViewController.m in Sources */,
 				BFC1615820114D6900EF12BC /* AISSystemSpeaker.m in Sources */,
 				BF39BC202014CB9C00919F1D /* Run+CoreDataProperties.m in Sources */,
 				BF26D4A6201067BD00D70121 /* AISRunTarget.m in Sources */,
-				BF4CE9FC2012F52B000BEC8A /* TypeOfPersonViewController.m in Sources */,
-				BF26D48E200F9BF300D70121 /* PrisesCollectionViewCell.m in Sources */,
+				BF4CE9FC2012F52B000BEC8A /* AISTypeOfPersonViewController.m in Sources */,
+				BF26D48E200F9BF300D70121 /* AISPrisesCollectionViewCell.m in Sources */,
 				BF4CEA022012F6E8000BEC8A /* AISHelperForCharactersSW.m in Sources */,
 				BF26D4952010051B00D70121 /* AISLightSaberView.m in Sources */,
-				BF26D487200F970900D70121 /* PrisesCollectionViewController.m in Sources */,
-				BF7D3479200E2837007D33B2 /* MainViewTabbarController.m in Sources */,
+				BF26D487200F970900D70121 /* AISPrisesCollectionViewController.m in Sources */,
+				BF7D3479200E2837007D33B2 /* AISMainViewTabbarController.m in Sources */,
 				BF39BC1E2014CB9C00919F1D /* Location+CoreDataProperties.m in Sources */,
-				BF3065EF200CB5BB00F3058E /* RunMissionMapViewController.m in Sources */,
-				BF3065F2200CB7FA00F3058E /* RunMissionCharacteristicsViewController.m in Sources */,
-				BF3065D0200BDBAC00F3058E /* BeginRunViewController.m in Sources */,
+				BF3065EF200CB5BB00F3058E /* AISRunMissionMapViewController.m in Sources */,
+				BF3065F2200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m in Sources */,
+				BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */,
 				BF26D4A92010697D00D70121 /* AISTargetAllocator.m in Sources */,
 				BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */,
 				BF26D483200F893200D70121 /* AISUserDefaultsService.m in Sources */,
 				BF39BC1D2014CB9C00919F1D /* Location+CoreDataClass.m in Sources */,
-				BF7D3482200E2A3F007D33B2 /* StatsViewController.m in Sources */,
-				BF26D4A020103FF200D70121 /* PrisesPagesViewController.m in Sources */,
+				BF7D3482200E2A3F007D33B2 /* AISStatsViewController.m in Sources */,
+				BF26D4A020103FF200D70121 /* AISPrisesPagesViewController.m in Sources */,
 				BF26D4AD20107DA400D70121 /* AISButtonsForTheBeginRunView.m in Sources */,
 				BF39BC1F2014CB9C00919F1D /* Run+CoreDataClass.m in Sources */,
 				BF26D480200F74EF00D70121 /* SettingsViewController.m in Sources */,
 				BF26D492200FDEB900D70121 /* AISDataService.m in Sources */,
 				BF26D4A32010678C00D70121 /* AISTargetAllocatorHelper.m in Sources */,
-				BF3065E9200C144F00F3058E /* CountdownRunMissionViewController.m in Sources */,
+				BF3065E9200C144F00F3058E /* AISCountdownRunMissionViewController.m in Sources */,
 				BF83EE242008B0F3000EBA5C /* RunQuestAI.xcdatamodeld in Sources */,
-				BF7D3485200E36C4007D33B2 /* StatsTableViewCell.m in Sources */,
+				BF7D3485200E36C4007D33B2 /* AISStatsTableViewCell.m in Sources */,
 				BF83EE2C2008B0F3000EBA5C /* main.m in Sources */,
 				BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */,
 				BF83EE1B2008B0F3000EBA5C /* AppDelegate.m in Sources */,
-				BF26D48A200F990100D70121 /* PrisesCollectionReusableView.m in Sources */,
+				BF26D48A200F990100D70121 /* AISPrisesCollectionReusableView.m in Sources */,
 				BF4CE9F42012D23D000BEC8A /* AISLoadViewController.m in Sources */,
-				BF3065EC200CB4A800F3058E /* RunMissionInProgressTabBarController.m in Sources */,
+				BF3065EC200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m in Sources */,
 				BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

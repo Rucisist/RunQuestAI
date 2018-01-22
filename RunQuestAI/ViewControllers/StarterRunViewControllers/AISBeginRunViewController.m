@@ -6,8 +6,8 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "BeginRunViewController.h"
-#import "CountdownRunMissionViewController.h"
+#import "AISBeginRunViewController.h"
+#import "AISCountdownRunMissionViewController.h"
 #import "SettingsViewController.h"
 #import "AISUserDefaultsService.h"
 #import "AISLightSaberView.h"
@@ -17,7 +17,7 @@ static CGFloat AISstartRunButtonDiameter = 100;
 static CGFloat AISSettingsButtonDiameter = 60;
 static CGFloat AISoffsetFromBottom = 200;
 
-@interface BeginRunViewController ()
+@interface AISBeginRunViewController ()
 
 @property (nonatomic, strong) UIButton *startRunButton;
 @property (nonatomic, strong) UIImageView *lightSaberImageView;
@@ -35,7 +35,7 @@ static CGFloat AISoffsetFromBottom = 200;
 
 @end
 
-@implementation BeginRunViewController
+@implementation AISBeginRunViewController
 
 
 
@@ -136,8 +136,8 @@ static CGFloat AISoffsetFromBottom = 200;
 
 -(void)goToCountdownViewController
 {
-    CountdownRunMissionViewController *countdownViewController;
-    countdownViewController = [CountdownRunMissionViewController new];
+    AISCountdownRunMissionViewController *countdownViewController;
+    countdownViewController = [AISCountdownRunMissionViewController new];
     
     [self.navigationController pushViewController:countdownViewController animated:YES];
 }

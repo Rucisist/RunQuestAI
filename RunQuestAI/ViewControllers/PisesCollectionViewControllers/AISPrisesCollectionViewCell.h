@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PrisesCollectionViewCell : UICollectionViewCell
+@interface AISPrisesCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UILabel *textLabel;
 @property (nonatomic, strong) UIImageView *priseImage;

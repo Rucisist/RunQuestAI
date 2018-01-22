@@ -6,20 +6,20 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "PrisesPagesViewController.h"
-#import "PrisesCollectionViewController.h"
-#import "StatsViewController.h"
-#import "TypeOfPersonViewController.h"
+#import "AISPrisesPagesViewController.h"
+#import "AISPrisesCollectionViewController.h"
+#import "AISStatsViewController.h"
+#import "AISTypeOfPersonViewController.h"
 
-@interface PrisesPagesViewController ()
+@interface AISPrisesPagesViewController ()
 
 @property (nonatomic, assign) NSUInteger index;
-@property (nonatomic, strong) TypeOfPersonViewController *typeOfPersonViewController;
-@property (nonatomic, strong) PrisesCollectionViewController *prisesCollectionViewController;
+@property (nonatomic, strong) AISTypeOfPersonViewController *typeOfPersonViewController;
+@property (nonatomic, strong) AISPrisesCollectionViewController *prisesCollectionViewController;
 
 @end
 
-@implementation PrisesPagesViewController
+@implementation AISPrisesPagesViewController
 
 @synthesize PageViewController,arrPageTitles,arrPageImages;
 
@@ -28,8 +28,8 @@
     
     self.index = 0;
     
-    self.typeOfPersonViewController = [TypeOfPersonViewController new];
-    self.prisesCollectionViewController = [PrisesCollectionViewController new];
+    self.typeOfPersonViewController = [AISTypeOfPersonViewController new];
+    self.prisesCollectionViewController = [AISPrisesCollectionViewController new];
     
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
@@ -60,25 +60,25 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    if ([viewController isKindOfClass:[PrisesCollectionViewController class]])
+    if ([viewController isKindOfClass:[AISPrisesCollectionViewController class]])
     {
         return nil;
     }
     else
     {
-        return [PrisesCollectionViewController new];
+        return [AISPrisesCollectionViewController new];
     }
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    if ([viewController isKindOfClass:[TypeOfPersonViewController class]])
+    if ([viewController isKindOfClass:[AISTypeOfPersonViewController class]])
     {
         return nil;
     }
     else
     {
-        return [TypeOfPersonViewController new];
+        return [AISTypeOfPersonViewController new];
     }
 }
 

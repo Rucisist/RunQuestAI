@@ -6,18 +6,18 @@
 //  Copyright © 2018 Андрей Илалов. All rights reserved.
 //
 
-#import "TypeOfPersonViewController.h"
+#import "AISTypeOfPersonViewController.h"
 #import "AISHelperForCharactersSW.h"
 #import "AISCaharcterSW.h"
 
-@interface TypeOfPersonViewController ()
+@interface AISTypeOfPersonViewController ()
 
 @property (nonatomic, strong) UIImageView *characterImageView;
 @property (nonatomic, strong) UILabel *characterDescriptionLabel;
 
 @end
 
-@implementation TypeOfPersonViewController
+@implementation AISTypeOfPersonViewController
 
 -(instancetype)init
 {
