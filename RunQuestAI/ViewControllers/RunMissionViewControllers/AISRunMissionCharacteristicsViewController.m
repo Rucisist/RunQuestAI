@@ -105,10 +105,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -119,7 +115,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 {
     self.locationManager = [CLLocationManager new];
     self.locationManager.delegate = self;
-    
 }
 
 -(void)openMapViewAndPaintaRouteWith

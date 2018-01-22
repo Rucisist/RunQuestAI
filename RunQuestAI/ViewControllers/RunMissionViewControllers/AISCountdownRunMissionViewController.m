@@ -10,6 +10,7 @@
 #import "AISRunMissionInProgressTabBarController.h"
 #import "AISRunMissionCharacteristicsViewController.h"
 
+
 static const int AIScountdownTime = 6;
 static const CGFloat AIScountdownLabelWidth = 200;
 static const CGFloat AIScountdownLabelHeight = 100;
@@ -102,8 +103,8 @@ static const CGFloat AISYOffset = 50;
     [self returnCountdownLabelHelperToTheInitialState];
     
     [UIView animateWithDuration:0.3 animations:^{
-        CGPoint center = CGPointMake(self.countdownLabel.center.x, self.countdownLabel.center.y + 50);
-        CGPoint centerHelper = CGPointMake(self.countdownLabelHelper.center.x, self.countdownLabelHelper.center.y + 50);
+        CGPoint center = CGPointMake(self.countdownLabel.center.x, self.countdownLabel.center.y + AISYOffset);
+        CGPoint centerHelper = CGPointMake(self.countdownLabelHelper.center.x, self.countdownLabelHelper.center.y + AISYOffset);
         
         self.countdownLabel.center = center;
         self.countdownLabelHelper.center = centerHelper;

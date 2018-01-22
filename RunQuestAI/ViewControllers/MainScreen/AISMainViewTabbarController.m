@@ -12,6 +12,10 @@
 #import "AISPrisesCollectionViewController.h"
 #import "AISPrisesPagesViewController.h"
 
+static const double AISSaberAppearAnimationDuration = 2.0;
+static const double AISSaberDissapearAnimationDuration = 2.0;
+static const double AISDelayAnimationDuration = 2.0;
+
 @interface AISMainViewTabbarController ()
 
 @property (nonatomic, strong) UIImageView *loadingImageView;
@@ -21,6 +25,7 @@
 @property (nonatomic, strong) AISPrisesPagesViewController *prisesPagesViewController;
 
 @end
+
 
 @implementation AISMainViewTabbarController
 
@@ -37,11 +42,6 @@
     [self.beginRunViewController configureSaberView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 -(void)configureTabBarWithViewControllers
 {
     self.beginRunViewController = [AISBeginRunViewController new];
@@ -49,7 +49,9 @@
     self.prisesPagesViewController = [AISPrisesPagesViewController new];
     
     UITabBarItem *firstItem = [[UITabBarItem alloc] initWithTitle:@"run" image:[UIImage imageNamed:@"road"] tag:0];
+    
     UITabBarItem *rightTabBarItem = [[UITabBarItem alloc] initWithTitle:@"stats" image:[UIImage imageNamed:@"runbuttonImageLittle"] tag:1];
+    
     UITabBarItem *thirdTabBarItem = [[UITabBarItem alloc] initWithTitle:@"prises" image:[UIImage imageNamed:@"medal"] tag:2];
     
     self.beginRunViewController.tabBarItem = firstItem;
@@ -80,13 +82,13 @@
     
     CGRect theFrame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 0);
     
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:AISSaberAppearAnimationDuration animations:^{
         helperCoverView.frame = theFrame;
     } completion:^(BOOL Complete){
         
     }];
     
-    [UIView animateWithDuration:2.0 delay:2.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:AISSaberDissapearAnimationDuration delay:AISDelayAnimationDuration options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.loadingImageView.alpha = 0.0;
     } completion:^(BOOL Finished){
         [self.view sendSubviewToBack:self.loadingImageView];
@@ -94,14 +96,5 @@
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
