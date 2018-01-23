@@ -13,6 +13,7 @@
 @interface AISRealVoicesPlayer : NSObject <AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer; //the player
+@property (nonatomic, strong) NSString *soundURL;
 
 -(void)play;
 

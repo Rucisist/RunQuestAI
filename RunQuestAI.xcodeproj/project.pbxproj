@@ -23,6 +23,8 @@
 		BF26D4AD20107DA400D70121 /* AISButtonsForTheBeginRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4AC20107DA400D70121 /* AISButtonsForTheBeginRunView.m */; };
 		BF2BF7A420178ADA003118F4 /* AISRunTargetAllocatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A320178ADA003118F4 /* AISRunTargetAllocatorTest.m */; };
 		BF2BF7A620178C4E003118F4 /* AISTargetAllocatorHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A520178C4E003118F4 /* AISTargetAllocatorHelperTest.m */; };
+		BF2BF7A82017983A003118F4 /* AISUserDefaultsServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A72017983A003118F4 /* AISUserDefaultsServiceTest.m */; };
+		BF2BF7AA201799B7003118F4 /* AISPlayerAudioTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A9201799B7003118F4 /* AISPlayerAudioTest.m */; };
 		BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */; };
 		BF3065E9200C144F00F3058E /* AISCountdownRunMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */; };
 		BF3065EF200CB5BB00F3058E /* AISRunMissionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */; };
@@ -130,6 +132,8 @@
 		BF26D4AC20107DA400D70121 /* AISButtonsForTheBeginRunView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISButtonsForTheBeginRunView.m; sourceTree = "<group>"; };
 		BF2BF7A320178ADA003118F4 /* AISRunTargetAllocatorTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunTargetAllocatorTest.m; sourceTree = "<group>"; };
 		BF2BF7A520178C4E003118F4 /* AISTargetAllocatorHelperTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTargetAllocatorHelperTest.m; sourceTree = "<group>"; };
+		BF2BF7A72017983A003118F4 /* AISUserDefaultsServiceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISUserDefaultsServiceTest.m; sourceTree = "<group>"; };
+		BF2BF7A9201799B7003118F4 /* AISPlayerAudioTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPlayerAudioTest.m; sourceTree = "<group>"; };
 		BF3065CE200BDBAC00F3058E /* AISBeginRunViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISBeginRunViewController.h; sourceTree = "<group>"; };
 		BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISBeginRunViewController.m; sourceTree = "<group>"; };
 		BF3065E7200C144F00F3058E /* AISCountdownRunMissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCountdownRunMissionViewController.h; sourceTree = "<group>"; };
@@ -310,7 +314,7 @@
 				BF39BC2C201679C000919F1D /* AISPathHelperModel.h */,
 				BF39BC2D201679C000919F1D /* AISPathHelperModel.m */,
 				BF39BC2B2016698900919F1D /* AISDownloadService */,
-				BF4CE9F72012E37B000BEC8A /* AISApeakerModel */,
+				BF4CE9F72012E37B000BEC8A /* AISSpeakerModel */,
 				BF26D484200F915F00D70121 /* AISModelHelpers */,
 				BF26D4AA2010698900D70121 /* AISTargetModel */,
 				BF4CE9AC20128DF7000BEC8A /* CoreDataClasses */,
@@ -468,7 +472,7 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		BF4CE9F72012E37B000BEC8A /* AISApeakerModel */ = {
+		BF4CE9F72012E37B000BEC8A /* AISSpeakerModel */ = {
 			isa = PBXGroup;
 			children = (
 				BFC1615620114D6900EF12BC /* AISSystemSpeaker.h */,
@@ -476,7 +480,7 @@
 				BFC1615920115B6500EF12BC /* AISRealVoicesPlayer.h */,
 				BFC1615A20115B6500EF12BC /* AISRealVoicesPlayer.m */,
 			);
-			path = AISApeakerModel;
+			path = AISSpeakerModel;
 			sourceTree = "<group>";
 		};
 		BF7D347A200E28A4007D33B2 /* RunMissionViewControllers */ = {
@@ -540,6 +544,8 @@
 		BF83EE342008B0F3000EBA5C /* RunQuestAITests */ = {
 			isa = PBXGroup;
 			children = (
+				BF2BF7A9201799B7003118F4 /* AISPlayerAudioTest.m */,
+				BF2BF7A72017983A003118F4 /* AISUserDefaultsServiceTest.m */,
 				BF2BF7A520178C4E003118F4 /* AISTargetAllocatorHelperTest.m */,
 				BF2BF7A320178ADA003118F4 /* AISRunTargetAllocatorTest.m */,
 				BF39BC47201775AC00919F1D /* AISTranslationUnitModelTest.m */,
@@ -939,7 +945,9 @@
 				BF2BF7A620178C4E003118F4 /* AISTargetAllocatorHelperTest.m in Sources */,
 				BF4CE9A920128901000BEC8A /* AISRunTargetTest.m in Sources */,
 				BF2BF7A420178ADA003118F4 /* AISRunTargetAllocatorTest.m in Sources */,
+				BF2BF7AA201799B7003118F4 /* AISPlayerAudioTest.m in Sources */,
 				BF39BC48201775AC00919F1D /* AISTranslationUnitModelTest.m in Sources */,
+				BF2BF7A82017983A003118F4 /* AISUserDefaultsServiceTest.m in Sources */,
 				BF39BC4620176E2300919F1D /* AISPathHelperModelTest.m in Sources */,
 				BF83EE362008B0F3000EBA5C /* RunQuestAITests.m in Sources */,
 			);
