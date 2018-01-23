@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "AISConfiguratorProtocolDelegate.h"
 
 @interface AISRunMissionCharacteristicsViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+-(void)pauseButtonPressed;
+-(void)resumeButtonPressed;
+-(void)stopButtonPressed;
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "AISCountdownRunMissionViewController.h"
-#import "AISRunMissionInProgressTabBarController.h"
 #import "AISRunMissionCharacteristicsViewController.h"
 
 

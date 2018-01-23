@@ -7,55 +7,16 @@
 //
 
 #import "AISRunMissionCharacteristicsViewController.h"
-#import "AISTranslationUnitsModel.h"
-#import "Location+CoreDataProperties.h"
-#import "Run+CoreDataProperties.h"
-#import "AISMainViewTabbarController.h"
-#import "AppDelegate.h"
-#import "AISDataService.h"
-#import "AISTargetAllocatorHelper.h"
-#import "AISRunMissionMapViewController.h"
-#import "AISSystemSpeaker.h"
-#import "AISRealVoicesPlayer.h"
-#import "AISCustomRunView.h"
+#import "AISConfiguratorProtocol.h"
+#import "AISCharacteristicViewConfigurator.h"
 
-static CGFloat paceTimeDTAlabelWidth = 100;
 static CGFloat paceTimeDTAlabelHeight = 50;
 static CGFloat pauseButtonDiameter = 100;
 static CGFloat pauseButtonSpaceFromCenter = 100;
 
 @interface AISRunMissionCharacteristicsViewController ()
 
-@property int seconds;
-@property int lastSecond;
-@property float distance;
-@property float distanceToAim;
-@property (nonatomic) BOOL isPaused;
-@property (nonatomic) BOOL beenOnPause;
-@property (nonatomic) CGRect viewFrame;
 
-@property (nonatomic, strong) NSMutableArray *locations;
-@property (nonatomic, strong) NSTimer *timer;
-
-@property (nonatomic, strong) UILabel *paceLabel;
-@property (nonatomic, strong) UILabel *timeLabel;
-@property (nonatomic, strong) UILabel *distanceToAimLabel;
-@property (nonatomic, strong) UILabel *distanceLabel;
-
-@property (nonatomic, strong) UIVisualEffectView *blurEffectView;
-
-@property (nonatomic, strong) UIButton *pauseButton;
-@property (nonatomic, strong) UIButton *stopButton;
-@property (nonatomic, strong) UIButton *resumeButton;
-@property (nonatomic, strong) UIButton *mapViewOpenButton;
-@property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, strong) CLLocation *targetLocation;
-
-@property (nonatomic, strong) AISSystemSpeaker *speaker;
-@property (nonatomic, strong) AISRealVoicesPlayer *voicePlayer;
-@property (nonatomic, strong) Run *run;
-@property (nonatomic, strong) AISDataService *dataService;
-@property (nonatomic, strong) AISTargetAllocatorHelper *targetAllocator;
 
 @end
 
@@ -64,8 +25,13 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self addBackgroundView];
+    //[self addBackgroundView];
     
+    self.UIConfigurator = [AISCharacteristicViewConfigurator new];
+    
+    self.UIConfigurator.viewController = self;
+    
+    [self.UIConfigurator configureUI];
     
     self.distanceToAim = 0;
     self.targetAllocator = [AISTargetAllocatorHelper new];
@@ -94,7 +60,7 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     
     self.dataService = [AISDataService new];
     self.viewFrame = self.view.frame;
-    [self configureUI];
+    //[self configureUI];
     [self startRun];
     
     self.paceLabel.text = @"0.00";
@@ -202,7 +168,6 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     self.resumeButton.hidden = YES;
     
     [self goToBeginRunViewController];
-    
 }
 
 -(void)goToBeginRunViewController
@@ -265,23 +230,23 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     [self startLocationUpdates];
 }
 
--(void)configurePaceLabel
-{
-    CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
-    CGFloat paceLabelHeight = paceTimeDTAlabelHeight;
-    CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
-    
-    CGRect paceLabelRect = CGRectMake(0, screenHeight / 2, screenWidth / 2, paceLabelHeight);
-    self.paceLabel = [[UILabel alloc] initWithFrame:paceLabelRect];
-    
-    self.paceLabel.numberOfLines = 2;
-    
-    self.paceLabel.textAlignment = NSTextAlignmentCenter;
-    
-    [self.paceLabel setFont:[UIFont fontWithName:@"Helvetica" size:20]];
-    
-    [self.view addSubview:self.paceLabel];
-}
+//-(void)configurePaceLabel
+//{
+//    CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
+//    CGFloat paceLabelHeight = paceTimeDTAlabelHeight;
+//    CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
+//
+//    CGRect paceLabelRect = CGRectMake(0, screenHeight / 2, screenWidth / 2, paceLabelHeight);
+//    self.paceLabel = [[UILabel alloc] initWithFrame:paceLabelRect];
+//
+//    self.paceLabel.numberOfLines = 2;
+//
+//    self.paceLabel.textAlignment = NSTextAlignmentCenter;
+//
+//    [self.paceLabel setFont:[UIFont fontWithName:@"Helvetica" size:20]];
+//
+//    [self.view addSubview:self.paceLabel];
+//}
 
 -(void)changeColorOfLabelsTo: (UIColor*) color
 {
@@ -291,67 +256,67 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
     self.distanceToAimLabel.textColor = color;
 }
 
--(void)configureTimeLabel
-{
-    CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
-    CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
-    CGFloat timeLabelHeight = paceTimeDTAlabelHeight;
-    
-    CGRect timeLabelRect = CGRectMake(screenWidth/2, screenHeight / 2, screenWidth / 2, timeLabelHeight);
-    self.timeLabel = [[UILabel alloc] initWithFrame:timeLabelRect];
-    
-    self.timeLabel.numberOfLines = 2;
-    
-    self.timeLabel.textAlignment = NSTextAlignmentCenter;
-    
-    self.timeLabel.text = @"0";
-    
-    [self.timeLabel setFont:[UIFont fontWithName:@"Helvetica" size:20]];
-    
-    [self.view addSubview:self.timeLabel];
-}
+//-(void)configureTimeLabel
+//{
+//    CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
+//    CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
+//    CGFloat timeLabelHeight = paceTimeDTAlabelHeight;
+//
+//    CGRect timeLabelRect = CGRectMake(screenWidth/2, screenHeight / 2, screenWidth / 2, timeLabelHeight);
+//    self.timeLabel = [[UILabel alloc] initWithFrame:timeLabelRect];
+//
+//    self.timeLabel.numberOfLines = 2;
+//
+//    self.timeLabel.textAlignment = NSTextAlignmentCenter;
+//
+//    self.timeLabel.text = @"0";
+//
+//    [self.timeLabel setFont:[UIFont fontWithName:@"Helvetica" size:20]];
+//
+//    [self.view addSubview:self.timeLabel];
+//}
 
--(void)configureDistanceToAimLabel
-{
-    CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
-    CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
-    CGFloat DTALabelHeigth = paceTimeDTAlabelHeight;
-    
-    CGRect DTARect = CGRectMake(0, screenHeight / 2 - 140, screenWidth, DTALabelHeigth *3);
-    
-    self.distanceToAimLabel = [[UILabel alloc] initWithFrame:DTARect];
-    
-    self.distanceToAimLabel.textAlignment = NSTextAlignmentCenter;
-    
-    self.distanceToAimLabel.numberOfLines = 2;
-    
-    [self.distanceToAimLabel setFont:[UIFont fontWithName:@"Helvetica" size:38]];
-    
-    [self.view addSubview:self.distanceToAimLabel];
-}
+//-(void)configureDistanceToAimLabel
+//{
+//    CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
+//    CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
+//    CGFloat DTALabelHeigth = paceTimeDTAlabelHeight;
+//
+//    CGRect DTARect = CGRectMake(0, screenHeight / 2 - 140, screenWidth, DTALabelHeigth *3);
+//
+//    self.distanceToAimLabel = [[UILabel alloc] initWithFrame:DTARect];
+//
+//    self.distanceToAimLabel.textAlignment = NSTextAlignmentCenter;
+//
+//    self.distanceToAimLabel.numberOfLines = 2;
+//
+//    [self.distanceToAimLabel setFont:[UIFont fontWithName:@"Helvetica" size:38]];
+//
+//    [self.view addSubview:self.distanceToAimLabel];
+//}
 
 
 
--(void)configurePauseButton
-{
-    CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
-    CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
-    
-    CGRect pauseButtonRect = CGRectMake(screenWidth / 2 - pauseButtonDiameter / 2, screenHeight / 2 + pauseButtonSpaceFromCenter, pauseButtonDiameter, pauseButtonDiameter);
-    
-    self.pauseButton = [[UIButton alloc] initWithFrame:pauseButtonRect];
-    
-    [self.pauseButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    [self.pauseButton setTitle:@"||" forState:UIControlStateNormal];
-    
-    self.pauseButton.backgroundColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:0.7];
-    self.pauseButton.layer.cornerRadius = 23;
-    
-    [self.pauseButton addTarget:self action:@selector(pauseButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:self.pauseButton];
-}
+//-(void)configurePauseButton
+//{
+//    CGFloat screenHeight = CGRectGetHeight(self.viewFrame);
+//    CGFloat screenWidth = CGRectGetWidth(self.viewFrame);
+//
+//    CGRect pauseButtonRect = CGRectMake(screenWidth / 2 - pauseButtonDiameter / 2, screenHeight / 2 + pauseButtonSpaceFromCenter, pauseButtonDiameter, pauseButtonDiameter);
+//
+//    self.pauseButton = [[UIButton alloc] initWithFrame:pauseButtonRect];
+//
+//    [self.pauseButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//
+//    [self.pauseButton setTitle:@"||" forState:UIControlStateNormal];
+//
+//    self.pauseButton.backgroundColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:0.7];
+//    self.pauseButton.layer.cornerRadius = 23;
+//
+//    [self.pauseButton addTarget:self action:@selector(pauseButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+//
+//    [self.view addSubview:self.pauseButton];
+//}
 
 -(void)animationForPauseButton
 {
@@ -562,12 +527,12 @@ static CGFloat pauseButtonSpaceFromCenter = 100;
 -(void)configureUI
 {
     [self configureMainView];
-    [self configurePaceLabel];
-    [self configureTimeLabel];
-    [self configureDistanceToAimLabel];
-    [self configurePauseButton];
-    [self configureResumeButton];
-    [self configureStopButton];
+//    [self configurePaceLabel];
+//    [self configureTimeLabel];
+//    [self configureDistanceToAimLabel];
+//    [self configurePauseButton];
+    //[self configureResumeButton];
+    //[self configureStopButton];
     
     self.distanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
     self.distanceLabel.text = @"distance";

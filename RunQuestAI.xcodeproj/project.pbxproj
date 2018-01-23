@@ -23,7 +23,6 @@
 		BF26D4AD20107DA400D70121 /* AISButtonsForTheBeginRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4AC20107DA400D70121 /* AISButtonsForTheBeginRunView.m */; };
 		BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */; };
 		BF3065E9200C144F00F3058E /* AISCountdownRunMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */; };
-		BF3065EC200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EB200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m */; };
 		BF3065EF200CB5BB00F3058E /* AISRunMissionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */; };
 		BF3065F2200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F1200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m */; };
 		BF3065F4200CF3F500F3058E /* eq6v-MGxOuU.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF3065F3200CF3F500F3058E /* eq6v-MGxOuU.jpg */; };
@@ -35,6 +34,7 @@
 		BF39BC23201649F700919F1D /* AISPrisesDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC22201649F700919F1D /* AISPrisesDescription.m */; };
 		BF39BC27201659C500919F1D /* AISDownloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC26201659C500919F1D /* AISDownloadService.m */; };
 		BF39BC2E201679C000919F1D /* AISPathHelperModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC2D201679C000919F1D /* AISPathHelperModel.m */; };
+		BF39BC402016A29F00919F1D /* AISCharacteristicViewConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC3F2016A29F00919F1D /* AISCharacteristicViewConfigurator.m */; };
 		BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE99620124F97000BEC8A /* AISCustomRunView.m */; };
 		BF4CE99C20127A34000BEC8A /* GELogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE99820127A31000BEC8A /* GELogo.png */; };
 		BF4CE99D20127A34000BEC8A /* SWLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE99920127A31000BEC8A /* SWLogo.png */; };
@@ -128,8 +128,6 @@
 		BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISBeginRunViewController.m; sourceTree = "<group>"; };
 		BF3065E7200C144F00F3058E /* AISCountdownRunMissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCountdownRunMissionViewController.h; sourceTree = "<group>"; };
 		BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCountdownRunMissionViewController.m; sourceTree = "<group>"; };
-		BF3065EA200CB4A800F3058E /* AISRunMissionInProgressTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunMissionInProgressTabBarController.h; sourceTree = "<group>"; };
-		BF3065EB200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunMissionInProgressTabBarController.m; sourceTree = "<group>"; };
 		BF3065ED200CB5BB00F3058E /* AISRunMissionMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunMissionMapViewController.h; sourceTree = "<group>"; };
 		BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunMissionMapViewController.m; sourceTree = "<group>"; };
 		BF3065F0200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunMissionCharacteristicsViewController.h; sourceTree = "<group>"; };
@@ -152,6 +150,9 @@
 		BF39BC2820165A5500919F1D /* AISDownloadServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISDownloadServiceDelegate.h; sourceTree = "<group>"; };
 		BF39BC2C201679C000919F1D /* AISPathHelperModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISPathHelperModel.h; sourceTree = "<group>"; };
 		BF39BC2D201679C000919F1D /* AISPathHelperModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPathHelperModel.m; sourceTree = "<group>"; };
+		BF39BC3E2016A29F00919F1D /* AISCharacteristicViewConfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCharacteristicViewConfigurator.h; sourceTree = "<group>"; };
+		BF39BC3F2016A29F00919F1D /* AISCharacteristicViewConfigurator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCharacteristicViewConfigurator.m; sourceTree = "<group>"; };
+		BF39BC412016A98600919F1D /* AISConfiguratorProtocolDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISConfiguratorProtocolDelegate.h; sourceTree = "<group>"; };
 		BF4CE99520124F97000BEC8A /* AISCustomRunView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCustomRunView.h; sourceTree = "<group>"; };
 		BF4CE99620124F97000BEC8A /* AISCustomRunView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCustomRunView.m; sourceTree = "<group>"; };
 		BF4CE99820127A31000BEC8A /* GELogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GELogo.png; sourceTree = "<group>"; };
@@ -335,6 +336,18 @@
 			path = AISDownloadService;
 			sourceTree = "<group>";
 		};
+		BF39BC442017287600919F1D /* RunmissionCharacteristicController */ = {
+			isa = PBXGroup;
+			children = (
+				BF39BC412016A98600919F1D /* AISConfiguratorProtocolDelegate.h */,
+				BF39BC3E2016A29F00919F1D /* AISCharacteristicViewConfigurator.h */,
+				BF39BC3F2016A29F00919F1D /* AISCharacteristicViewConfigurator.m */,
+				BF3065F0200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.h */,
+				BF3065F1200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m */,
+			);
+			path = RunmissionCharacteristicController;
+			sourceTree = "<group>";
+		};
 		BF4CE9AA20128DBA000BEC8A /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,12 +476,9 @@
 			children = (
 				BF3065ED200CB5BB00F3058E /* AISRunMissionMapViewController.h */,
 				BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */,
+				BF39BC442017287600919F1D /* RunmissionCharacteristicController */,
 				BF3065E7200C144F00F3058E /* AISCountdownRunMissionViewController.h */,
 				BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */,
-				BF3065EA200CB4A800F3058E /* AISRunMissionInProgressTabBarController.h */,
-				BF3065EB200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m */,
-				BF3065F0200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.h */,
-				BF3065F1200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m */,
 			);
 			path = RunMissionViewControllers;
 			sourceTree = "<group>";
@@ -891,6 +901,7 @@
 				BF26D483200F893200D70121 /* AISUserDefaultsService.m in Sources */,
 				BF39BC1D2014CB9C00919F1D /* Location+CoreDataClass.m in Sources */,
 				BF7D3482200E2A3F007D33B2 /* AISStatsViewController.m in Sources */,
+				BF39BC402016A29F00919F1D /* AISCharacteristicViewConfigurator.m in Sources */,
 				BF26D4A020103FF200D70121 /* AISPrisesPagesViewController.m in Sources */,
 				BF26D4AD20107DA400D70121 /* AISButtonsForTheBeginRunView.m in Sources */,
 				BF39BC1F2014CB9C00919F1D /* Run+CoreDataClass.m in Sources */,
@@ -905,7 +916,6 @@
 				BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */,
 				BF83EE1B2008B0F3000EBA5C /* AppDelegate.m in Sources */,
 				BF26D48A200F990100D70121 /* AISPrisesCollectionReusableView.m in Sources */,
-				BF3065EC200CB4A800F3058E /* AISRunMissionInProgressTabBarController.m in Sources */,
 				BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1066,7 +1076,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7WJ756XHJ;
 				INFOPLIST_FILE = RunQuestAI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AI.RunQuestAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1082,7 +1092,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7WJ756XHJ;
 				INFOPLIST_FILE = RunQuestAI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AI.RunQuestAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
