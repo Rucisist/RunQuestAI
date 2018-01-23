@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Run+CoreDataClass.h"
+
 #import "Location+CoreDataProperties.h"
 
 /*! @brief класс контроллера, выводящего на карту маршрут(разноцветный) в зависимости от темпа */

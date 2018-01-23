@@ -21,15 +21,15 @@
 		BF2BF7A82017983A003118F4 /* AISUserDefaultsServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A72017983A003118F4 /* AISUserDefaultsServiceTest.m */; };
 		BF2BF7AA201799B7003118F4 /* AISPlayerAudioTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A9201799B7003118F4 /* AISPlayerAudioTest.m */; };
 		BF2BF7AD2017C4EA003118F4 /* AISCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7AC2017C4EA003118F4 /* AISCoreDataStack.m */; };
+		BF2BF7BC2017D3D6003118F4 /* Location+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7B62017D3D6003118F4 /* Location+CoreDataClass.m */; };
+		BF2BF7BD2017D3D6003118F4 /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7B72017D3D6003118F4 /* Location+CoreDataProperties.m */; };
+		BF2BF7BE2017D3D6003118F4 /* Run+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7BA2017D3D6003118F4 /* Run+CoreDataClass.m */; };
+		BF2BF7BF2017D3D6003118F4 /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7BB2017D3D6003118F4 /* Run+CoreDataProperties.m */; };
 		BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */; };
 		BF3065E9200C144F00F3058E /* AISCountdownRunMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */; };
 		BF3065EF200CB5BB00F3058E /* AISRunMissionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */; };
 		BF3065F2200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F1200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m */; };
 		BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065F8200D3B0700F3058E /* AISTranslationUnitsModel.m */; };
-		BF39BC1D2014CB9C00919F1D /* Location+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC172014CB9C00919F1D /* Location+CoreDataClass.m */; };
-		BF39BC1E2014CB9C00919F1D /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC182014CB9C00919F1D /* Location+CoreDataProperties.m */; };
-		BF39BC1F2014CB9C00919F1D /* Run+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC1B2014CB9C00919F1D /* Run+CoreDataClass.m */; };
-		BF39BC202014CB9C00919F1D /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC1C2014CB9C00919F1D /* Run+CoreDataProperties.m */; };
 		BF39BC23201649F700919F1D /* AISPrisesDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC22201649F700919F1D /* AISPrisesDescription.m */; };
 		BF39BC27201659C500919F1D /* AISDownloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC26201659C500919F1D /* AISDownloadService.m */; };
 		BF39BC2E201679C000919F1D /* AISPathHelperModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC2D201679C000919F1D /* AISPathHelperModel.m */; };
@@ -107,6 +107,14 @@
 		BF2BF7A9201799B7003118F4 /* AISPlayerAudioTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPlayerAudioTest.m; sourceTree = "<group>"; };
 		BF2BF7AB2017C4EA003118F4 /* AISCoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCoreDataStack.h; sourceTree = "<group>"; };
 		BF2BF7AC2017C4EA003118F4 /* AISCoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCoreDataStack.m; sourceTree = "<group>"; };
+		BF2BF7B42017D3D6003118F4 /* Location+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BF2BF7B52017D3D6003118F4 /* Location+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataClass.h"; sourceTree = "<group>"; };
+		BF2BF7B62017D3D6003118F4 /* Location+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataClass.m"; sourceTree = "<group>"; };
+		BF2BF7B72017D3D6003118F4 /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BF2BF7B82017D3D6003118F4 /* Run+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BF2BF7B92017D3D6003118F4 /* Run+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataClass.h"; sourceTree = "<group>"; };
+		BF2BF7BA2017D3D6003118F4 /* Run+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataClass.m"; sourceTree = "<group>"; };
+		BF2BF7BB2017D3D6003118F4 /* Run+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BF3065CE200BDBAC00F3058E /* AISBeginRunViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISBeginRunViewController.h; sourceTree = "<group>"; };
 		BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISBeginRunViewController.m; sourceTree = "<group>"; };
 		BF3065E7200C144F00F3058E /* AISCountdownRunMissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCountdownRunMissionViewController.h; sourceTree = "<group>"; };
@@ -117,14 +125,6 @@
 		BF3065F1200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunMissionCharacteristicsViewController.m; sourceTree = "<group>"; };
 		BF3065F7200D3B0700F3058E /* AISTranslationUnitsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISTranslationUnitsModel.h; sourceTree = "<group>"; };
 		BF3065F8200D3B0700F3058E /* AISTranslationUnitsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTranslationUnitsModel.m; sourceTree = "<group>"; };
-		BF39BC152014CB9C00919F1D /* Location+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BF39BC162014CB9C00919F1D /* Location+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataClass.h"; sourceTree = "<group>"; };
-		BF39BC172014CB9C00919F1D /* Location+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataClass.m"; sourceTree = "<group>"; };
-		BF39BC182014CB9C00919F1D /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BF39BC192014CB9C00919F1D /* Run+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BF39BC1A2014CB9C00919F1D /* Run+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataClass.h"; sourceTree = "<group>"; };
-		BF39BC1B2014CB9C00919F1D /* Run+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataClass.m"; sourceTree = "<group>"; };
-		BF39BC1C2014CB9C00919F1D /* Run+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BF39BC21201649F700919F1D /* AISPrisesDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISPrisesDescription.h; sourceTree = "<group>"; };
 		BF39BC22201649F700919F1D /* AISPrisesDescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPrisesDescription.m; sourceTree = "<group>"; };
 		BF39BC25201659C500919F1D /* AISDownloadService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISDownloadService.h; sourceTree = "<group>"; };
@@ -258,6 +258,21 @@
 			path = AISTargetModel;
 			sourceTree = "<group>";
 		};
+		BF2BF7C02017D42A003118F4 /* CoreDataInstances */ = {
+			isa = PBXGroup;
+			children = (
+				BF2BF7B42017D3D6003118F4 /* Location+CoreDataProperties.h */,
+				BF2BF7B52017D3D6003118F4 /* Location+CoreDataClass.h */,
+				BF2BF7B62017D3D6003118F4 /* Location+CoreDataClass.m */,
+				BF2BF7B72017D3D6003118F4 /* Location+CoreDataProperties.m */,
+				BF2BF7B82017D3D6003118F4 /* Run+CoreDataProperties.h */,
+				BF2BF7B92017D3D6003118F4 /* Run+CoreDataClass.h */,
+				BF2BF7BA2017D3D6003118F4 /* Run+CoreDataClass.m */,
+				BF2BF7BB2017D3D6003118F4 /* Run+CoreDataProperties.m */,
+			);
+			path = CoreDataInstances;
+			sourceTree = "<group>";
+		};
 		BF3065D1200C022300F3058E /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +346,7 @@
 		BF4CE9AC20128DF7000BEC8A /* CoreDataClasses */ = {
 			isa = PBXGroup;
 			children = (
+				BF2BF7C02017D42A003118F4 /* CoreDataInstances */,
 				BF26D490200FDEB900D70121 /* AISDataService.h */,
 				BF26D491200FDEB900D70121 /* AISDataService.m */,
 				BF2BF7AB2017C4EA003118F4 /* AISCoreDataStack.h */,
@@ -418,14 +434,6 @@
 		BF83EE0D2008B0F3000EBA5C = {
 			isa = PBXGroup;
 			children = (
-				BF39BC152014CB9C00919F1D /* Location+CoreDataProperties.h */,
-				BF39BC162014CB9C00919F1D /* Location+CoreDataClass.h */,
-				BF39BC172014CB9C00919F1D /* Location+CoreDataClass.m */,
-				BF39BC182014CB9C00919F1D /* Location+CoreDataProperties.m */,
-				BF39BC192014CB9C00919F1D /* Run+CoreDataProperties.h */,
-				BF39BC1A2014CB9C00919F1D /* Run+CoreDataClass.h */,
-				BF39BC1B2014CB9C00919F1D /* Run+CoreDataClass.m */,
-				BF39BC1C2014CB9C00919F1D /* Run+CoreDataProperties.m */,
 				BF83EE182008B0F3000EBA5C /* RunQuestAI */,
 				BF83EE342008B0F3000EBA5C /* RunQuestAITests */,
 				BF83EE3F2008B0F3000EBA5C /* RunQuestAIUITests */,
@@ -803,7 +811,6 @@
 				BF4CE9FF2012F575000BEC8A /* AISCaharcterSW.m in Sources */,
 				BFBE0CBF200E8D9500C3F019 /* AISRunStaticsViewController.m in Sources */,
 				BFC1615820114D6900EF12BC /* AISSystemSpeaker.m in Sources */,
-				BF39BC202014CB9C00919F1D /* Run+CoreDataProperties.m in Sources */,
 				BF26D4A6201067BD00D70121 /* AISRunTarget.m in Sources */,
 				BF4CE9FC2012F52B000BEC8A /* AISTypeOfPersonViewController.m in Sources */,
 				BF26D48E200F9BF300D70121 /* AISPrisesCollectionViewCell.m in Sources */,
@@ -813,23 +820,24 @@
 				BF26D4952010051B00D70121 /* AISLightSaberView.m in Sources */,
 				BF26D487200F970900D70121 /* AISPrisesCollectionViewController.m in Sources */,
 				BF7D3479200E2837007D33B2 /* AISMainViewTabbarController.m in Sources */,
-				BF39BC1E2014CB9C00919F1D /* Location+CoreDataProperties.m in Sources */,
 				BF3065EF200CB5BB00F3058E /* AISRunMissionMapViewController.m in Sources */,
 				BF3065F2200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m in Sources */,
 				BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */,
 				BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */,
+				BF2BF7BC2017D3D6003118F4 /* Location+CoreDataClass.m in Sources */,
+				BF2BF7BF2017D3D6003118F4 /* Run+CoreDataProperties.m in Sources */,
 				BF26D483200F893200D70121 /* AISUserDefaultsService.m in Sources */,
-				BF39BC1D2014CB9C00919F1D /* Location+CoreDataClass.m in Sources */,
 				BF7D3482200E2A3F007D33B2 /* AISStatsViewController.m in Sources */,
 				BF39BC402016A29F00919F1D /* AISCharacteristicViewConfigurator.m in Sources */,
 				BF2BF7AD2017C4EA003118F4 /* AISCoreDataStack.m in Sources */,
 				BF26D4A020103FF200D70121 /* AISPrisesPagesViewController.m in Sources */,
-				BF39BC1F2014CB9C00919F1D /* Run+CoreDataClass.m in Sources */,
 				BF39BC23201649F700919F1D /* AISPrisesDescription.m in Sources */,
 				BF26D492200FDEB900D70121 /* AISDataService.m in Sources */,
 				BF26D4A32010678C00D70121 /* AISTargetAllocatorHelper.m in Sources */,
+				BF2BF7BE2017D3D6003118F4 /* Run+CoreDataClass.m in Sources */,
 				BF3065E9200C144F00F3058E /* AISCountdownRunMissionViewController.m in Sources */,
 				BF83EE242008B0F3000EBA5C /* RunQuestAI.xcdatamodeld in Sources */,
+				BF2BF7BD2017D3D6003118F4 /* Location+CoreDataProperties.m in Sources */,
 				BF7D3485200E36C4007D33B2 /* AISStatsTableViewCell.m in Sources */,
 				BF83EE2C2008B0F3000EBA5C /* main.m in Sources */,
 				BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */,
