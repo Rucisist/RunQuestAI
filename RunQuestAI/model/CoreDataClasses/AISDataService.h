@@ -10,6 +10,7 @@
 #import "Run+CoreDataProperties.h"
 #import "Location+CoreDataProperties.h"
 #import "AppDelegate.h"
+#import "AISCoreDataStack.h"
 
 /*!@brief Класс AISDataService это методы для работы с сохранением и загрузкой данных из coreData*/
 @interface AISDataService : NSObject
