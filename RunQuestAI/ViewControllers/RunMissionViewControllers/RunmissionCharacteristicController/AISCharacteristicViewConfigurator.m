@@ -132,8 +132,6 @@ static const CGFloat pauseButtonSpaceFromCenter = 100;
     
     self.delegate.stopButton.layer.affineTransform = CGAffineTransformMakeRotation(M_PI);
     
-    [self.delegate.stopButton addTarget:self.delegate action:@selector(stopButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    
     [self.delegate.view addSubview:self.delegate.stopButton];
     
 }

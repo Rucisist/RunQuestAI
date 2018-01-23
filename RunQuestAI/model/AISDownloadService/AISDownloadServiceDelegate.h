@@ -10,6 +10,7 @@
 
 @protocol AISDownloadServiceDelegate
 
+/*! @brief свойство - карты */
 @property (nonatomic, strong) GMSMapView *mapView;
 
 @end

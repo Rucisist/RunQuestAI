@@ -29,7 +29,8 @@ static const CGFloat AISYOffset = 50;
 
 @implementation AISCountdownRunMissionViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self configureCountdownScreen];
     
@@ -136,6 +137,8 @@ static const CGFloat AISYOffset = 50;
     
     self.countdownLabelHelper.alpha = 0;
 }
+
+#pragma mark - Navigation
 
 -(void)goToRunMissionInProgressTabBarViewController
 {

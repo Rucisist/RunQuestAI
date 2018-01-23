@@ -83,6 +83,11 @@
     [self.resumeButton addTarget:self action:@selector(resumeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 -(void)configureAVSession
 {
     AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -95,6 +100,8 @@
     }
 }
 
+#pragma mark - configureView
+
 -(void)addMapButton
 {
     self.mapViewOpenButton = [UIButton new];
@@ -106,11 +113,6 @@
     [self.mapViewOpenButton addTarget:self action:@selector(openMapViewAndPaintaRouteWith) forControlEvents:UIControlEventTouchUpInside];
     
     [self.mapViewOpenButton addTarget:self action:@selector(openMapViewAndPaintaRouteWith) forControlEvents:UIControlEventTouchUpInside];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [self.navigationController setNavigationBarHidden:YES];
 }
 
 -(void)configureLocationManager
@@ -149,6 +151,8 @@
     [self.locationManager startUpdatingLocation];
 }
 
+#pragma mark - update view
+
 - (void)updateLabels
 {
     self.timeLabel.text = [NSString stringWithFormat:@"⏱\n %@",  [AISTranslationUnitsModel stringifySecondCount:self.seconds usingLongFormat:NO]];
@@ -170,6 +174,8 @@
     [self.view sendSubviewToBack:customView];
 }
 
+#pragma mark - speaker update
+
 -(void)speakCharacteristics
 {
     NSString *timeString = [NSString stringWithFormat:@"Time is %@ minutes.",  [AISTranslationUnitsModel stringifySecondCount:self.seconds usingLongFormat:NO]];
@@ -180,6 +186,8 @@
     
     [self.speaker speakCharacteristicsTime:timeString pace:paceString distance:distanceString];
 }
+
+#pragma mark - update timer
 
 - (void)eachSecond
 {
@@ -200,11 +208,6 @@
     self.resumeButton.hidden = YES;
     
     [self goToBeginRunViewController];
-}
-
--(void)goToBeginRunViewController
-{
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)resumeButtonPressed
@@ -258,6 +261,13 @@
     [self startLocationUpdates];
 }
 
+#pragma mark - Navigation
+
+-(void)goToBeginRunViewController
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -296,6 +306,8 @@
         }
     }
 }
+
+
 
 - (void)configureUI {
     

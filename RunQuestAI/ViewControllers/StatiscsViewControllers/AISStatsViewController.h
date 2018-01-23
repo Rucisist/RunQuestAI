@@ -10,6 +10,7 @@
 #import "Run+CoreDataProperties.h"
 #import "Location+CoreDataProperties.h"
 
+/*! класс показывающий таблицу последних забегов */
 @interface AISStatsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;

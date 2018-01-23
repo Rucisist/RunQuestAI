@@ -7,7 +7,6 @@
 //
 
 #import "AISPrisesCollectionViewController.h"
-#import "AISPrisesCollectionReusableView.h"
 #import "AISPrisesCollectionViewCell.h"
 #import "AISPrisesDescription.h"
 
@@ -33,7 +32,8 @@ static NSString *AIScellIdentifier = @"AISprisesCollectionViewCell";
 
 @implementation AISPrisesCollectionViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.prisesDescription = [AISPrisesDescription new];
@@ -50,6 +50,8 @@ static NSString *AIScellIdentifier = @"AISprisesCollectionViewCell";
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     self.allDistance = [NSNumber numberWithDouble:[userDefaults doubleForKey:@"allDistance"]];
 }
+
+#pragma mark - configure cell
 
 -(void)configureCells
 {
@@ -74,6 +76,8 @@ static NSString *AIScellIdentifier = @"AISprisesCollectionViewCell";
 {
     [self.collectionView registerClass:[AISPrisesCollectionViewCell class] forCellWithReuseIdentifier:AIScellIdentifier];
 }
+
+#pragma mark - display cells
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     AISPrisesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:AIScellIdentifier forIndexPath:indexPath];

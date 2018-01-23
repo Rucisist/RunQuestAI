@@ -49,6 +49,8 @@ static const CGFloat AIScharacterDescriptionLabelNumberOfLines = 0;
     [self configureUI];
 }
 
+#pragma mark - configureView
+
 -(void)configureUI
 {
     [self configureCharacterDescriptionLabel];

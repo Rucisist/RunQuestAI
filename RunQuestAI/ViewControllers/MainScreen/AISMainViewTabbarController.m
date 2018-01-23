@@ -29,7 +29,8 @@ static const double AISDelayAnimationDuration = 2.0;
 
 @implementation AISMainViewTabbarController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self configureTabBarWithViewControllers];
     [self initializeLoadingView];

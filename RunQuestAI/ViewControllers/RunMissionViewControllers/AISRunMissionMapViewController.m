@@ -76,7 +76,8 @@
     return self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.downloadService = [AISDownloadService new];
@@ -101,6 +102,8 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - add googleMaps
 
 -(void)loadMap
 {

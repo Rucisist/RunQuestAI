@@ -11,10 +11,14 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "AISDownloadServiceDelegate.h"
 
+/*! класс для загрузки информации о достопримечательностях */
 @interface AISDownloadService : NSObject
 
+/*! @brief экземпляр делегата */
 @property(nonatomic, strong) id<AISDownloadServiceDelegate> delegate;
 
+/*! @brief функция загрузки информации о достопримечательностях рядо с местоположением
+ @params locationCoordinates - местоположение */
 -(BOOL)loadDataFromGooglePlaces:(CLLocation *)locationCoordinates;
 
 @end

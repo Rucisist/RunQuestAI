@@ -11,6 +11,7 @@
 #import "AISDownloadServiceDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 
+/*! контроллер с картой на которой отображены достопримечательности */
 @interface AISRunMissionMapViewController : UIViewController <CLLocationManagerDelegate, AISDownloadServiceDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -18,6 +19,7 @@
 
 @property (nonatomic, strong) GMSMapView *mapView;
 
+/*! метод инициализации */
 -(instancetype)initWithRoute:(NSMutableArray *)locations;
 
 @end

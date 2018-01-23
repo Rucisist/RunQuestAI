@@ -8,13 +8,10 @@
 
 #import "AISBeginRunViewController.h"
 #import "AISCountdownRunMissionViewController.h"
-#import "SettingsViewController.h"
 #import "AISUserDefaultsService.h"
 #import "AISLightSaberView.h"
-#import "AISButtonsForTheBeginRunView.h"
 
 static CGFloat AISstartRunButtonDiameter = 100;
-static CGFloat AISSettingsButtonDiameter = 60;
 static CGFloat AISoffsetFromBottom = 200;
 
 @interface AISBeginRunViewController ()
@@ -30,7 +27,6 @@ static CGFloat AISoffsetFromBottom = 200;
 
 @property (nonatomic, strong) AISUserDefaultsService *userDefaultsService;
 @property (nonatomic, strong) AISLightSaberView *lightSaberView;
-@property (nonatomic, strong) AISButtonsForTheBeginRunView *buttonPannel;
 
 @end
 
@@ -59,6 +55,8 @@ static CGFloat AISoffsetFromBottom = 200;
 {
     [self.navigationController setNavigationBarHidden:YES];
 }
+
+#pragma mark - configureView
 
 -(void)configureUI
 {
@@ -89,24 +87,6 @@ static CGFloat AISoffsetFromBottom = 200;
     [self.startRunButton addTarget:self action:@selector(startButtonPressed) forControlEvents:UIControlEventTouchUpInside];
 }
 
--(void)configureSettingsButton
-{
-    CGFloat height = CGRectGetHeight(self.view.frame);
-    self.settingsButton = [[UIButton alloc] initWithFrame:CGRectMake(50, height - AISoffsetFromBottom + 40, AISSettingsButtonDiameter, AISSettingsButtonDiameter)];
-    self.settingsButton.backgroundColor = [UIColor redColor];
-    self.settingsButton.layer.cornerRadius = AISSettingsButtonDiameter / 2;
-    
-    [self.settingsButton setTitle:@"информация" forState:UIControlStateNormal];
-    [self.view addSubview:self.settingsButton];
-    [self.settingsButton addTarget:self action:@selector(goToSettingsScreen) forControlEvents:UIControlEventTouchUpInside];
-}
-
--(void)goToSettingsScreen
-{
-    SettingsViewController *settingsViewController = [SettingsViewController new];
-    [self presentViewController:settingsViewController animated:YES completion:nil];
-}
-
 -(void)initializeSaberView
 {
     self.lightSaberView = [[AISLightSaberView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200)];
@@ -131,6 +111,13 @@ static CGFloat AISoffsetFromBottom = 200;
     [self goToCountdownViewController];
 }
 
+-(void)changeBackgroundColor
+{
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+#pragma mark - Navigation
+
 -(void)goToCountdownViewController
 {
     AISCountdownRunMissionViewController *countdownViewController;
@@ -139,10 +126,5 @@ static CGFloat AISoffsetFromBottom = 200;
     [self.navigationController pushViewController:countdownViewController animated:YES];
 }
 
-
--(void)changeBackgroundColor
-{
-    self.view.backgroundColor = [UIColor whiteColor];
-}
 
 @end

@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+/*! класс персонажей */
 @interface AISCaharcterSW : NSObject
 
+/*! имя персонажа */
 @property (nonatomic, strong) NSString *characterDescription;
+
+/*! фото персонажа */
 @property(nonatomic,strong) UIImage *characterImage;
 
 @end

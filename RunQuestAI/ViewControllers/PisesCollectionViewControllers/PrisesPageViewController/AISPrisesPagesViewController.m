@@ -23,7 +23,8 @@
 
 @synthesize PageViewController,arrPageTitles,arrPageImages;
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.index = 0;
     
@@ -36,6 +37,8 @@
     
     [self configurePageControll];
 }
+
+#pragma mark - configureView
 
 -(void)configurePageViewController
 {
@@ -89,9 +92,8 @@
     }
 }
 
-#pragma mark - Other Methods
+#pragma mark - configure the controllers stack
 
-#pragma mark - No of Pages Methods
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
     return 2;

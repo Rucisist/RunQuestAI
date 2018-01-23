@@ -22,21 +22,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //added Google Maps Kit and Google Places
     [GMSServices provideAPIKey:@"AIzaSyBacMb-sv6VxaYjoZHJV9D6c4c_iyBhdak"];
-    //[GMSPlacesClient provideAPIKey:@"AIzaSyBmz4XmOmeEfJdB8ekR6fk3Z5QrtXK26Fw"];
     //*****
     
     //configure window
     self.window = [UIWindow new];
     AISMainViewTabbarController *rootViewController = [AISMainViewTabbarController new];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
-    //AISLoadViewController *loadView = [AISLoadViewController new];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
     self.window.rootViewController = navigationController;
     
     [self.window makeKeyAndVisible];
     
-    // Override point for customization after application launch.
     return YES;
 }
 
