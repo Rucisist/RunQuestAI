@@ -24,6 +24,11 @@
     [super tearDown];
 }
 
+- (void)testInitializing
+{
+    XCTAssertNotNil([AISTranslationUnitsModel new], @"не создается объект");
+}
+
 - (void)testStringifyDistance
 {
     double testedValue1 = 3;
@@ -115,14 +120,6 @@
     XCTAssertEqualObjects(expectedValue2, value2);
     XCTAssertEqualObjects(expectedValue3, value3);
     XCTAssertEqualObjects(expectedValue4, value4);
-}
-
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
 }
 
 @end

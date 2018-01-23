@@ -21,6 +21,8 @@
 		BF26D4A6201067BD00D70121 /* AISRunTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4A5201067BD00D70121 /* AISRunTarget.m */; };
 		BF26D4A92010697D00D70121 /* AISTargetAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4A82010697D00D70121 /* AISTargetAllocator.m */; };
 		BF26D4AD20107DA400D70121 /* AISButtonsForTheBeginRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4AC20107DA400D70121 /* AISButtonsForTheBeginRunView.m */; };
+		BF2BF7A420178ADA003118F4 /* AISRunTargetAllocatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A320178ADA003118F4 /* AISRunTargetAllocatorTest.m */; };
+		BF2BF7A620178C4E003118F4 /* AISTargetAllocatorHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A520178C4E003118F4 /* AISTargetAllocatorHelperTest.m */; };
 		BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */; };
 		BF3065E9200C144F00F3058E /* AISCountdownRunMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */; };
 		BF3065EF200CB5BB00F3058E /* AISRunMissionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */; };
@@ -126,6 +128,8 @@
 		BF26D4A82010697D00D70121 /* AISTargetAllocator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTargetAllocator.m; sourceTree = "<group>"; };
 		BF26D4AB20107DA400D70121 /* AISButtonsForTheBeginRunView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISButtonsForTheBeginRunView.h; sourceTree = "<group>"; };
 		BF26D4AC20107DA400D70121 /* AISButtonsForTheBeginRunView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISButtonsForTheBeginRunView.m; sourceTree = "<group>"; };
+		BF2BF7A320178ADA003118F4 /* AISRunTargetAllocatorTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunTargetAllocatorTest.m; sourceTree = "<group>"; };
+		BF2BF7A520178C4E003118F4 /* AISTargetAllocatorHelperTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTargetAllocatorHelperTest.m; sourceTree = "<group>"; };
 		BF3065CE200BDBAC00F3058E /* AISBeginRunViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISBeginRunViewController.h; sourceTree = "<group>"; };
 		BF3065CF200BDBAC00F3058E /* AISBeginRunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISBeginRunViewController.m; sourceTree = "<group>"; };
 		BF3065E7200C144F00F3058E /* AISCountdownRunMissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCountdownRunMissionViewController.h; sourceTree = "<group>"; };
@@ -536,6 +540,8 @@
 		BF83EE342008B0F3000EBA5C /* RunQuestAITests */ = {
 			isa = PBXGroup;
 			children = (
+				BF2BF7A520178C4E003118F4 /* AISTargetAllocatorHelperTest.m */,
+				BF2BF7A320178ADA003118F4 /* AISRunTargetAllocatorTest.m */,
 				BF39BC47201775AC00919F1D /* AISTranslationUnitModelTest.m */,
 				BF39BC4520176E2300919F1D /* AISPathHelperModelTest.m */,
 				BF4CE9A820128901000BEC8A /* AISRunTargetTest.m */,
@@ -930,7 +936,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2BF7A620178C4E003118F4 /* AISTargetAllocatorHelperTest.m in Sources */,
 				BF4CE9A920128901000BEC8A /* AISRunTargetTest.m in Sources */,
+				BF2BF7A420178ADA003118F4 /* AISRunTargetAllocatorTest.m in Sources */,
 				BF39BC48201775AC00919F1D /* AISTranslationUnitModelTest.m in Sources */,
 				BF39BC4620176E2300919F1D /* AISPathHelperModelTest.m in Sources */,
 				BF83EE362008B0F3000EBA5C /* RunQuestAITests.m in Sources */,
