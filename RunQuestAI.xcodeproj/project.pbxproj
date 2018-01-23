@@ -35,6 +35,8 @@
 		BF39BC27201659C500919F1D /* AISDownloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC26201659C500919F1D /* AISDownloadService.m */; };
 		BF39BC2E201679C000919F1D /* AISPathHelperModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC2D201679C000919F1D /* AISPathHelperModel.m */; };
 		BF39BC402016A29F00919F1D /* AISCharacteristicViewConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC3F2016A29F00919F1D /* AISCharacteristicViewConfigurator.m */; };
+		BF39BC4620176E2300919F1D /* AISPathHelperModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC4520176E2300919F1D /* AISPathHelperModelTest.m */; };
+		BF39BC48201775AC00919F1D /* AISTranslationUnitModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF39BC47201775AC00919F1D /* AISTranslationUnitModelTest.m */; };
 		BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CE99620124F97000BEC8A /* AISCustomRunView.m */; };
 		BF4CE99C20127A34000BEC8A /* GELogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE99820127A31000BEC8A /* GELogo.png */; };
 		BF4CE99D20127A34000BEC8A /* SWLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4CE99920127A31000BEC8A /* SWLogo.png */; };
@@ -153,6 +155,8 @@
 		BF39BC3E2016A29F00919F1D /* AISCharacteristicViewConfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCharacteristicViewConfigurator.h; sourceTree = "<group>"; };
 		BF39BC3F2016A29F00919F1D /* AISCharacteristicViewConfigurator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCharacteristicViewConfigurator.m; sourceTree = "<group>"; };
 		BF39BC412016A98600919F1D /* AISConfiguratorProtocolDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISConfiguratorProtocolDelegate.h; sourceTree = "<group>"; };
+		BF39BC4520176E2300919F1D /* AISPathHelperModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPathHelperModelTest.m; sourceTree = "<group>"; };
+		BF39BC47201775AC00919F1D /* AISTranslationUnitModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTranslationUnitModelTest.m; sourceTree = "<group>"; };
 		BF4CE99520124F97000BEC8A /* AISCustomRunView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISCustomRunView.h; sourceTree = "<group>"; };
 		BF4CE99620124F97000BEC8A /* AISCustomRunView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISCustomRunView.m; sourceTree = "<group>"; };
 		BF4CE99820127A31000BEC8A /* GELogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GELogo.png; sourceTree = "<group>"; };
@@ -532,6 +536,8 @@
 		BF83EE342008B0F3000EBA5C /* RunQuestAITests */ = {
 			isa = PBXGroup;
 			children = (
+				BF39BC47201775AC00919F1D /* AISTranslationUnitModelTest.m */,
+				BF39BC4520176E2300919F1D /* AISPathHelperModelTest.m */,
 				BF4CE9A820128901000BEC8A /* AISRunTargetTest.m */,
 				BF83EE352008B0F3000EBA5C /* RunQuestAITests.m */,
 				BF83EE372008B0F3000EBA5C /* Info.plist */,
@@ -925,6 +931,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4CE9A920128901000BEC8A /* AISRunTargetTest.m in Sources */,
+				BF39BC48201775AC00919F1D /* AISTranslationUnitModelTest.m in Sources */,
+				BF39BC4620176E2300919F1D /* AISPathHelperModelTest.m in Sources */,
 				BF83EE362008B0F3000EBA5C /* RunQuestAITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
