@@ -46,7 +46,7 @@ static const CGFloat AISSaberViewHeight = 200;
     [self.view addSubview:imageView];
     [self.view sendSubviewToBack:imageView];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"SW1"]];
+    self.view.backgroundColor = [UIColor blackColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -95,12 +95,6 @@ static const CGFloat AISSaberViewHeight = 200;
 -(void)configureSaberView
 {
     [self.lightSaberView configureTheLightSaberView];
-}
-
--(void)configureUserSettings
-{
-    self.userDefaultsService = [AISUserDefaultsService new];
-    [self.userDefaultsService setUserDefaultsForTheKey:@"name" objectForTheKey:@"Andrew I."];
 }
 
 -(void)startButtonPressed
