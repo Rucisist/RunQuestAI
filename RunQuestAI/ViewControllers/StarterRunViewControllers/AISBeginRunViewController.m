@@ -52,6 +52,7 @@ static const CGFloat AISSaberViewHeight = 200;
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES];
+    [self configureSaberView];
 }
 
 #pragma mark - configureView
