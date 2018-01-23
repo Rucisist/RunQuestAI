@@ -25,20 +25,22 @@
 
 @implementation AISStatsViewController
 
-- (void)viewDidLoad {
-    
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.dataService = [AISDataService new];
     
-    [self fetchRequest];
     [self configureUI];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self fetchRequest];
+    [self.tableView reloadData];
+    [self calculateTheKilometersEverRun];
 }
+
+#pragma mark - configureView
 
 -(void)configureUI
 {
@@ -68,13 +70,6 @@
     
     [self.allDistanceLabel setFont:[UIFont boldSystemFontOfSize:25]];
     [aISheaderView addSubview:self.allDistanceLabel];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [self fetchRequest];
-    [self.tableView reloadData];
-    [self calculateTheKilometersEverRun];
 }
 
 -(void)fetchRequest
@@ -136,7 +131,10 @@
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+#pragma mark - TableViewDelegate
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         self.allDistance = self.allDistance - self.runArray[indexPath.row].distance;
         [self.dataService deleteRun:self.runArray[indexPath.row]];

@@ -15,7 +15,6 @@
 @property (nonatomic, strong) GMSMutablePath *path;
 @property (nonatomic, strong) GMSPolyline *runTrack;
 @property (nonatomic, strong) AISDownloadService *downloadService;
-
 @property (nonatomic, strong) NSMutableArray *locationsArray;
 
 @end

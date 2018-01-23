@@ -91,9 +91,4 @@
     
 }
 
--(void)printRunInfo
-{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
 @end

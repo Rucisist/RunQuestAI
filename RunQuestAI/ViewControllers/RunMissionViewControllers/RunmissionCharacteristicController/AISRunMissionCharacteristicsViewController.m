@@ -20,33 +20,34 @@
 #import "AISCustomRunView.h"
 #import "AISCharacteristicViewConfigurator.h"
 
+static int seconds;
+static float distance;
+static float distanceToAim;
+
 @interface AISRunMissionCharacteristicsViewController ()
 
-@property int seconds;
-@property int lastSecond;
-@property float distance;
-@property float distanceToAim;
 @property (nonatomic) BOOL isPaused;
 @property (nonatomic) BOOL beenOnPause;
 @property (nonatomic) CGRect viewFrame;
-
 @property (nonatomic, strong) NSMutableArray *locations;
 @property (nonatomic, strong) NSTimer *timer;
-
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *targetLocation;
-
 @property (nonatomic, strong) AISSystemSpeaker *speaker;
 @property (nonatomic, strong) AISRealVoicesPlayer *voicePlayer;
 @property (nonatomic, strong) Run *run;
 @property (nonatomic, strong) AISDataService *dataService;
 @property (nonatomic, strong) AISTargetAllocatorHelper *targetAllocator;
-
 @property (nonatomic, strong) AISCharacteristicViewConfigurator *configurator;
 
 @end
 
 @implementation AISRunMissionCharacteristicsViewController
+
+-(void)dealloc
+{
+    [self.timer invalidate];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,7 +58,7 @@
     
     self.configurator.delegate = self;
     
-    self.distanceToAim = 0;
+    distanceToAim = 0;
     self.targetAllocator = [AISTargetAllocatorHelper new];
     
     self.speaker = [AISSystemSpeaker new];
@@ -155,14 +156,14 @@
 
 - (void)updateLabels
 {
-    self.timeLabel.text = [NSString stringWithFormat:@"⏱\n %@",  [AISTranslationUnitsModel stringifySecondCount:self.seconds usingLongFormat:NO]];
+    self.timeLabel.text = [NSString stringWithFormat:@"⏱\n %@",  [AISTranslationUnitsModel stringifySecondCount:seconds usingLongFormat:NO]];
     
     self.distanceToAimLabel.numberOfLines = 2;
-    self.distanceToAimLabel.text = [NSString stringWithFormat:@"%@", [AISTranslationUnitsModel stringifyDistance:self.distance]];
+    self.distanceToAimLabel.text = [NSString stringWithFormat:@"%@", [AISTranslationUnitsModel stringifyDistance:distance]];
     
-    self.paceLabel.text = [NSString stringWithFormat:@"Темп\n%@",  [AISTranslationUnitsModel stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
+    self.paceLabel.text = [NSString stringWithFormat:@"Темп\n%@",  [AISTranslationUnitsModel stringifyAvgPaceFromDist:distance overTime:seconds]];
     
-    self.distanceLabel.text = [NSString stringWithFormat:@" %@", [AISTranslationUnitsModel stringifyDistance:self.distanceToAim]];
+    self.distanceLabel.text = [NSString stringWithFormat:@" %@", [AISTranslationUnitsModel stringifyDistance:distanceToAim]];
 }
 
 -(void)addBackgroundView
@@ -178,11 +179,11 @@
 
 -(void)speakCharacteristics
 {
-    NSString *timeString = [NSString stringWithFormat:@"Time is %@ minutes.",  [AISTranslationUnitsModel stringifySecondCount:self.seconds usingLongFormat:NO]];
+    NSString *timeString = [NSString stringWithFormat:@"Time is %@ minutes.",  [AISTranslationUnitsModel stringifySecondCount:seconds usingLongFormat:NO]];
     
-    NSString *distanceString = [NSString stringWithFormat:@"Distance: %@.", [AISTranslationUnitsModel stringifyDistance:self.distance]];
+    NSString *distanceString = [NSString stringWithFormat:@"Distance: %@.", [AISTranslationUnitsModel stringifyDistance:distance]];
     
-    NSString *paceString = [NSString stringWithFormat:@"Pace: %@.",  [AISTranslationUnitsModel stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
+    NSString *paceString = [NSString stringWithFormat:@"Pace: %@.",  [AISTranslationUnitsModel stringifyAvgPaceFromDist:distance overTime:seconds]];
     
     [self.speaker speakCharacteristicsTime:timeString pace:paceString distance:distanceString];
 }
@@ -191,9 +192,9 @@
 
 - (void)eachSecond
 {
-    self.seconds++;
+    seconds++;
     
-    if (self.seconds % 60 == 0)
+    if (seconds % 60 == 0)
     {
         [self speakCharacteristics];
     }
@@ -233,10 +234,10 @@
 
 - (void)saveRun
 {
-    [self.dataService saveDataWith:self.locations duration:self.seconds distance:self.distance date:[NSDate date]];
+    [self.dataService saveDataWith:self.locations duration:seconds distance:distance date:[NSDate date]];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     double distanceSaved = [userDefaults doubleForKey:@"allDistance"];
-    [userDefaults setDouble:distanceSaved + self.distance forKey:@"allDistance"];
+    [userDefaults setDouble:distanceSaved + distance forKey:@"allDistance"];
 }
 
 -(void)pauseRun
@@ -246,13 +247,13 @@
 
 -(void)startRun
 {
-    self.seconds = 0;
+    seconds = 0;
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
     
     [self.voicePlayer play];
     
-    self.distance = 0;
+    distance = 0;
     self.locations = [NSMutableArray array];
     
     self.isPaused = NO;
@@ -285,14 +286,14 @@
             {
                 if (!self.beenOnPause)
                 {
-                    self.distance += [newLocation distanceFromLocation:self.locations.lastObject];
+                    distance += [newLocation distanceFromLocation:self.locations.lastObject];
                 }
                 else
                 {
                     self.beenOnPause = NO;
                 }
                 
-                self.distanceToAim = [newLocation distanceFromLocation:self.targetLocation];
+                distanceToAim = [newLocation distanceFromLocation:self.targetLocation];
                 
                 CLLocationCoordinate2D coords[2];
                 coords[0] = ((CLLocation *)self.locations.lastObject).coordinate;

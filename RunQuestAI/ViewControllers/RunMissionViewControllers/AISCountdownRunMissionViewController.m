@@ -15,7 +15,6 @@ static const CGFloat AIScountdownLabelWidth = 200;
 static const CGFloat AIScountdownLabelHeight = 100;
 static const CGFloat AISYOffset = 50;
 
-
 @interface AISCountdownRunMissionViewController ()
 
 @property (nonatomic) NSUInteger counter;
