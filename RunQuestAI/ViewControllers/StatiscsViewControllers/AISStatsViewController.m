@@ -25,7 +25,7 @@
 
 @implementation AISStatsViewController
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
     self.dataService = [AISDataService new];
@@ -93,9 +93,8 @@
     self.allDistanceLabel.text = [NSString stringWithFormat:@"Вы пробежали %@", [AISTranslationUnitsModel stringifyDistance:allDistanceHelper]];
     self.allDistance = allDistanceHelper;
 }
-    
 
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+-(nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     AISStatsTableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Run *runObject;
     
@@ -111,13 +110,12 @@
     return tableViewCell;
 }
 
-
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
-- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+-(NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.runArray.count;
 }
@@ -127,13 +125,13 @@
     return 110;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
 
 #pragma mark - TableViewDelegate
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         self.allDistance = self.allDistance - self.runArray[indexPath.row].distance;
@@ -157,6 +155,5 @@
     
     [self.navigationController pushViewController:runStatViewController animated:YES];
 }
-
 
 @end

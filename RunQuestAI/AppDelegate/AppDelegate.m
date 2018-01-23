@@ -26,6 +26,8 @@
     
     //configure window
     self.window = [UIWindow new];
+    
+    //создается начальный viewController
     AISMainViewTabbarController *rootViewController = [AISMainViewTabbarController new];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];

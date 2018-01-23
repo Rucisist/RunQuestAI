@@ -10,7 +10,7 @@
 
 @interface AISLightSaberView : UIView
 
-/*! метод для рисования дополнительной view со световым мечем */
+/*! @brief метод для рисования дополнительной view со световым мечем */
 -(void)configureTheLightSaberView;
 
 @end

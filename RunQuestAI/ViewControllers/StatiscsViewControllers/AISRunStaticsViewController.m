@@ -18,11 +18,9 @@
 @property (nonatomic, strong) GMSMutablePath *path;
 @property (nonatomic, strong) GMSPolyline *runTrack;
 
-
 @end
 
 @implementation AISRunStaticsViewController
-
 
 -(instancetype)initWithRunInfo:(NSDate *)date
 {
@@ -35,7 +33,8 @@
     return self;
 }
 
-- (void)viewDidLoad {
+-(void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -79,7 +78,6 @@
     startPointMarker.snippet = @"Point";
     endPointMarker.map = self.mapView;
 
-    
     AISPathHelperModel *model = [AISPathHelperModel new];
     
     GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];

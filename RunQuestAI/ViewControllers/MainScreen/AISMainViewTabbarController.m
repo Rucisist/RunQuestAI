@@ -26,7 +26,6 @@ static const double AISDelayAnimationDuration = 2.0;
 
 @end
 
-
 @implementation AISMainViewTabbarController
 
 - (void)viewDidLoad
@@ -96,6 +95,5 @@ static const double AISDelayAnimationDuration = 2.0;
         [self.view sendSubviewToBack:helperCoverView];
     }];
 }
-
 
 @end

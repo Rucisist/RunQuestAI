@@ -9,6 +9,11 @@
 #import "AISHelperForCharactersSW.h"
 #import "AISCaharcterSW.h"
 
+static const double AISKnightJedyDistance = 2000.0;
+static const double AISMasterJedyDistance = 10000.0;
+static const double AISKnightSithDistance = 50000.0;
+static const double AISMasterSithDistance = 100000.0;
+
 @interface AISHelperForCharactersSW()
 
 @property (nonatomic, copy) NSMutableArray<AISCaharcterSW *> *characters;
@@ -34,19 +39,19 @@
     character.characterDescription = @"Ты падаван джедай";
     character.characterImage = [UIImage imageNamed:@"LukeSkywalkerImage"];
     
-    if (distance > 2000) {
+    if (distance > AISKnightJedyDistance) {
         character.characterDescription = @"Ты рыцарь джедай";
         character.characterImage = [UIImage imageNamed:@"obiwankenobiImage"];
     }
-    if (distance > 10000) {
+    if (distance > AISMasterJedyDistance) {
         character.characterDescription = @"Ты мастер джедай";
         character.characterImage = [UIImage imageNamed:@"MasterYodaImage"];
     }
-    if (distance > 50000) {
+    if (distance > AISKnightSithDistance) {
         character.characterDescription = @"Ты рыцарь ситх";
         character.characterImage = [UIImage imageNamed:@"DookoImage"];
     }
-    if (distance > 100000) {
+    if (distance > AISMasterSithDistance) {
         character.characterDescription = @"Ты мастер ситх";
         character.characterImage = [UIImage imageNamed:@"DarthVaderImage"];
     }

@@ -11,6 +11,7 @@
 
 @interface AISBeginRunViewController : UIViewController <CLLocationManagerDelegate>
 
+/*! @brief на вью создает экземпляр AISSaberView */
 -(void)configureSaberView;
 
 @end

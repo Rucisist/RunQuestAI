@@ -16,7 +16,6 @@
 		BF26D4A020103FF200D70121 /* AISPrisesPagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D49F20103FF200D70121 /* AISPrisesPagesViewController.m */; };
 		BF26D4A32010678C00D70121 /* AISTargetAllocatorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4A22010678C00D70121 /* AISTargetAllocatorHelper.m */; };
 		BF26D4A6201067BD00D70121 /* AISRunTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4A5201067BD00D70121 /* AISRunTarget.m */; };
-		BF26D4A92010697D00D70121 /* AISTargetAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D4A82010697D00D70121 /* AISTargetAllocator.m */; };
 		BF2BF7A420178ADA003118F4 /* AISRunTargetAllocatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A320178ADA003118F4 /* AISRunTargetAllocatorTest.m */; };
 		BF2BF7A620178C4E003118F4 /* AISTargetAllocatorHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A520178C4E003118F4 /* AISTargetAllocatorHelperTest.m */; };
 		BF2BF7A82017983A003118F4 /* AISUserDefaultsServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BF7A72017983A003118F4 /* AISUserDefaultsServiceTest.m */; };
@@ -102,8 +101,6 @@
 		BF26D4A22010678C00D70121 /* AISTargetAllocatorHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTargetAllocatorHelper.m; sourceTree = "<group>"; };
 		BF26D4A4201067BD00D70121 /* AISRunTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunTarget.h; sourceTree = "<group>"; };
 		BF26D4A5201067BD00D70121 /* AISRunTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunTarget.m; sourceTree = "<group>"; };
-		BF26D4A72010697D00D70121 /* AISTargetAllocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISTargetAllocator.h; sourceTree = "<group>"; };
-		BF26D4A82010697D00D70121 /* AISTargetAllocator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTargetAllocator.m; sourceTree = "<group>"; };
 		BF2BF7A320178ADA003118F4 /* AISRunTargetAllocatorTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunTargetAllocatorTest.m; sourceTree = "<group>"; };
 		BF2BF7A520178C4E003118F4 /* AISTargetAllocatorHelperTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISTargetAllocatorHelperTest.m; sourceTree = "<group>"; };
 		BF2BF7A72017983A003118F4 /* AISUserDefaultsServiceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISUserDefaultsServiceTest.m; sourceTree = "<group>"; };
@@ -254,8 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				BF26D4A12010678C00D70121 /* AISTargetAllocatorHelper.h */,
-				BF26D4A72010697D00D70121 /* AISTargetAllocator.h */,
-				BF26D4A82010697D00D70121 /* AISTargetAllocator.m */,
 				BF26D4A22010678C00D70121 /* AISTargetAllocatorHelper.m */,
 				BF26D4A4201067BD00D70121 /* AISRunTarget.h */,
 				BF26D4A5201067BD00D70121 /* AISRunTarget.m */,
@@ -822,7 +817,6 @@
 				BF3065EF200CB5BB00F3058E /* AISRunMissionMapViewController.m in Sources */,
 				BF3065F2200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m in Sources */,
 				BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */,
-				BF26D4A92010697D00D70121 /* AISTargetAllocator.m in Sources */,
 				BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */,
 				BF26D483200F893200D70121 /* AISUserDefaultsService.m in Sources */,
 				BF39BC1D2014CB9C00919F1D /* Location+CoreDataClass.m in Sources */,

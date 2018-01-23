@@ -14,18 +14,16 @@ static const CGFloat AISitemSize = 150;
 static const CGFloat AISMinimumLineSpacing = 20;
 static const CGFloat AISMinimumInteritemSpacing = 20;
 static const CGFloat AISCollectionItemCornerRadius = 20.0f;
-static const double AISMetersInKM = 1000;
+static const double AISMetersInKM = 1000.0;
 static NSString *AIScellIdentifier = @"AISprisesCollectionViewCell";
 
 
 @interface AISPrisesCollectionViewController ()
 
 @property (nonatomic, strong) NSNumber *allDistance;
-
 @property (nonatomic, copy) NSArray *album;
 @property (nonatomic, copy) NSArray *albumDescription;
 @property (nonatomic, copy) NSArray *albumHelper;
-
 @property (nonatomic, strong) AISPrisesDescription *prisesDescription;
 
 @end

@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-/*! класс для создания цели забега */
+/*! @brief класс для создания цели забега */
 @interface AISTargetAllocatorHelper : NSObject
 
-/*! координаты центра Москвы. Они могут меняться */
+/*! @brief координаты центра Москвы. Они могут меняться */
 @property (nonatomic, strong) CLLocation *moscowCenterLocation;
 
-/*! координаты северозаподной границы центра Москвы */
+/*! @brief координаты северозаподной границы центра Москвы */
 @property (nonatomic, strong) CLLocation *moscowCenterNorthWestLocation;
 
-/*! координаты юговосточной границы центра Москвы */
+/*! @brief координаты юговосточной границы центра Москвы */
 @property (nonatomic, strong) CLLocation *moscowCenterSouthEastLocation;
 
 /*! @brief возвращает случайное местоположение в квадрате определенной юговосточной и северозападной границей Москвы

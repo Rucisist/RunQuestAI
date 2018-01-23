@@ -35,7 +35,6 @@
             }];
         }
     }
-    
     return _persistentContainer;
 }
 
@@ -50,6 +49,5 @@
         abort();
     }
 }
-
 
 @end

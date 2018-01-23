@@ -11,7 +11,7 @@
 #import "Run+CoreDataProperties.h"
 #import "Location+CoreDataProperties.h"
 
-/*! класс для рассчитования темпа на отдельных кусках пути */
+/*! @brief класс для рассчитования темпа на отдельных кусках пути */
 @interface AISPathHelperModel : NSObject
 
 /*! @brief метод для рассчета массива темпов для всех кусков одного забега */

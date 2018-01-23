@@ -19,7 +19,6 @@
 
 @end
 
-
 @implementation AISPathHelperModel
 
 -(NSMutableArray *)calculatePaceArrayWith:(Run *)runDetails
@@ -141,9 +140,7 @@
         
         i = i+1;
     }
-    
     return self.polylineColorSegments;
-    
 }
 
 @end

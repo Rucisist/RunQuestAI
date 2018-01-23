@@ -85,20 +85,12 @@
     }
 }
 
-- (NSManagedObjectContext *)coreDataContext
+-(NSManagedObjectContext *)coreDataContext
 {
     AISCoreDataStack *dataStack = [AISCoreDataStack sharedManager];
     NSPersistentContainer *container = dataStack.persistentContainer;
     NSManagedObjectContext *context = container.viewContext;
     return context;
 }
-
-//- (NSManagedObjectContext *)coreDataContext
-//{
-//    UIApplication *application = [UIApplication sharedApplication];
-//    NSPersistentContainer *container = ((AppDelegate *)(application.delegate)).persistentContainer;
-//    NSManagedObjectContext *context = container.viewContext;
-//    return context;
-//}
 
 @end

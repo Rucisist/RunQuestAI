@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-/*! класс для проигрывания звука старта забега */
+/*! @brief класс для проигрывания звука старта забега */
 @interface AISRealVoicesPlayer : NSObject <AVAudioPlayerDelegate>
 
-/*! аудиоплеер */
+/*! @brief аудиоплеер */
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
-/*! путь к звуку, проигрываемому во время старта */
+/*! @brief путь к звуку, проигрываемому во время старта */
 @property (nonatomic, strong) NSString *soundURL;
 
 -(void)play;

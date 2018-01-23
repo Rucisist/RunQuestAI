@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-/*! класс - цель забега, содержащий метоположение, описание и изображение места-цели*/
+/*! @brief класс - цель забега, содержащий метоположение, описание и изображение места-цели*/
 @interface AISRunTarget : NSObject
 
-/*! метоположение цели */
+/*! @brief метоположение цели */
 @property (nonatomic, strong) CLLocation * _Nullable targetLocation;
 
-/*! название цели */
+/*! @brief название цели */
 @property (nonatomic, strong) NSString * _Nullable targetName;
 
-/*! описание цели */
+/*! @brief описание цели */
 @property (nonatomic, strong) NSString * _Nullable targetDescription;
 
-/*! изображение цели */
+/*! @brief изображение цели */
 @property (nonatomic, strong, nullable) UIImage *targetImage;
 
 @end

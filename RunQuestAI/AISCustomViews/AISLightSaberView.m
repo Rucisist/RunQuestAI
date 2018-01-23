@@ -12,6 +12,8 @@
 
 static const double distanceToCompleteHelper = 50000.0;
 static const double distanceToCompleteForRedSaber = 100000.0;
+static const CGFloat YOffsetAllDistanceLabel = 80.0;
+static const CGFloat allDistanceHeight = 40.0;
 
 @interface AISLightSaberView()
 
@@ -32,7 +34,6 @@ static const double distanceToCompleteForRedSaber = 100000.0;
     self = [super initWithFrame:frame];
     if (self)
     {
-        
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         _allDistanceValue = [NSNumber numberWithDouble:[userDefaults doubleForKey:@"allDistance"]];
         
@@ -51,7 +52,7 @@ static const double distanceToCompleteForRedSaber = 100000.0;
         _frontImageView = [[UIImageView alloc] initWithFrame:self.frame];
         _frontImageView.contentMode = UIViewContentModeScaleAspectFit;
         
-        _allDistanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame)-80, CGRectGetWidth(self.frame), 40)];
+        _allDistanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame)-YOffsetAllDistanceLabel, CGRectGetWidth(self.frame), allDistanceHeight)];
         
         _allDistanceLabel.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.1 alpha:1.0];
     

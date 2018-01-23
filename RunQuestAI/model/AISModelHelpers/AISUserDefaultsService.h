@@ -10,16 +10,16 @@
 
 @interface AISUserDefaultsService : NSObject
 
-/*! класс для управления пользовательскими настройками */
+/*! @brief класс для управления пользовательскими настройками */
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
 
-/*! сохранение объекта в NSUserDefaults */
+/*! @brief сохранение объекта в NSUserDefaults */
 -(void)setUserDefaultsForTheKey: (NSString *) key objectForTheKey: (id) object;
 
-/*! удаление объекта в NSUserDefaults */
+/*! @brief удаление объекта в NSUserDefaults */
 -(void)deleteUserDefaultsForTheKey: (NSString *) key;
 
-/*! сохраняемый или удаляемый объект */
+/*! @brief сохраняемый или удаляемый объект */
 -(id)objectForTheKey: (NSString *)key;
 
 

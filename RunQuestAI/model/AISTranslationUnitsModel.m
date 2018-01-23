@@ -13,8 +13,6 @@
 static bool const isMetric = YES;
 static float const metersInKM = 1000;
 static float const metersInMile = 1609.344;
-//static const int idealSmoothReachSize = 33; // about 133 locations/mi
-
 
 @implementation AISTranslationUnitsModel
 
@@ -115,8 +113,5 @@ static float const metersInMile = 1609.344;
     
     return [NSString stringWithFormat:@"%i.%02i %@", paceMin, paceSec, unitName];
 }
-
-
-
 
 @end

@@ -11,27 +11,25 @@
 #import "AISUserDefaultsService.h"
 #import "AISLightSaberView.h"
 
-static CGFloat AISstartRunButtonDiameter = 100;
-static CGFloat AISoffsetFromBottom = 200;
+static const CGFloat AISstartRunButtonDiameter = 100;
+static const CGFloat AISoffsetFromBottom = 200;
+static const CGFloat AISSaberViewHeight = 200;
 
 @interface AISBeginRunViewController ()
 
-@property (nonatomic, strong) UIButton *startRunButton;
-@property (nonatomic, strong) UIImageView *lightSaberImageView;
-@property (nonatomic, strong) UIButton *settingsButton;
-
-@property (nonatomic, strong) UILabel *AllDistanceLabel;
 @property (nonatomic, strong) UIButton *freeRunButton;
 @property (nonatomic, strong) UIButton *questRunButton;
+@property (nonatomic, strong) UIButton *startRunButton;
+@property (nonatomic, strong) UIButton *settingsButton;
+@property (nonatomic, strong) UIImageView *lightSaberImageView;
+@property (nonatomic, strong) UILabel *AllDistanceLabel;
 @property (nonatomic, strong) CLLocationManager *locationManager;
-
 @property (nonatomic, strong) AISUserDefaultsService *userDefaultsService;
 @property (nonatomic, strong) AISLightSaberView *lightSaberView;
 
 @end
 
 @implementation AISBeginRunViewController
-
 
 - (void)viewDidLoad
 {
@@ -89,7 +87,7 @@ static CGFloat AISoffsetFromBottom = 200;
 
 -(void)initializeSaberView
 {
-    self.lightSaberView = [[AISLightSaberView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200)];
+    self.lightSaberView = [[AISLightSaberView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), AISSaberViewHeight)];
     
     [self.view addSubview:self.lightSaberView];
 }
@@ -98,7 +96,6 @@ static CGFloat AISoffsetFromBottom = 200;
 {
     [self.lightSaberView configureTheLightSaberView];
 }
-
 
 -(void)configureUserSettings
 {
@@ -125,6 +122,5 @@ static CGFloat AISoffsetFromBottom = 200;
     
     [self.navigationController pushViewController:countdownViewController animated:YES];
 }
-
 
 @end

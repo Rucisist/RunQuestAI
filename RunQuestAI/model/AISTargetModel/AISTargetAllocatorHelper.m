@@ -49,6 +49,4 @@ static const double AISSouthEastLongitude = 37.660980;
     return [[CLLocation alloc] initWithLatitude:randomLattitude longitude:randomLongitude];
 }
 
-
-
 @end

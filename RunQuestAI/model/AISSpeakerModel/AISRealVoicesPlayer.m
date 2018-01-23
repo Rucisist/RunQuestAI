@@ -9,7 +9,6 @@
 #import "AISRealVoicesPlayer.h"
 
 @implementation AISRealVoicesPlayer
-#define YourSound @"TimeToRun.m4a"
 
 -(void)play
 {

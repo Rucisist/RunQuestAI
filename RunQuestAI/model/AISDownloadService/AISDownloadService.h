@@ -11,7 +11,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "AISDownloadServiceDelegate.h"
 
-/*! класс для загрузки информации о достопримечательностях */
+/*! @brief класс для загрузки информации о достопримечательностях */
 @interface AISDownloadService : NSObject
 
 /*! @brief экземпляр делегата */
