@@ -65,6 +65,7 @@ static const CGFloat allDistanceHeight = 40.0;
 {
     self.backImageView.image = self.backImage;
     self.frontImageView.image = self.frontImage;
+    
     [self addSubview:self.backImageView];
     [self addSubview:self.frontImageView];
     CGRect portionFrame = CGRectMake(0, 0, self.frame.size.width * portion, self.frame.size.height);
