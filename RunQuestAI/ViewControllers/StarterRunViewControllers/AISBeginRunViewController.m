@@ -77,10 +77,10 @@ static const CGFloat AISSaberViewHeight = 200;
     
     self.startRunButton = [[UIButton alloc] initWithFrame:startButtonFrame];
     self.startRunButton.layer.cornerRadius = AISstartRunButtonDiameter / 2;
-    self.startRunButton.backgroundColor = [UIColor redColor];
+    self.startRunButton.backgroundColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:0.7];
     
     [self.startRunButton setTitle:@"run!" forState:UIControlStateNormal];
-    [self.startRunButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.startRunButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     [self.view addSubview:self.startRunButton];
     [self.startRunButton addTarget:self action:@selector(startButtonPressed) forControlEvents:UIControlEventTouchUpInside];

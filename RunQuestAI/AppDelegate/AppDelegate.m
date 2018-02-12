@@ -10,9 +10,12 @@
 #import "AISBeginRunViewController.h"
 #import "AISCountdownRunMissionViewController.h"
 #import "AISMainViewTabbarController.h"
+#import "AISNavigationControllerDelegate.h"
 @import GoogleMaps;
 
 @interface AppDelegate ()
+
+@property (nonatomic,strong) id <UINavigationControllerDelegate> globalNavBarDelegate;
 
 @end
 
@@ -29,10 +32,15 @@
     
     //создается начальный viewController
     AISMainViewTabbarController *rootViewController = [AISMainViewTabbarController new];
-    
+
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-    
+
+    self.globalNavBarDelegate = [AISNavigationControllerDelegate new];
+
+    navigationController.delegate = self.globalNavBarDelegate;
+
     self.window.rootViewController = navigationController;
+    
     
     [self.window makeKeyAndVisible];
     

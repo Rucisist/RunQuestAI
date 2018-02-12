@@ -23,6 +23,7 @@ static const double AISDelayAnimationDuration = 2.0;
 @property (nonatomic, strong) AISStatsViewController *statsViewController;
 @property (nonatomic, strong) AISPrisesCollectionViewController *prisesCollectionViewController;
 @property (nonatomic, strong) AISPrisesPagesViewController *prisesPagesViewController;
+@property (nonatomic,strong) id <UINavigationControllerDelegate> globalNavBarDelegate;
 
 @end
 
