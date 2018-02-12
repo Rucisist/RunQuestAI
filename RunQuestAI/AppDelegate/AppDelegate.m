@@ -19,12 +19,13 @@
 
 @end
 
-@implementation AppDelegate
+static NSString *const GMSServicesKey = @"AIzaSyBacMb-sv6VxaYjoZHJV9D6c4c_iyBhdak";
 
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //added Google Maps Kit and Google Places
-    [GMSServices provideAPIKey:@"AIzaSyBacMb-sv6VxaYjoZHJV9D6c4c_iyBhdak"];
+    [GMSServices provideAPIKey:GMSServicesKey];
     //*****
     
     //configure window

@@ -19,11 +19,11 @@ static const double AISDelayAnimationDuration = 2.0;
 @interface AISMainViewTabbarController ()
 
 @property (nonatomic, strong) UIImageView *loadingImageView;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) AISBeginRunViewController *beginRunViewController;
 @property (nonatomic, strong) AISStatsViewController *statsViewController;
 @property (nonatomic, strong) AISPrisesCollectionViewController *prisesCollectionViewController;
 @property (nonatomic, strong) AISPrisesPagesViewController *prisesPagesViewController;
-@property (nonatomic,strong) id <UINavigationControllerDelegate> globalNavBarDelegate;
 
 @end
 
@@ -35,6 +35,7 @@ static const double AISDelayAnimationDuration = 2.0;
     [self configureTabBarWithViewControllers];
     [self initializeLoadingView];
     [self animateLoading];
+    [self requestLocationUpdates];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -73,6 +74,11 @@ static const double AISDelayAnimationDuration = 2.0;
     self.loadingImageView.backgroundColor = [UIColor blackColor];
     self.loadingImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:self.loadingImageView];
+}
+
+-(void)requestLocationUpdates
+{
+    [self.locationManager startUpdatingLocation];
 }
 
 -(void)animateLoading
