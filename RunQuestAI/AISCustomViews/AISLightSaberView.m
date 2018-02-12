@@ -9,6 +9,7 @@
 #import "AISLightSaberView.h"
 #import "AISUserDefaultsService.h"
 #import "AISTranslationUnitsModel.h"
+#import "AISImageResizer.h"
 
 static const double distanceToCompleteHelper = 50000.0;
 static const double distanceToCompleteForRedSaber = 100000.0;
@@ -23,6 +24,7 @@ static const CGFloat allDistanceHeight = 40.0;
 @property (nonatomic, strong) UIImage *frontImage;
 @property (nonatomic, strong) UILabel *allDistanceLabel;
 @property (nonatomic, strong) NSNumber *allDistanceValue;
+@property (nonatomic, strong) AISImageResizer *resizer;
 
 @end
 
@@ -48,14 +50,24 @@ static const CGFloat allDistanceHeight = 40.0;
             _backImage = [UIImage imageNamed:@"LightsaberBlueIndicator"];
         }
         
-        _backImageView = [[UIImageView alloc] initWithFrame:self.frame];
-        _frontImageView = [[UIImageView alloc] initWithFrame:self.frame];
-        _frontImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _backImageView = [UIImageView new];
+        _frontImageView = [UIImageView new];
         
+        _backImageView.contentMode = UIViewContentModeLeft;
+        _frontImageView.contentMode = UIViewContentModeLeft;
+        
+        _frontImageView.clipsToBounds = YES;
+        _backImageView.clipsToBounds = YES;
+    
         _allDistanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.frame)-YOffsetAllDistanceLabel, CGRectGetWidth(self.frame), allDistanceHeight)];
         
         _allDistanceLabel.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.1 alpha:1.0];
     
+        _resizer = [AISImageResizer new];
+        
+        [self addSubview:_backImageView];
+        [self addSubview:_frontImageView];
+        
         [self addSubview:_allDistanceLabel];
     }
     return self;
@@ -63,22 +75,25 @@ static const CGFloat allDistanceHeight = 40.0;
 
 -(void)indicatorFill: (double)portion
 {
-    self.backImageView.image = self.backImage;
-    self.frontImageView.image = self.frontImage;
+    UIImage *newBackImage = [self.resizer scaleImage:self.backImage proportionallyToSize:CGSizeMake(self.frame.size.width, self.frame.size.height)];
+    UIImage *newFrontImage = [self.resizer scaleImage:self.frontImage proportionallyToSize:CGSizeMake(self.frame.size.width, self.frame.size.height)];
+
+    self.backImageView.image = newBackImage;
+    self.frontImageView.image = newFrontImage;
     
-    [self addSubview:self.backImageView];
-    [self addSubview:self.frontImageView];
     CGRect portionFrame = CGRectMake(0, 0, self.frame.size.width * portion, self.frame.size.height);
     CGRect addFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     self.frontImageView.frame = portionFrame;
     self.backImageView.frame = addFrame;
     self.backImageView.alpha = 0.2;
+    self.frontImageView.alpha = 0.9;
 }
 
 -(void)configureTheLightSaberView
 {
     [self configureAllDistanceLabel];
     double coefficientForLightSaber = [self.allDistanceValue doubleValue] / distanceToCompleteHelper;
+    
     if (coefficientForLightSaber > 1)
     {
         coefficientForLightSaber = [self.allDistanceValue doubleValue] / distanceToCompleteForRedSaber;
@@ -88,6 +103,7 @@ static const CGFloat allDistanceHeight = 40.0;
     {
         coefficientForLightSaber = 1;
     }
+    
     [self indicatorFill:coefficientForLightSaber];
 }
 

@@ -55,6 +55,7 @@
 		BFC1615820114D6900EF12BC /* AISSystemSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC1615720114D6900EF12BC /* AISSystemSpeaker.m */; };
 		BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC1615A20115B6500EF12BC /* AISRealVoicesPlayer.m */; };
 		BFC16169201167D500EF12BC /* TimeToRun.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BFC1615C20115D0C00EF12BC /* TimeToRun.m4a */; };
+		BFC434CB202B1C7B008D3D79 /* AISImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC434CA202B1C7B008D3D79 /* AISImageResizer.m */; };
 		C82BCEEF8976D05F5394DA73 /* libPods-RunQuestAITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 909BB1A7FBEF79C4DB2A1491 /* libPods-RunQuestAITests.a */; };
 		F40323E5C36EC69FB2C16380 /* libPods-RunQuestAI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB3329CECEDB84AFB247AFE /* libPods-RunQuestAI.a */; };
 /* End PBXBuildFile section */
@@ -173,6 +174,8 @@
 		BFC1615920115B6500EF12BC /* AISRealVoicesPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRealVoicesPlayer.h; sourceTree = "<group>"; };
 		BFC1615A20115B6500EF12BC /* AISRealVoicesPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRealVoicesPlayer.m; sourceTree = "<group>"; };
 		BFC1615C20115D0C00EF12BC /* TimeToRun.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimeToRun.m4a; sourceTree = "<group>"; };
+		BFC434C9202B1C7B008D3D79 /* AISImageResizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISImageResizer.h; sourceTree = "<group>"; };
+		BFC434CA202B1C7B008D3D79 /* AISImageResizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISImageResizer.m; sourceTree = "<group>"; };
 		DE88160992FC2299B437EEDB /* Pods-RunQuestAITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunQuestAITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunQuestAITests/Pods-RunQuestAITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -373,6 +376,8 @@
 			children = (
 				BF26D4932010051B00D70121 /* AISLightSaberView.h */,
 				BF26D4942010051B00D70121 /* AISLightSaberView.m */,
+				BFC434C9202B1C7B008D3D79 /* AISImageResizer.h */,
+				BFC434CA202B1C7B008D3D79 /* AISImageResizer.m */,
 				BF4CE99520124F97000BEC8A /* AISCustomRunView.h */,
 				BF4CE99620124F97000BEC8A /* AISCustomRunView.m */,
 			);
@@ -824,6 +829,7 @@
 				BF3065F2200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m in Sources */,
 				BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */,
 				BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */,
+				BFC434CB202B1C7B008D3D79 /* AISImageResizer.m in Sources */,
 				BF2BF7BC2017D3D6003118F4 /* Location+CoreDataClass.m in Sources */,
 				BF2BF7BF2017D3D6003118F4 /* Run+CoreDataProperties.m in Sources */,
 				BF26D483200F893200D70121 /* AISUserDefaultsService.m in Sources */,
