@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -97,7 +97,7 @@
 
 /* Begin PBXFileReference section */
 		01781F33653741AF92AFD18657EB6035 /* OCMStubRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCMStubRecorder.h; path = Source/OCMock/OCMStubRecorder.h; sourceTree = "<group>"; };
-		03A81AD4149219EF511BF3DA69285DF0 /* libPods-RunQuestAIUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RunQuestAIUITests.a"; path = "libPods-RunQuestAIUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A81AD4149219EF511BF3DA69285DF0 /* libPods-RunQuestAIUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RunQuestAIUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		069064EEA0E13BF04934D8690549E3F4 /* Pods-RunQuestAI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RunQuestAI-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1088C9D9D21A530353055B233765CDA3 /* NSInvocation+OCMAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+OCMAdditions.h"; path = "Source/OCMock/NSInvocation+OCMAdditions.h"; sourceTree = "<group>"; };
 		11E7D9594291CE8E17392CF536B86EDA /* OCMArg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCMArg.h; path = Source/OCMock/OCMArg.h; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		19D46B44F831413D1A0756EACF3D41EE /* OCMReturnValueProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCMReturnValueProvider.h; path = Source/OCMock/OCMReturnValueProvider.h; sourceTree = "<group>"; };
 		1A3684C469A75A75895B22A46F7E2A3D /* OCMArgAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCMArgAction.h; path = Source/OCMock/OCMArgAction.h; sourceTree = "<group>"; };
 		1BEB2132D0D65D4F24F6B31A5483E634 /* NSNotificationCenter+OCMAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+OCMAdditions.m"; path = "Source/OCMock/NSNotificationCenter+OCMAdditions.m"; sourceTree = "<group>"; };
-		219D5EA97FD0B001B28358A9B83E9875 /* libPods-RunQuestAI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RunQuestAI.a"; path = "libPods-RunQuestAI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		219D5EA97FD0B001B28358A9B83E9875 /* libPods-RunQuestAI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RunQuestAI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2216DB2152C389DDAA5ED44A34F339AE /* OCMVerifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMVerifier.m; path = Source/OCMock/OCMVerifier.m; sourceTree = "<group>"; };
 		2372B6E5CF3E6381D1E2B9F1DD671DDF /* OCProtocolMockObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCProtocolMockObject.m; path = Source/OCMock/OCProtocolMockObject.m; sourceTree = "<group>"; };
 		24105489F8D603826D84F9378DC95A7C /* NSObject+OCMAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+OCMAdditions.m"; path = "Source/OCMock/NSObject+OCMAdditions.m"; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		4B815BBAD7F21CD7FF8E22BCAB958A67 /* Pods-RunQuestAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunQuestAI.release.xcconfig"; sourceTree = "<group>"; };
 		5132CD88C032E7E4F7B89084FF6867F6 /* OCMExceptionReturnValueProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMExceptionReturnValueProvider.m; path = Source/OCMock/OCMExceptionReturnValueProvider.m; sourceTree = "<group>"; };
 		5386A65A236C233B4A16DF495CC140C3 /* Pods-RunQuestAIUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RunQuestAIUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		56182D1A2B6C9C4DBE26A2ECF88E4EEE /* libPods-RunQuestAITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RunQuestAITests.a"; path = "libPods-RunQuestAITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56182D1A2B6C9C4DBE26A2ECF88E4EEE /* libPods-RunQuestAITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RunQuestAITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5682563FFC12305B63A3B91DA5A3E2AC /* OCMFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMFunctions.m; path = Source/OCMock/OCMFunctions.m; sourceTree = "<group>"; };
 		56A460F50DF3FBAA9F6A049AC3CD735B /* Pods-RunQuestAITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunQuestAITests.release.xcconfig"; sourceTree = "<group>"; };
 		57B03F0F665B55AF25BEDD4EA7BE684F /* Pods-RunQuestAIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunQuestAIUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		9024CEDF715CE42F7B9CA1CC764D43F2 /* OCMRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMRecorder.m; path = Source/OCMock/OCMRecorder.m; sourceTree = "<group>"; };
 		91B5099ECA66A917624F0ACF8B42A62E /* OCMArgAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMArgAction.m; path = Source/OCMock/OCMArgAction.m; sourceTree = "<group>"; };
 		924D0E77F5C9BA3B588CBECE774352BF /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93E531D4F6983D6DB02042353C258C4A /* NSMethodSignature+OCMAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+OCMAdditions.m"; path = "Source/OCMock/NSMethodSignature+OCMAdditions.m"; sourceTree = "<group>"; };
 		94086774A544E16CA005930B9804F9E5 /* OCMock-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OCMock-prefix.pch"; sourceTree = "<group>"; };
 		97106CEC576AB3BC3E0E0585E5F62446 /* OCMMacroState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMMacroState.m; path = Source/OCMock/OCMMacroState.m; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		BF1258B6480BAF4FAD98412A739A917E /* OCPartialMockObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCPartialMockObject.h; path = Source/OCMock/OCPartialMockObject.h; sourceTree = "<group>"; };
 		C50EB95109CF467C10A38D9DCB839EDE /* OCMBoxedReturnValueProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCMBoxedReturnValueProvider.h; path = Source/OCMock/OCMBoxedReturnValueProvider.h; sourceTree = "<group>"; };
 		C59C5C645218F7309513CE509B18BBC1 /* Pods-RunQuestAI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunQuestAI-acknowledgements.plist"; sourceTree = "<group>"; };
-		C6072EC46073ADDEEDA051400888F3F8 /* libOCMock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libOCMock.a; path = libOCMock.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6072EC46073ADDEEDA051400888F3F8 /* libOCMock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOCMock.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FA62E67312125C8CC13D3FCB653825 /* OCMNotificationPoster.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OCMNotificationPoster.m; path = Source/OCMock/OCMNotificationPoster.m; sourceTree = "<group>"; };
 		CAA54760538F1441CF0B77DA6B2256D1 /* Pods-RunQuestAIUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunQuestAIUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CD027838F474C1102C51970DAA22C56F /* OCMockObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCMockObject.h; path = Source/OCMock/OCMockObject.h; sourceTree = "<group>"; };
@@ -332,7 +332,6 @@
 				2372B6E5CF3E6381D1E2B9F1DD671DDF /* OCProtocolMockObject.m */,
 				0A04903DF8F37D52D1E9964AFA864418 /* Support Files */,
 			);
-			name = OCMock;
 			path = OCMock;
 			sourceTree = "<group>";
 		};
@@ -386,7 +385,6 @@
 				BFBE30DD9471CCDAA22ECDBE907EE84B /* Frameworks */,
 				F6EEEB648AB65AA476D3F8D1DA8F5F62 /* Resources */,
 			);
-			name = GooglePlaces;
 			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
@@ -396,7 +394,6 @@
 				F61EE933B89BD3A9203C5DD89EEB268E /* Base */,
 				64B39A9C6D611A8B1950281DC3DE1452 /* Maps */,
 			);
-			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -940,7 +937,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.2;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -983,7 +980,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.2;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

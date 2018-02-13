@@ -49,7 +49,8 @@ static float distanceToAim;
     [self.timer invalidate];
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     [self addBackgroundView];
@@ -310,8 +311,8 @@ static float distanceToAim;
 
 
 
-- (void)configureUI {
-    
-}
+//- (void)configureUI {
+//
+//}
 
 @end

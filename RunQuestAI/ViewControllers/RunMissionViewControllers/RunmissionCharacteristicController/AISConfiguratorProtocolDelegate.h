@@ -23,6 +23,4 @@
 
 @property (nonatomic, strong) UIVisualEffectView *blurEffectView;
 
--(void)configureUI;
-
 @end

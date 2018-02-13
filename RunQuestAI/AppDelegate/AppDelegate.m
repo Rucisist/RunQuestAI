@@ -38,7 +38,7 @@ static NSString *const GMSServicesKey = @"AIzaSyBacMb-sv6VxaYjoZHJV9D6c4c_iyBhda
 
     self.globalNavBarDelegate = [AISNavigationControllerDelegate new];
 
-    navigationController.delegate = self.globalNavBarDelegate;
+    //navigationController.delegate = self.globalNavBarDelegate;
 
     self.window.rootViewController = navigationController;
     
