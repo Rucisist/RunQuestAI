@@ -11,10 +11,15 @@
 #import "AISUserDefaultsService.h"
 #import "AISLightSaberView.h"
 #import "AISWeatherForRunAndClothesViewController.h"
+#import "AISDownloadService.h"
 
 static const CGFloat AISstartRunButtonDiameter = 100;
 static const CGFloat AISoffsetFromBottom = 200;
 static const CGFloat AISSaberViewHeight = 200;
+static const CGFloat AISxOffsetFromCenterWeatherButton = 100;
+static const CGFloat AISyOffsetFromCenterWeatherButton = 70;
+static const CGFloat AISopenWeatherButtonSize = 48;
+static const CGFloat AISopenWeatherButtonCornerRadius = 10;
 
 @interface AISBeginRunViewController ()
 
@@ -28,6 +33,7 @@ static const CGFloat AISSaberViewHeight = 200;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) AISUserDefaultsService *userDefaultsService;
 @property (nonatomic, strong) AISLightSaberView *lightSaberView;
+@property (nonatomic, strong) AISDownloadService *downloadService;
 
 @end
 
@@ -36,6 +42,11 @@ static const CGFloat AISSaberViewHeight = 200;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.weatherForRun = [AISSpecialWeatherForRun new];
+    
+    self.locationManager = [CLLocationManager new];
+    [self.locationManager startUpdatingLocation];
     
     [self configureUI];
     [self initializeSaberView];
@@ -48,6 +59,11 @@ static const CGFloat AISSaberViewHeight = 200;
     [self.view addSubview:imageView];
     [self.view sendSubviewToBack:imageView];
     
+    self.downloadService = [AISDownloadService new];
+    self.downloadService.delegate = self;
+    
+    [self sendRequestToOWM];
+    
     self.view.backgroundColor = [UIColor blackColor];
 }
 
@@ -55,6 +71,18 @@ static const CGFloat AISSaberViewHeight = 200;
 {
     [self.navigationController setNavigationBarHidden:YES];
     [self configureSaberView];
+    [self sendRequestToOWM];
+}
+
+-(void)sendRequestToOWM
+{
+    [self.downloadService loadWeatherData:self.locationManager.location];
+}
+
+-(void)updateUI
+{
+    NSLog(@"%@", self.weatherForRun.temperatureString);
+    [self.clothesWeatherButton setTitle:self.weatherForRun.temperatureString forState:UIControlStateNormal];
 }
 
 #pragma mark - configureView
@@ -75,10 +103,11 @@ static const CGFloat AISSaberViewHeight = 200;
     CGFloat frameWidth = CGRectGetWidth(screenFrame);
     CGFloat frameHeight = CGRectGetHeight(screenFrame);
     
-    self.clothesWeatherButton = [[UIButton alloc] initWithFrame:CGRectMake(frameWidth / 2 + 100, frameHeight / 2 + 70, 40, 40)];
+    self.clothesWeatherButton = [[UIButton alloc] initWithFrame:CGRectMake(frameWidth / 2 + AISxOffsetFromCenterWeatherButton, frameHeight / 2 + AISyOffsetFromCenterWeatherButton, AISopenWeatherButtonSize, AISopenWeatherButtonSize)];
     [self.clothesWeatherButton setTitle:@"t" forState:UIControlStateNormal];
+    self.clothesWeatherButton.titleLabel.font = [UIFont systemFontOfSize:10];
     [self.clothesWeatherButton setTitleColor:UIColor.orangeColor forState:UIControlStateNormal];
-    self.clothesWeatherButton.layer.cornerRadius = 10;
+    self.clothesWeatherButton.layer.cornerRadius = AISopenWeatherButtonCornerRadius;
     self.clothesWeatherButton.backgroundColor = UIColor.yellowColor;
     [self.view addSubview:self.clothesWeatherButton];
     [self.clothesWeatherButton addTarget:self action:@selector(goToAISWeatherForRunAndClothesViewController) forControlEvents:UIControlEventTouchUpInside];

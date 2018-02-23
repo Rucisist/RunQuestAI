@@ -118,7 +118,6 @@
             NSLog(@"%@", json[@"list"][0][@"main"][@"temp"]);
             //NSString *timeFromJSONObj = [NSString stringWithFormat:@"%@", json[@"list"][0][@"dt_txt"]];
             double times = [json[@"list"][0][@"dt"] doubleValue] - 3600 * 3;
-            NSDate *theDate = [NSDate dateWithTimeIntervalSince1970:times];
             
             self.delegate.weatherForRun.temperatureString = [NSString stringWithFormat:@"%@", json[@"list"][0][@"main"][@"temp"]];
             
@@ -126,7 +125,6 @@
                 [self.delegate updateUI];
             });
             NSLog(@"%@",  self.delegate.weatherForRun.temperatureString);
-           // NSLog(@"%@", json[@"list"][0]);
         }
         
     }];

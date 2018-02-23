@@ -421,6 +421,8 @@
 		BF4CE9BF20128F9E000BEC8A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF91ED0C203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.h */,
+				BF91ED0D203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.m */,
 				BF5A46C32031D94600959B94 /* Animation */,
 				BF4CE9AB20128DD1000BEC8A /* StarterRunViewControllers */,
 				BF26D48B200F990A00D70121 /* PisesCollectionViewControllers */,
@@ -463,8 +465,6 @@
 				BF3065EE200CB5BB00F3058E /* AISRunMissionMapViewController.m */,
 				BF3065E7200C144F00F3058E /* AISCountdownRunMissionViewController.h */,
 				BF3065E8200C144F00F3058E /* AISCountdownRunMissionViewController.m */,
-				BF91ED0C203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.h */,
-				BF91ED0D203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.m */,
 			);
 			path = RunMissionViewControllers;
 			sourceTree = "<group>";

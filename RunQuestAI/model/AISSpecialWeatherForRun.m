@@ -17,7 +17,7 @@
     if (self)
     {
         double temperature = [temp doubleValue] - 273.15;
-        _temperatureString = [NSString stringWithFormat:@"%f,°C", temperature];
+        _temperatureString = [NSString stringWithFormat:@"%f°C", temperature];
     }
     
     return self;
@@ -26,7 +26,7 @@
 -(void)setTemperatureString:(NSString *)temperatureString
 {
     double temperature = round([temperatureString doubleValue] - 273.15);
-    _temperatureString = [NSString stringWithFormat:@"%.0f,°C", temperature];
+    _temperatureString = [NSString stringWithFormat:@"%.0f°C", temperature];
 }
 
 @end

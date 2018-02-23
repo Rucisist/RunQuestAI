@@ -10,6 +10,13 @@
 #import "AISWeatherForRunAndClothesViewController.h"
 #import "AISDownloadService.h"
 
+static const CGFloat AISTopImageViewOffsetx = 40;
+static const CGFloat AISTopImageViewOffsety = 100;
+static const CGFloat AISTopImageViewHeight = 200;
+static const CGFloat AISCurrentWeatherLabelWidth = 100;
+static const CGFloat AISCurrentWeatherLabelHeight = 40;
+static const CGFloat AISactivityIndicatorViewScale = 40;
+
 @interface AISWeatherForRunAndClothesViewController ()
 
 @property (nonatomic, strong) AISDownloadService *downloadService;
@@ -45,17 +52,17 @@
 {
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.currentWeatherLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 50, self.view.frame.size.height / 2 - 20, 100, 40)];
+    self.currentWeatherLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - AISCurrentWeatherLabelWidth / 2, self.view.frame.size.height / 2 - AISCurrentWeatherLabelHeight / 2, AISCurrentWeatherLabelWidth, AISCurrentWeatherLabelHeight)];
     self.currentWeatherLabel.textAlignment = NSTextAlignmentCenter;
     self.currentWeatherLabel.font = [UIFont systemFontOfSize:30];
     self.currentWeatherLabel.transform = CGAffineTransformScale(self.currentWeatherLabel.transform, 1, 1);
     
-    self.activityLoadIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 20, self.view.frame.size.height / 2 - 20, 40, 40)];
+    self.activityLoadIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - AISactivityIndicatorViewScale / 2, self.view.frame.size.height / 2 - AISactivityIndicatorViewScale / 2, AISactivityIndicatorViewScale, AISactivityIndicatorViewScale)];
     self.activityLoadIndicator.layer.cornerRadius = 12;
     self.activityLoadIndicator.backgroundColor = UIColor.grayColor;
     self.activityLoadIndicator.alpha = 0.4;
     
-    self.tShirtImageView = [[UIImageView alloc] initWithFrame:CGRectMake(40, 100, self.view.frame.size.width - 80, 200)];
+    self.tShirtImageView = [[UIImageView alloc] initWithFrame:CGRectMake(AISTopImageViewOffsetx, AISTopImageViewOffsety, self.view.frame.size.width - AISTopImageViewOffsetx * 2, AISTopImageViewHeight)];
     self.tShirtImageView.image = [UIImage imageNamed:@"shirtSleeveShort"];
     
     [self.view addSubview:self.tShirtImageView];
@@ -74,12 +81,14 @@
 
 -(void)megaAnimation
 {
+    CGRect newCurrentWeatherLabelRect = CGRectMake(0, 70, 100, 40);
+    
     [UIView animateWithDuration:2.0 delay:0.4 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        self.currentWeatherLabel.frame = CGRectMake(0, 70, 100, 40);
+        self.currentWeatherLabel.frame = newCurrentWeatherLabelRect;
         self.currentWeatherLabel.transform = CGAffineTransformScale(self.currentWeatherLabel.transform, 0.5, 0.5);
         self.tShirtImageView.alpha = 1.0;
     } completion:^(BOOL finished) {
-        self.currentWeatherLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, 100, 40)];
+        self.currentWeatherLabel = [[UILabel alloc] initWithFrame:newCurrentWeatherLabelRect];
         self.currentWeatherLabel.font = [UIFont systemFontOfSize:15];
     }];
 }
