@@ -10,6 +10,7 @@
 #import "AISCountdownRunMissionViewController.h"
 #import "AISUserDefaultsService.h"
 #import "AISLightSaberView.h"
+#import "AISWeatherForRunAndClothesViewController.h"
 
 static const CGFloat AISstartRunButtonDiameter = 100;
 static const CGFloat AISoffsetFromBottom = 200;
@@ -19,6 +20,7 @@ static const CGFloat AISSaberViewHeight = 200;
 
 @property (nonatomic, strong) UIButton *freeRunButton;
 @property (nonatomic, strong) UIButton *questRunButton;
+@property (nonatomic, strong) UIButton *clothesWeatherButton;
 @property (nonatomic, strong) UIButton *startRunButton;
 @property (nonatomic, strong) UIButton *settingsButton;
 @property (nonatomic, strong) UIImageView *lightSaberImageView;
@@ -63,8 +65,23 @@ static const CGFloat AISSaberViewHeight = 200;
     
     [self configurateStartButton];
     [self configureSaberView];
-    
+    [self configurateGoToClothesWeatherButton];
     self.AllDistanceLabel = [UILabel new];
+}
+
+-(void)configurateGoToClothesWeatherButton
+{
+    CGRect screenFrame = self.view.frame;
+    CGFloat frameWidth = CGRectGetWidth(screenFrame);
+    CGFloat frameHeight = CGRectGetHeight(screenFrame);
+    
+    self.clothesWeatherButton = [[UIButton alloc] initWithFrame:CGRectMake(frameWidth / 2 + 100, frameHeight / 2 + 70, 40, 40)];
+    [self.clothesWeatherButton setTitle:@"t" forState:UIControlStateNormal];
+    [self.clothesWeatherButton setTitleColor:UIColor.orangeColor forState:UIControlStateNormal];
+    self.clothesWeatherButton.layer.cornerRadius = 10;
+    self.clothesWeatherButton.backgroundColor = UIColor.yellowColor;
+    [self.view addSubview:self.clothesWeatherButton];
+    [self.clothesWeatherButton addTarget:self action:@selector(goToAISWeatherForRunAndClothesViewController) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)configurateStartButton
@@ -116,6 +133,14 @@ static const CGFloat AISSaberViewHeight = 200;
     countdownViewController = [AISCountdownRunMissionViewController new];
     
     [self.navigationController pushViewController:countdownViewController animated:YES];
+}
+
+-(void)goToAISWeatherForRunAndClothesViewController
+{
+    AISWeatherForRunAndClothesViewController *runClothesViewController;
+    runClothesViewController = [AISWeatherForRunAndClothesViewController new];
+    
+    [self.navigationController pushViewController:runClothesViewController animated:YES];
 }
 
 @end

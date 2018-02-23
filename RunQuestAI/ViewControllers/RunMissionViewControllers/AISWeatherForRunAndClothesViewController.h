@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AISDownloadServiceDelegate.h"
+#import "AISSpecialWeatherForRun.h"
 
-@interface AISWeatherForRunAndClothesViewController : UIViewController
+@interface AISWeatherForRunAndClothesViewController : UIViewController <AISDownloadServiceDelegate>
+
+@property (nonatomic, strong) AISSpecialWeatherForRun *weatherForRun;
 
 @end

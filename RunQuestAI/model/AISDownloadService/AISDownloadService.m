@@ -43,7 +43,6 @@
     components.queryItems = @[location, radius, type, key];
     
     NSURL *url = components.URL;
-    NSLog(@"%@", url);
     
     NSURLSession *session = [NSURLSession sharedSession];
     
@@ -87,5 +86,54 @@
     
     return self.isOK;
 }
+
+-(BOOL)loadWeatherData:(CLLocation *)locationCoordinates
+{
+    //http://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&APPID=c0881ff1c7fc2a42a383904116671c61
+    
+    NSURLComponents *components = [NSURLComponents componentsWithString:@"https://api.openweathermap.org/data/2.5/forecast"];
+    
+    NSString *lattitude = [NSString stringWithFormat:@"%f", locationCoordinates.coordinate.latitude];
+    NSString *longitude = [NSString stringWithFormat:@"%f", locationCoordinates.coordinate.longitude];
+    
+    NSURLQueryItem *longitudeQueryItem = [NSURLQueryItem queryItemWithName:@"lat" value:lattitude];
+    
+    NSURLQueryItem *lattitudeQueryItem = [NSURLQueryItem queryItemWithName:@"lon" value:longitude];
+    
+    NSURLQueryItem *key = [NSURLQueryItem queryItemWithName:@"APPID" value:@"c0881ff1c7fc2a42a383904116671c61"];
+    
+    components.queryItems = @[lattitudeQueryItem, longitudeQueryItem, key];
+    
+    NSURL *url = components.URL;
+    
+    NSLog(@"%@", url);
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+     
+        if (!error)
+        {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSLog(@"%@", json[@"list"][0][@"main"][@"temp"]);
+            //NSString *timeFromJSONObj = [NSString stringWithFormat:@"%@", json[@"list"][0][@"dt_txt"]];
+            double times = [json[@"list"][0][@"dt"] doubleValue] - 3600 * 3;
+            NSDate *theDate = [NSDate dateWithTimeIntervalSince1970:times];
+            
+            self.delegate.weatherForRun.temperatureString = [NSString stringWithFormat:@"%@", json[@"list"][0][@"main"][@"temp"]];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.delegate updateUI];
+            });
+            NSLog(@"%@",  self.delegate.weatherForRun.temperatureString);
+           // NSLog(@"%@", json[@"list"][0]);
+        }
+        
+    }];
+    
+    [dataTask resume];
+    return YES;
+}
+
 
 @end

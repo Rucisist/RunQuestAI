@@ -21,4 +21,6 @@
  @params locationCoordinates - местоположение */
 -(BOOL)loadDataFromGooglePlaces:(CLLocation *)locationCoordinates;
 
+-(BOOL)loadWeatherData:(CLLocation *)locationCoordinates;
+
 @end

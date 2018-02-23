@@ -7,10 +7,16 @@
 //
 
 #import <GoogleMaps/GoogleMaps.h>
+#import "AISSpecialWeatherForRun.h"
 
 @protocol AISDownloadServiceDelegate
 
 /*! @brief свойство - карты */
+@optional
 @property (nonatomic, strong) GMSMapView *mapView;
+
+@property (nonatomic, strong) AISSpecialWeatherForRun *weatherForRun;
+
+-(void)updateUI;
 
 @end

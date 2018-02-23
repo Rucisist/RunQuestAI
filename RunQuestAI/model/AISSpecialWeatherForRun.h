@@ -10,4 +10,7 @@
 
 @interface AISSpecialWeatherForRun : NSObject
 
+@property (nonatomic, strong) NSString *temperatureString;
+@property (nonatomic, strong) NSNumber *temperatureDigit;
+
 @end
