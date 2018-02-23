@@ -74,18 +74,12 @@
 
 -(void)megaAnimation
 {
-    [UIView animateWithDuration:1.0 animations:^{
-
-    }];
-    
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:2.0 delay:0.4 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.currentWeatherLabel.frame = CGRectMake(0, 70, 100, 40);
         self.currentWeatherLabel.transform = CGAffineTransformScale(self.currentWeatherLabel.transform, 0.5, 0.5);
-        //        [self.currentWeatherLabel setFont:[UIFont systemFontOfSize:15]];
         self.tShirtImageView.alpha = 1.0;
     } completion:^(BOOL finished) {
         self.currentWeatherLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, 100, 40)];
-        
         self.currentWeatherLabel.font = [UIFont systemFontOfSize:15];
     }];
 }
