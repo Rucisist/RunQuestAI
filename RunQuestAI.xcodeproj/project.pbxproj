@@ -61,6 +61,7 @@
 		BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC1615A20115B6500EF12BC /* AISRealVoicesPlayer.m */; };
 		BFC16169201167D500EF12BC /* TimeToRun.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BFC1615C20115D0C00EF12BC /* TimeToRun.m4a */; };
 		BFC434CB202B1C7B008D3D79 /* AISImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC434CA202B1C7B008D3D79 /* AISImageResizer.m */; };
+		BFDF3286204C043D00844841 /* AISALittlePieceOfSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF3285204C043D00844841 /* AISALittlePieceOfSwift.swift */; };
 		C82BCEEF8976D05F5394DA73 /* libPods-RunQuestAITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 909BB1A7FBEF79C4DB2A1491 /* libPods-RunQuestAITests.a */; };
 		F40323E5C36EC69FB2C16380 /* libPods-RunQuestAI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB3329CECEDB84AFB247AFE /* libPods-RunQuestAI.a */; };
 /* End PBXBuildFile section */
@@ -191,6 +192,8 @@
 		BFC1615C20115D0C00EF12BC /* TimeToRun.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimeToRun.m4a; sourceTree = "<group>"; };
 		BFC434C9202B1C7B008D3D79 /* AISImageResizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISImageResizer.h; sourceTree = "<group>"; };
 		BFC434CA202B1C7B008D3D79 /* AISImageResizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISImageResizer.m; sourceTree = "<group>"; };
+		BFDF3284204C043C00844841 /* RunQuestAI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunQuestAI-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFDF3285204C043D00844841 /* AISALittlePieceOfSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISALittlePieceOfSwift.swift; sourceTree = "<group>"; };
 		DE88160992FC2299B437EEDB /* Pods-RunQuestAITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunQuestAITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunQuestAITests/Pods-RunQuestAITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -422,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				BF91ED0C203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.h */,
+				BFDF3285204C043D00844841 /* AISALittlePieceOfSwift.swift */,
 				BF91ED0D203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.m */,
 				BF5A46C32031D94600959B94 /* Animation */,
 				BF4CE9AB20128DD1000BEC8A /* StarterRunViewControllers */,
@@ -429,6 +433,7 @@
 				BF7D347A200E28A4007D33B2 /* RunMissionViewControllers */,
 				BF26D48F200F9E6000D70121 /* MainScreen */,
 				BF4CE9AD20128E18000BEC8A /* StatiscsViewControllers */,
+				BFDF3284204C043C00844841 /* RunQuestAI-Bridging-Header.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -621,6 +626,7 @@
 				TargetAttributes = {
 					BF83EE152008B0F3000EBA5C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -863,6 +869,7 @@
 				BF91ED11203FECB100DF34D9 /* AISSpecialWeatherForRun.m in Sources */,
 				BF3065F2200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m in Sources */,
 				BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */,
+				BFDF3286204C043D00844841 /* AISALittlePieceOfSwift.swift in Sources */,
 				BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */,
 				BFC434CB202B1C7B008D3D79 /* AISImageResizer.m in Sources */,
 				BF91ED0E203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.m in Sources */,
@@ -1049,13 +1056,18 @@
 			baseConfigurationReference = 61D7A8DE3924531802539768 /* Pods-RunQuestAI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M5268ZTPTL;
 				INFOPLIST_FILE = RunQuestAI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AIL.RunQuestAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunQuestAI/ViewControllers/RunQuestAI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1065,13 +1077,17 @@
 			baseConfigurationReference = 72ED9C532FF017944AB14B42 /* Pods-RunQuestAI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M5268ZTPTL;
 				INFOPLIST_FILE = RunQuestAI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AIL.RunQuestAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunQuestAI/ViewControllers/RunQuestAI-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1080,6 +1096,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE88160992FC2299B437EEDB /* Pods-RunQuestAITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5268ZTPTL;
@@ -1096,6 +1113,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43E90E808D27D223DCDA5D0A /* Pods-RunQuestAITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5268ZTPTL;
@@ -1112,6 +1130,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B880ABE2B79798E47AE25DB4 /* Pods-RunQuestAIUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5268ZTPTL;
 				INFOPLIST_FILE = RunQuestAIUITests/Info.plist;
@@ -1127,6 +1146,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B06C476CA1D0A4169831ED01 /* Pods-RunQuestAIUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5268ZTPTL;
 				INFOPLIST_FILE = RunQuestAIUITests/Info.plist;

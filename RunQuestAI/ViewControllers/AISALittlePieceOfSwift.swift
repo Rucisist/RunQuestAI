@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+@objc class AISWriteLog: NSObject {
+    static func A() {
+        print("s")
+    }
+    static func printSomething(text: String?) -> Bool {
+        print(text ?? "noText")
+        return true
+    }
+}

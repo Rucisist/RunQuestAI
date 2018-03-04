@@ -9,6 +9,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "AISWeatherForRunAndClothesViewController.h"
 #import "AISDownloadService.h"
+#import "RunQuestAI-Swift.h"
 
 static const CGFloat AISTopImageViewOffsetx = 40;
 static const CGFloat AISTopImageViewOffsety = 100;
@@ -41,6 +42,7 @@ static const CGFloat AISactivityIndicatorViewScale = 40;
     self.downloadService.delegate = self;
     [self.downloadService loadWeatherData:self.locationManager.location];
     [self configureUI];
+    [AISWriteLog printSomethingWithText:@"some text"];
 }
 
 -(void)viewWillAppear:(BOOL)animated
