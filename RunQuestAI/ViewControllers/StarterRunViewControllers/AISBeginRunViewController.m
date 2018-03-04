@@ -74,6 +74,11 @@ static const CGFloat AISopenWeatherButtonCornerRadius = 10;
     [self sendRequestToOWM];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 -(void)sendRequestToOWM
 {
     [self.downloadService loadWeatherData:self.locationManager.location];
