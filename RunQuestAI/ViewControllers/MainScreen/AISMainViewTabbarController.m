@@ -38,6 +38,7 @@ static const double AISDelayAnimationDuration = 2.0;
     [self requestLocationUpdates];
     
     [self.tabBar setBarStyle:UIBarStyleBlack];
+    self.tabBar.alpha = 0.8;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -110,11 +111,12 @@ static const double AISDelayAnimationDuration = 2.0;
     if (item.tag == 0)
     {
         [self.tabBar setBarStyle:UIBarStyleBlack];
+        self.tabBar.alpha = 0.8;
     }
     else
     {
         [self.tabBar setBarStyle:UIBarStyleDefault];
-        [self.tabBar setTintColor:UIColor.blueColor];
+        self.tabBar.alpha = 1;
     }
 }
 
