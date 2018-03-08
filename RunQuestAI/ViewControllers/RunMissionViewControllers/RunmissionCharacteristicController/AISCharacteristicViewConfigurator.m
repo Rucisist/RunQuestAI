@@ -166,7 +166,6 @@ static const CGFloat pauseButtonSpaceFromCenter = 100;
 {
     [UIView animateWithDuration:0.3 animations:^{
         [self returnStopResumeButtonInitialState];
-        [self.delegate.blurEffectView removeFromSuperview];
         [self configureMainView];
         [self.delegate.pauseButton bringSubviewToFront:self.delegate.view];
     }
@@ -178,12 +177,15 @@ static const CGFloat pauseButtonSpaceFromCenter = 100;
         self.delegate.resumeButton.hidden = YES;
         self.delegate.stopButton.alpha = 0;
         self.delegate.resumeButton.alpha = 0;
+        [self.delegate.blurEffectView removeFromSuperview];
         }];
     
 }
 
 -(void)animationForPauseButton
 {
+    [self blurEffect];
+    
     [UIView animateWithDuration:0.4 animations:^{
         self.delegate.stopButton.alpha = 1.0;
         self.delegate.resumeButton.alpha = 1.0;
@@ -199,9 +201,7 @@ static const CGFloat pauseButtonSpaceFromCenter = 100;
         self.delegate.resumeButton.hidden = NO;
     }];
     
-    
     [UIView animateWithDuration:0.6 animations:^{
-        [self blurEffect];
         
         CGRect stopButtonFrame = self.delegate.stopButton.frame;
         CGRect resumeButtonFrame = self.delegate.resumeButton.frame;
@@ -223,8 +223,6 @@ static const CGFloat pauseButtonSpaceFromCenter = 100;
 -(void)blurEffect
 {
     if (!UIAccessibilityIsReduceTransparencyEnabled()) {
-        self.delegate.view.backgroundColor = [UIColor clearColor];
-        
         UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
         self.delegate.blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
         self.delegate.blurEffectView.frame = self.delegate.view.bounds;
