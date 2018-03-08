@@ -41,11 +41,16 @@ static NSString *const GMSServicesKey = @"AIzaSyBacMb-sv6VxaYjoZHJV9D6c4c_iyBhda
 
     //navigationController.delegate = self.globalNavBarDelegate;
 
+    [navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    navigationController.navigationBar.shadowImage = [UIImage new];
+    navigationController.navigationBar.translucent = YES;
+    
     self.window.rootViewController = navigationController; //[AISWeatherForRunAndClothesViewController new];
     
     
     [self.window makeKeyAndVisible];
-    
+        
     return YES;
 }
 

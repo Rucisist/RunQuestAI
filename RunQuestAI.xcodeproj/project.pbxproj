@@ -44,6 +44,7 @@
 		BF5A46BC2031C1EE00959B94 /* AISPopAnimationLaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5A46BB2031C1EE00959B94 /* AISPopAnimationLaunch.m */; };
 		BF5A46BF2031C20600959B94 /* AISPushAnimationLaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5A46BE2031C20600959B94 /* AISPushAnimationLaunch.m */; };
 		BF5A46C22031C21B00959B94 /* AISNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5A46C12031C21B00959B94 /* AISNavigationControllerDelegate.m */; };
+		BF6703AE2051773800954CD2 /* UIViewController+BackColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6703AD2051773800954CD2 /* UIViewController+BackColor.m */; };
 		BF7D3479200E2837007D33B2 /* AISMainViewTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3478200E2837007D33B2 /* AISMainViewTabbarController.m */; };
 		BF7D3482200E2A3F007D33B2 /* AISStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3481200E2A3F007D33B2 /* AISStatsViewController.m */; };
 		BF7D3485200E36C4007D33B2 /* AISStatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7D3484200E36C4007D33B2 /* AISStatsTableViewCell.m */; };
@@ -158,6 +159,8 @@
 		BF5A46BE2031C20600959B94 /* AISPushAnimationLaunch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISPushAnimationLaunch.m; sourceTree = "<group>"; };
 		BF5A46C02031C21B00959B94 /* AISNavigationControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISNavigationControllerDelegate.h; sourceTree = "<group>"; };
 		BF5A46C12031C21B00959B94 /* AISNavigationControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISNavigationControllerDelegate.m; sourceTree = "<group>"; };
+		BF6703AC2051773800954CD2 /* UIViewController+BackColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackColor.h"; sourceTree = "<group>"; };
+		BF6703AD2051773800954CD2 /* UIViewController+BackColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackColor.m"; sourceTree = "<group>"; };
 		BF7D3477200E2837007D33B2 /* AISMainViewTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISMainViewTabbarController.h; sourceTree = "<group>"; };
 		BF7D3478200E2837007D33B2 /* AISMainViewTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISMainViewTabbarController.m; sourceTree = "<group>"; };
 		BF7D3480200E2A3F007D33B2 /* AISStatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISStatsViewController.h; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 			children = (
 				BF83EE192008B0F3000EBA5C /* AppDelegate.h */,
 				BF83EE1A2008B0F3000EBA5C /* AppDelegate.m */,
+				BF6703AC2051773800954CD2 /* UIViewController+BackColor.h */,
+				BF6703AD2051773800954CD2 /* UIViewController+BackColor.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -875,6 +880,7 @@
 				BF26D4A020103FF200D70121 /* AISPrisesPagesViewController.m in Sources */,
 				BF39BC23201649F700919F1D /* AISPrisesDescription.m in Sources */,
 				BF26D492200FDEB900D70121 /* AISDataService.m in Sources */,
+				BF6703AE2051773800954CD2 /* UIViewController+BackColor.m in Sources */,
 				BF5A46BF2031C20600959B94 /* AISPushAnimationLaunch.m in Sources */,
 				BF26D4A32010678C00D70121 /* AISTargetAllocatorHelper.m in Sources */,
 				BF2BF7BE2017D3D6003118F4 /* Run+CoreDataClass.m in Sources */,

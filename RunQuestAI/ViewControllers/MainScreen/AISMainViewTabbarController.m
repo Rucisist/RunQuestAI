@@ -36,6 +36,8 @@ static const double AISDelayAnimationDuration = 2.0;
     [self initializeLoadingView];
     [self animateLoading];
     [self requestLocationUpdates];
+    
+    [self.tabBar setBarStyle:UIBarStyleBlack];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -101,6 +103,19 @@ static const double AISDelayAnimationDuration = 2.0;
         [self.view sendSubviewToBack:self.loadingImageView];
         [self.view sendSubviewToBack:helperCoverView];
     }];
+}
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    if (item.tag == 0)
+    {
+        [self.tabBar setBarStyle:UIBarStyleBlack];
+    }
+    else
+    {
+        [self.tabBar setBarStyle:UIBarStyleDefault];
+        [self.tabBar setTintColor:UIColor.blueColor];
+    }
 }
 
 @end

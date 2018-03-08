@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface AISMainViewTabbarController : UITabBarController
+@interface AISMainViewTabbarController : UITabBarController <UITabBarDelegate>
 
 @end

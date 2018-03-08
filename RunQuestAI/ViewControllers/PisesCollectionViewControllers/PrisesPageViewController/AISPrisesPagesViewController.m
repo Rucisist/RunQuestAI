@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.index = 0;
     
     self.typeOfPersonViewController = [AISTypeOfPersonViewController new];
