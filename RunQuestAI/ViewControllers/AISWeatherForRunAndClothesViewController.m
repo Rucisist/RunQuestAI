@@ -138,12 +138,10 @@ static const CGFloat AISactivityIndicatorViewScale = 40;
     }];
 }
 
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (scrollView.contentOffset.y > 120)
-    {
-        [scrollView setContentOffset:CGPointMake(scrollView.contentOffset.x, 252)];
-    }
+    NSLog(@"%f", scrollView.contentOffset.y);
+    self.closeButton.alpha = [self makeAlphaWith:scrollView.contentOffset.y];
 }
 
 -(float)makeAlphaWith:(NSUInteger)position
