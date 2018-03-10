@@ -310,9 +310,4 @@ static float distanceToAim;
 }
 
 
-
-//- (void)configureUI {
-//
-//}
-
 @end

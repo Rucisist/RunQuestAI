@@ -17,4 +17,6 @@
 /*! @brief метод для рассчета массива темпов для всех кусков одного забега */
 -(NSMutableArray *)calculatePaceArrayWith:(Run *)runDetails;
 
++(NSMutableArray *)calculatePaceArrayForKmWith:(Run *)runDetails;
+
 @end

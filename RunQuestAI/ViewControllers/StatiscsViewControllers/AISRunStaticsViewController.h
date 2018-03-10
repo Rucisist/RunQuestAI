@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "Location+CoreDataProperties.h"
 
 /*! @brief класс контроллера, выводящего на карту маршрут(разноцветный) в зависимости от темпа */
-@interface AISRunStaticsViewController : UIViewController
+@interface AISRunStaticsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSDate *someDate;
 @property (nonatomic, strong) Run *runDetails;

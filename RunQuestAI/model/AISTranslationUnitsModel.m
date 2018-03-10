@@ -81,6 +81,14 @@ static float const metersInMile = 1609.344;
     }
 }
 
++ (NSString *)stringifyPaceFrom:(double)seconds
+{
+    int sec = round(seconds);
+    int minute = sec / 60;
+    sec = sec % 60;
+    return sec > 10 ? [NSString stringWithFormat:@"%d:%d", minute, sec] : [NSString stringWithFormat:@"%d:0%d", minute, sec];
+}
+
 + (NSString *)stringifyAvgPaceFromDist:(float)meters overTime:(int)seconds
 {
     if (seconds == 0 || meters == 0)

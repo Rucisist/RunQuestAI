@@ -57,6 +57,8 @@
 		BF83EE412008B0F3000EBA5C /* RunQuestAIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF83EE402008B0F3000EBA5C /* RunQuestAIUITests.m */; };
 		BF91ED0E203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91ED0D203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.m */; };
 		BF91ED11203FECB100DF34D9 /* AISSpecialWeatherForRun.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91ED10203FECB100DF34D9 /* AISSpecialWeatherForRun.m */; };
+		BFA585F1205430EA004D6721 /* AISgMapViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA585F0205430EA004D6721 /* AISgMapViewTableViewCell.m */; };
+		BFA585F420545150004D6721 /* AISlabelPaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA585F320545150004D6721 /* AISlabelPaceTableViewCell.m */; };
 		BFBE0CBF200E8D9500C3F019 /* AISRunStaticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBE0CBE200E8D9500C3F019 /* AISRunStaticsViewController.m */; };
 		BFC1615820114D6900EF12BC /* AISSystemSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC1615720114D6900EF12BC /* AISSystemSpeaker.m */; };
 		BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC1615A20115B6500EF12BC /* AISRealVoicesPlayer.m */; };
@@ -185,6 +187,10 @@
 		BF91ED0D203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISWeatherForRunAndClothesViewController.m; sourceTree = "<group>"; };
 		BF91ED0F203FECB100DF34D9 /* AISSpecialWeatherForRun.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISSpecialWeatherForRun.h; sourceTree = "<group>"; };
 		BF91ED10203FECB100DF34D9 /* AISSpecialWeatherForRun.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISSpecialWeatherForRun.m; sourceTree = "<group>"; };
+		BFA585EF205430EA004D6721 /* AISgMapViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISgMapViewTableViewCell.h; sourceTree = "<group>"; };
+		BFA585F0205430EA004D6721 /* AISgMapViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISgMapViewTableViewCell.m; sourceTree = "<group>"; };
+		BFA585F220545150004D6721 /* AISlabelPaceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISlabelPaceTableViewCell.h; sourceTree = "<group>"; };
+		BFA585F320545150004D6721 /* AISlabelPaceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISlabelPaceTableViewCell.m; sourceTree = "<group>"; };
 		BFBE0CBD200E8D9500C3F019 /* AISRunStaticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISRunStaticsViewController.h; sourceTree = "<group>"; };
 		BFBE0CBE200E8D9500C3F019 /* AISRunStaticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISRunStaticsViewController.m; sourceTree = "<group>"; };
 		BFC1615620114D6900EF12BC /* AISSystemSpeaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISSystemSpeaker.h; sourceTree = "<group>"; };
@@ -387,6 +393,10 @@
 				BF7D3481200E2A3F007D33B2 /* AISStatsViewController.m */,
 				BFBE0CBD200E8D9500C3F019 /* AISRunStaticsViewController.h */,
 				BFBE0CBE200E8D9500C3F019 /* AISRunStaticsViewController.m */,
+				BFA585F220545150004D6721 /* AISlabelPaceTableViewCell.h */,
+				BFA585F320545150004D6721 /* AISlabelPaceTableViewCell.m */,
+				BFA585EF205430EA004D6721 /* AISgMapViewTableViewCell.h */,
+				BFA585F0205430EA004D6721 /* AISgMapViewTableViewCell.m */,
 				BF7D3483200E36C4007D33B2 /* AISStatsTableViewCell.h */,
 				BF7D3484200E36C4007D33B2 /* AISStatsTableViewCell.m */,
 			);
@@ -857,6 +867,7 @@
 				BF5A46BC2031C1EE00959B94 /* AISPopAnimationLaunch.m in Sources */,
 				BF26D4A6201067BD00D70121 /* AISRunTarget.m in Sources */,
 				BF4CE9FC2012F52B000BEC8A /* AISTypeOfPersonViewController.m in Sources */,
+				BFA585F1205430EA004D6721 /* AISgMapViewTableViewCell.m in Sources */,
 				BF26D48E200F9BF300D70121 /* AISPrisesCollectionViewCell.m in Sources */,
 				BF39BC27201659C500919F1D /* AISDownloadService.m in Sources */,
 				BF39BC2E201679C000919F1D /* AISPathHelperModel.m in Sources */,
@@ -869,6 +880,7 @@
 				BF3065F2200CB7FA00F3058E /* AISRunMissionCharacteristicsViewController.m in Sources */,
 				BF3065D0200BDBAC00F3058E /* AISBeginRunViewController.m in Sources */,
 				BF3065F9200D3B0700F3058E /* AISTranslationUnitsModel.m in Sources */,
+				BFA585F420545150004D6721 /* AISlabelPaceTableViewCell.m in Sources */,
 				BFC434CB202B1C7B008D3D79 /* AISImageResizer.m in Sources */,
 				BF91ED0E203EEA8A00DF34D9 /* AISWeatherForRunAndClothesViewController.m in Sources */,
 				BF2BF7BC2017D3D6003118F4 /* Location+CoreDataClass.m in Sources */,

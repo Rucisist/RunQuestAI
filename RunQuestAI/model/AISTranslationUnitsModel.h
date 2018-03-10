@@ -48,4 +48,6 @@
  */
 + (NSString *)stringifyAvgPaceFromDist:(float)meters overTime:(int)seconds;
 
++ (NSString *)stringifyPaceFrom:(double)seconds;
+
 @end

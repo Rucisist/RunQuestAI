@@ -102,7 +102,7 @@
     tableViewCell.runInfoLabel.text = [NSString stringWithFormat:@"%@", [runObject.timestamp description]];
     
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    [dateFormatter setDateFormat:@"DD.MM EEEE"];
+    [dateFormatter setDateFormat:@"DD.MM "];
     tableViewCell.runInfoLabel.text = [NSString stringWithFormat:@"Пробежка в %@", [dateFormatter stringFromDate:runObject.timestamp]];
     
     tableViewCell.distanceInfoLabel.text = [NSString stringWithFormat:@"Вы пробежали %@", [AISTranslationUnitsModel stringifyDistance:runObject.distance]];
@@ -115,8 +115,8 @@
     return 1;
 }
 
--(NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+-(NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return self.runArray.count;
 }
 

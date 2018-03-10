@@ -21,6 +21,49 @@
 
 @implementation AISPathHelperModel
 
++(NSMutableArray *)calculatePaceArrayForKmWith:(Run *)runDetails
+{
+    NSUInteger i = 1;
+    NSMutableArray *paceKmArray = [NSMutableArray new];
+    
+    double t = [runDetails.locations.firstObject.timestamp timeIntervalSinceReferenceDate];
+    double distanceLocal = 0;
+    double t1 = 0;
+    double dt = 0;
+    double pace = 0;
+    
+    while (i < runDetails.locations.count)
+    {
+        if (distanceLocal < 1000)
+        {
+        CLLocation *locationTo = [[CLLocation alloc] initWithLatitude:runDetails.locations[i].latitude longitude:runDetails.locations[i].longitude];
+        
+        CLLocation *locationFrom = [[CLLocation alloc] initWithLatitude:runDetails.locations[i-1].latitude longitude:runDetails.locations[i-1].longitude];
+        
+        distanceLocal += [locationTo distanceFromLocation:locationFrom];
+        }
+        else
+        {
+            t1 = [runDetails.locations[i].timestamp timeIntervalSinceReferenceDate];
+            dt = t1 - t;
+            pace = dt / (distanceLocal / 1000);
+            distanceLocal = 0;
+            t = t1;
+            [paceKmArray addObject:[NSNumber numberWithDouble:pace]];
+        }
+        i = i + 1;
+    }
+    if ((int)runDetails.distance % 1000 > 0)
+    {
+        t1 = [runDetails.locations.lastObject.timestamp timeIntervalSinceReferenceDate];
+        dt = t1 - t;
+        pace = dt / (distanceLocal / 1000);
+        [paceKmArray addObject:[NSNumber numberWithDouble:pace]];
+    }
+    
+    return paceKmArray;
+}
+
 -(NSMutableArray *)calculatePaceArrayWith:(Run *)runDetails
 {
     NSUInteger i = 1;

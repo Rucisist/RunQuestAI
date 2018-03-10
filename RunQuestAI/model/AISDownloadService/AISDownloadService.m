@@ -116,7 +116,6 @@
         {
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSLog(@"%@", json[@"list"][0][@"main"][@"temp"]);
-            //NSString *timeFromJSONObj = [NSString stringWithFormat:@"%@", json[@"list"][0][@"dt_txt"]];
             double times = [json[@"list"][0][@"dt"] doubleValue] - 3600 * 3;
             
             self.delegate.weatherForRun.temperatureString = [NSString stringWithFormat:@"%@", json[@"list"][0][@"main"][@"temp"]];
