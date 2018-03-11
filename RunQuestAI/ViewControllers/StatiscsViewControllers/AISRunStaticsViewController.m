@@ -12,6 +12,7 @@
 #import "AISPathHelperModel.h"
 #import "AISgMapViewTableViewCell.h"
 #import "AISlabelPaceTableViewCell.h"
+#import "AISStatiscsPlotViewController.h"
 
 
 @interface AISRunStaticsViewController ()
@@ -42,6 +43,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"title" style:UIBarButtonItemStylePlain target:self action:@selector(goToGrpahViewController)];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -105,15 +108,16 @@
     }
 }
 
--(void)addView
+-(void)goToGrpahViewController
 {
-    UIView *someV = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 200, 200)];
-    someV.backgroundColor = UIColor.yellowColor;
-    someV.alpha = 0.7;
-    [self.view addSubview:someV];
+    AISStatiscsPlotViewController *graphViewController = [AISStatiscsPlotViewController new];
+    graphViewController.runDetails = self.runDetails;
+    
+    [self.navigationController pushViewController:graphViewController animated:YES];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
     if (indexPath.row < 1)
     {
         AISgMapViewTableViewCell *mapCell = [tableView dequeueReusableCellWithIdentifier:@"mapCell"         forIndexPath:indexPath];
@@ -148,7 +152,7 @@
         else if (delta < 0)
         {
             paceLabelCell.paceInsectLabel.textColor = UIColor.greenColor;
-            paceLabelCell.paceInsectLabel.text = [NSString stringWithFormat:@" -%@", [AISTranslationUnitsModel stringifyPaceFrom:fabs(delta)]];
+            paceLabelCell.paceInsectLabel.text = [NSString stringWithFormat:@"-%@", [AISTranslationUnitsModel stringifyPaceFrom:fabs(delta)]];
         }
         
         return [UITableViewCell new];
@@ -169,6 +173,11 @@
     {
         return 100;
     }
+}
+
+-(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
 }
 
 @end

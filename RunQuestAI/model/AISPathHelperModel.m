@@ -64,6 +64,34 @@
     return paceKmArray;
 }
 
++(NSMutableArray *)calculatePaceArrayForPlot:(Run *)runDetails
+{
+    NSUInteger i = 1;
+    double delta = 100;
+    double dt = 100;
+    
+    NSMutableArray *paceArray = [NSMutableArray new];
+    
+    while (i < runDetails.locations.count)
+    {
+        CLLocation *locationTo = [[CLLocation alloc] initWithLatitude:runDetails.locations[i].latitude longitude:runDetails.locations[i].longitude];
+        
+        CLLocation *locationFrom = [[CLLocation alloc] initWithLatitude:runDetails.locations[i-1].latitude longitude:runDetails.locations[i-1].longitude];
+        
+        dt = [runDetails.locations[i].timestamp timeIntervalSinceReferenceDate] - [runDetails.locations[i-1].timestamp timeIntervalSinceReferenceDate];
+        
+        delta = dt / [locationTo distanceFromLocation:locationFrom] * 1000;
+        
+        
+        NSNumber *someNum = [NSNumber new];
+        someNum = [NSNumber numberWithDouble:delta];
+        
+        [paceArray addObject:someNum];
+        i=i+1;
+    }
+    return paceArray;
+}
+
 -(NSMutableArray *)calculatePaceArrayWith:(Run *)runDetails
 {
     NSUInteger i = 1;

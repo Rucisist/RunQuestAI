@@ -19,4 +19,6 @@
 
 +(NSMutableArray *)calculatePaceArrayForKmWith:(Run *)runDetails;
 
++(NSMutableArray *)calculatePaceArrayForPlot:(Run *)runDetails;
+
 @end

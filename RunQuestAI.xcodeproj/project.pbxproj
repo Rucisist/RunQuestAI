@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2571F50F076404FF33C9E73A /* libPods-RunQuestAIUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05691F8E0C67F5DC9EF60BFB /* libPods-RunQuestAIUITests.a */; };
+		BF1162AA20552C83004C4391 /* AISStatiscsPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1162A920552C83004C4391 /* AISStatiscsPlotViewController.m */; };
 		BF26D483200F893200D70121 /* AISUserDefaultsService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D482200F893200D70121 /* AISUserDefaultsService.m */; };
 		BF26D487200F970900D70121 /* AISPrisesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D486200F970900D70121 /* AISPrisesCollectionViewController.m */; };
 		BF26D48E200F9BF300D70121 /* AISPrisesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D48D200F9BF300D70121 /* AISPrisesCollectionViewCell.m */; };
@@ -94,6 +95,8 @@
 		9FB3329CECEDB84AFB247AFE /* libPods-RunQuestAI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RunQuestAI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06C476CA1D0A4169831ED01 /* Pods-RunQuestAIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunQuestAIUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunQuestAIUITests/Pods-RunQuestAIUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B880ABE2B79798E47AE25DB4 /* Pods-RunQuestAIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunQuestAIUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunQuestAIUITests/Pods-RunQuestAIUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF1162A820552C83004C4391 /* AISStatiscsPlotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISStatiscsPlotViewController.h; sourceTree = "<group>"; };
+		BF1162A920552C83004C4391 /* AISStatiscsPlotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISStatiscsPlotViewController.m; sourceTree = "<group>"; };
 		BF26D481200F893200D70121 /* AISUserDefaultsService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISUserDefaultsService.h; sourceTree = "<group>"; };
 		BF26D482200F893200D70121 /* AISUserDefaultsService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISUserDefaultsService.m; sourceTree = "<group>"; };
 		BF26D485200F970900D70121 /* AISPrisesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISPrisesCollectionViewController.h; sourceTree = "<group>"; };
@@ -393,6 +396,8 @@
 				BF7D3481200E2A3F007D33B2 /* AISStatsViewController.m */,
 				BFBE0CBD200E8D9500C3F019 /* AISRunStaticsViewController.h */,
 				BFBE0CBE200E8D9500C3F019 /* AISRunStaticsViewController.m */,
+				BF1162A820552C83004C4391 /* AISStatiscsPlotViewController.h */,
+				BF1162A920552C83004C4391 /* AISStatiscsPlotViewController.m */,
 				BFA585F220545150004D6721 /* AISlabelPaceTableViewCell.h */,
 				BFA585F320545150004D6721 /* AISlabelPaceTableViewCell.m */,
 				BFA585EF205430EA004D6721 /* AISgMapViewTableViewCell.h */,
@@ -873,6 +878,7 @@
 				BF39BC2E201679C000919F1D /* AISPathHelperModel.m in Sources */,
 				BF4CEA022012F6E8000BEC8A /* AISHelperForCharactersSW.m in Sources */,
 				BF26D4952010051B00D70121 /* AISLightSaberView.m in Sources */,
+				BF1162AA20552C83004C4391 /* AISStatiscsPlotViewController.m in Sources */,
 				BF26D487200F970900D70121 /* AISPrisesCollectionViewController.m in Sources */,
 				BF7D3479200E2837007D33B2 /* AISMainViewTabbarController.m in Sources */,
 				BF3065EF200CB5BB00F3058E /* AISRunMissionMapViewController.m in Sources */,

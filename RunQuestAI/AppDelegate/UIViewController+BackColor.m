@@ -10,5 +10,14 @@
 
 @implementation UIViewController (BackColor)
 
+-(void)creategRightNavigationButton
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"title" style:UIBarButtonItemStyleDone target:self action:@selector(ac)];
+}
+
+-(void)ac
+{
+    
+}
 
 @end
