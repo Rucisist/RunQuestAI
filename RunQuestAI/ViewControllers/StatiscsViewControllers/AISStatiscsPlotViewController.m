@@ -12,6 +12,7 @@
 #import "Run+CoreDataClass.h"
 #import "Run+CoreDataProperties.h"
 #import "AISPathHelperModel.h"
+#import "AISMathModel.h"
 
 static const double tx0 = 20;
 static const double ty0 = 300;
@@ -33,18 +34,27 @@ static const double ty0 = 300;
     
     self.paceArray = [AISPathHelperModel calculatePaceArrayForPlot:self.runDetails];
     
+    NSMutableArray *someAr = [AISMathModel smoothMedianFor:self.paceArray withWindo:20];
+    
     self.view = self.graphScrollingView;
     
     self.view.backgroundColor = UIColor.whiteColor;
     
+    [self plotAxis];
+    
     UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(tx0, ty0)];
+    
+    [path moveToPoint:CGPointMake(tx0 ,ty0 - [someAr.firstObject integerValue] / 3)];
     
     NSUInteger i = 0;
     
-    while (i < self.paceArray.count)
+    NSLog(@"%@", [AISMathModel smoothMedianFor:self.paceArray withWindo:20]);
+    
+    self.graphScrollingView.contentSize = CGSizeMake(someAr.count + 2*tx0, self.view.frame.size.height);
+    
+    while (i < someAr.count)
     {
-        [path addLineToPoint:CGPointMake(tx0+i*3,ty0 - [self.paceArray[i] integerValue] / 3)];
+        [path addLineToPoint:CGPointMake(tx0+i,ty0 - [someAr[i] integerValue] / 3)];
         i = i + 1;
     }
     
@@ -57,6 +67,23 @@ static const double ty0 = 300;
     [self.view.layer addSublayer:shapeLayer];
     
     // Do any additional setup after loading the view.
+}
+
+-(void)plotAxis
+{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(tx0, ty0)];
+    [path addLineToPoint:CGPointMake(tx0 + self.paceArray.count,ty0)];
+    [path moveToPoint:CGPointMake(tx0, ty0)];
+    [path addLineToPoint:CGPointMake(tx0, ty0 - 200)];
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = [path CGPath];
+    shapeLayer.strokeColor = [[UIColor blackColor] CGColor];
+    shapeLayer.lineWidth = 3;
+    shapeLayer.fillColor = [[UIColor clearColor] CGColor];
+    
+    [self.view.layer addSublayer:shapeLayer];
 }
 
 - (void)didReceiveMemoryWarning {

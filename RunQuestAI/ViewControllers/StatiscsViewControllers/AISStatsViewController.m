@@ -102,7 +102,7 @@
     tableViewCell.runInfoLabel.text = [NSString stringWithFormat:@"%@", [runObject.timestamp description]];
     
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    [dateFormatter setDateFormat:@"DD.MM "];
+    [dateFormatter setDateFormat:@"dd.MM yyyy, HH:mm"];
     tableViewCell.runInfoLabel.text = [NSString stringWithFormat:@"Пробежка в %@", [dateFormatter stringFromDate:runObject.timestamp]];
     
     tableViewCell.distanceInfoLabel.text = [NSString stringWithFormat:@"Вы пробежали %@", [AISTranslationUnitsModel stringifyDistance:runObject.distance]];

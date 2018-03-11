@@ -53,11 +53,11 @@ static const double AISDelayAnimationDuration = 2.0;
     self.statsViewController = [AISStatsViewController new];
     self.prisesPagesViewController = [AISPrisesPagesViewController new];
     
-    UITabBarItem *firstItem = [[UITabBarItem alloc] initWithTitle:@"run" image:[UIImage imageNamed:@"road"] tag:0];
+    UITabBarItem *firstItem = [[UITabBarItem alloc] initWithTitle:@"run" image:[UIImage imageNamed:@"road1"] tag:0];
     
-    UITabBarItem *rightTabBarItem = [[UITabBarItem alloc] initWithTitle:@"stats" image:[UIImage imageNamed:@"runbuttonImageLittle"] tag:1];
+    UITabBarItem *rightTabBarItem = [[UITabBarItem alloc] initWithTitle:@"stats" image:[UIImage imageNamed:@"statsImage1"] tag:1];
     
-    UITabBarItem *thirdTabBarItem = [[UITabBarItem alloc] initWithTitle:@"prises" image:[UIImage imageNamed:@"medal"] tag:2];
+    UITabBarItem *thirdTabBarItem = [[UITabBarItem alloc] initWithTitle:@"prises" image:[UIImage imageNamed:@"medal1"] tag:2];
     
     self.beginRunViewController.tabBarItem = firstItem;
     

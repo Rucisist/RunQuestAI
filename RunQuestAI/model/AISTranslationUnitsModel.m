@@ -28,7 +28,7 @@ static float const metersInMile = 1609.344;
     }
     else
     {
-        unitName = @"mi";
+        unitName = @"миль";
         unitDivider = metersInMile;
     }
     

@@ -110,7 +110,7 @@
         
         dt = [runDetails.locations[i].timestamp timeIntervalSinceReferenceDate] - [runDetails.locations[i-1].timestamp timeIntervalSinceReferenceDate];
         
-        delta = [locationTo distanceFromLocation:locationFrom] / dt;
+        delta = dt / [locationTo distanceFromLocation:locationFrom];
         
         NSNumber *someNum = [NSNumber new];
         someNum = [NSNumber numberWithDouble:delta];

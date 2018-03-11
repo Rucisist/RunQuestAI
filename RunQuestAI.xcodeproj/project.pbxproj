@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2571F50F076404FF33C9E73A /* libPods-RunQuestAIUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05691F8E0C67F5DC9EF60BFB /* libPods-RunQuestAIUITests.a */; };
 		BF1162AA20552C83004C4391 /* AISStatiscsPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1162A920552C83004C4391 /* AISStatiscsPlotViewController.m */; };
+		BF1162AD205546DB004C4391 /* AISMathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1162AC205546DB004C4391 /* AISMathModel.m */; };
 		BF26D483200F893200D70121 /* AISUserDefaultsService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D482200F893200D70121 /* AISUserDefaultsService.m */; };
 		BF26D487200F970900D70121 /* AISPrisesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D486200F970900D70121 /* AISPrisesCollectionViewController.m */; };
 		BF26D48E200F9BF300D70121 /* AISPrisesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26D48D200F9BF300D70121 /* AISPrisesCollectionViewCell.m */; };
@@ -97,6 +98,8 @@
 		B880ABE2B79798E47AE25DB4 /* Pods-RunQuestAIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunQuestAIUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunQuestAIUITests/Pods-RunQuestAIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF1162A820552C83004C4391 /* AISStatiscsPlotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISStatiscsPlotViewController.h; sourceTree = "<group>"; };
 		BF1162A920552C83004C4391 /* AISStatiscsPlotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISStatiscsPlotViewController.m; sourceTree = "<group>"; };
+		BF1162AB205546DB004C4391 /* AISMathModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISMathModel.h; sourceTree = "<group>"; };
+		BF1162AC205546DB004C4391 /* AISMathModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISMathModel.m; sourceTree = "<group>"; };
 		BF26D481200F893200D70121 /* AISUserDefaultsService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISUserDefaultsService.h; sourceTree = "<group>"; };
 		BF26D482200F893200D70121 /* AISUserDefaultsService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISUserDefaultsService.m; sourceTree = "<group>"; };
 		BF26D485200F970900D70121 /* AISPrisesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISPrisesCollectionViewController.h; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 			children = (
 				BF91ED0F203FECB100DF34D9 /* AISSpecialWeatherForRun.h */,
 				BF91ED10203FECB100DF34D9 /* AISSpecialWeatherForRun.m */,
+				BF1162AB205546DB004C4391 /* AISMathModel.h */,
+				BF1162AC205546DB004C4391 /* AISMathModel.m */,
 				BF39BC2C201679C000919F1D /* AISPathHelperModel.h */,
 				BF39BC2D201679C000919F1D /* AISPathHelperModel.m */,
 				BF39BC2B2016698900919F1D /* AISDownloadService */,
@@ -911,6 +916,7 @@
 				BF4CE99720124F97000BEC8A /* AISCustomRunView.m in Sources */,
 				BF83EE1B2008B0F3000EBA5C /* AppDelegate.m in Sources */,
 				BFC1615B20115B6500EF12BC /* AISRealVoicesPlayer.m in Sources */,
+				BF1162AD205546DB004C4391 /* AISMathModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
