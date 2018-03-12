@@ -65,8 +65,6 @@ static const double ty0 = 300;
     shapeLayer.fillColor = [[UIColor clearColor] CGColor];
     
     [self.view.layer addSublayer:shapeLayer];
-    
-    // Do any additional setup after loading the view.
 }
 
 -(void)plotAxis
@@ -84,11 +82,6 @@ static const double ty0 = 300;
     shapeLayer.fillColor = [[UIColor clearColor] CGColor];
     
     [self.view.layer addSublayer:shapeLayer];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

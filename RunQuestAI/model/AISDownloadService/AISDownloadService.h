@@ -15,7 +15,7 @@
 @interface AISDownloadService : NSObject
 
 /*! @brief экземпляр делегата */
-@property(nonatomic, strong) id<AISDownloadServiceDelegate> delegate;
+@property(nonatomic, weak) id<AISDownloadServiceDelegate> delegate;
 
 /*! @brief функция загрузки информации о достопримечательностях рядо с местоположением
  @params locationCoordinates - местоположение */

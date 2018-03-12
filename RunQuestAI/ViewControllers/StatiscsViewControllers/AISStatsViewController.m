@@ -107,6 +107,8 @@
     
     tableViewCell.distanceInfoLabel.text = [NSString stringWithFormat:@"Вы пробежали %@", [AISTranslationUnitsModel stringifyDistance:runObject.distance]];
     
+    tableViewCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return tableViewCell;
 }
 

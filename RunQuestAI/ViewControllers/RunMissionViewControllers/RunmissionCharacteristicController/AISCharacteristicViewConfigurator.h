@@ -12,7 +12,7 @@
 
 @interface AISCharacteristicViewConfigurator : NSObject
 
-@property (nonatomic, strong) id<AISConfiguratorProtocolDelegate> delegate;
+@property (nonatomic, weak) id<AISConfiguratorProtocolDelegate> delegate;
 
 -(void)configureUI;
 
