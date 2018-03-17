@@ -21,4 +21,6 @@
 
 +(NSMutableArray *)calculatePaceArrayForPlot:(Run *)runDetails;
 
++(NSMutableArray *)normolizeArray:(NSMutableArray *)inputArray;
+
 @end

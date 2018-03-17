@@ -168,6 +168,52 @@
     self.meanNormolizedPace = [NSNumber numberWithDouble:meanNormPace];
 }
 
++(NSMutableArray *)normolizeArray:(NSMutableArray *)inputArray
+{
+    NSMutableArray *array = [inputArray mutableCopy];
+    
+    NSNumber *minPace = [NSNumber new];
+    NSNumber *maxPace = [NSNumber new];
+    
+    NSNumber *max = [NSNumber new];
+    NSNumber *min = [NSNumber new];
+    
+    max = [array valueForKeyPath: @"@max.self"];
+    min = [array valueForKeyPath: @"@min.self"];
+    
+    minPace = min;
+    maxPace = max;
+    
+    float helperNum = 0;
+    
+    double sum = 0;
+    double meanNormPace = 0;
+    
+    NSUInteger i = 0;
+    
+    while (i < array.count)
+    {
+        helperNum = [array[i] floatValue];
+        
+        helperNum = ((helperNum - [min floatValue]) / ([max floatValue] - [min floatValue]));
+        
+        if (helperNum < 0.1)
+        {
+            helperNum = 0.1;
+        }
+        
+        array[i] = [NSNumber numberWithFloat:helperNum];
+        
+        sum = sum + helperNum;
+        
+        i = i+1;
+    }
+    
+    meanNormPace = sum / array.count;
+    
+    return array;
+}
+
 -(NSMutableArray *)calculateStrokeColor:(Run *)runDetails
 {
     NSUInteger i = 1;

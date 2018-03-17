@@ -34,6 +34,8 @@ static const double ty0 = 300;
     
     self.paceArray = [AISPathHelperModel calculatePaceArrayForPlot:self.runDetails];
     
+    NSLog(@"%@", [AISPathHelperModel normolizeArray:self.paceArray]);
+    
     NSMutableArray *someAr = [AISMathModel smoothMedianFor:self.paceArray withWindo:20];
     
     self.view = self.graphScrollingView;
@@ -48,13 +50,12 @@ static const double ty0 = 300;
     
     NSUInteger i = 0;
     
-    NSLog(@"%@", [AISMathModel smoothMedianFor:self.paceArray withWindo:20]);
-    
     self.graphScrollingView.contentSize = CGSizeMake(someAr.count + 2*tx0, self.view.frame.size.height);
+    
     
     while (i < someAr.count)
     {
-        [path addLineToPoint:CGPointMake(tx0+i,ty0 - [someAr[i] integerValue] / 3)];
+        [path addLineToPoint:CGPointMake(tx0+i,ty0 - round([someAr[i] doubleValue] / 3))];
         i = i + 1;
     }
     
