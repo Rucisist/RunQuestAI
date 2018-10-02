@@ -138,6 +138,22 @@ static const CGFloat AISactivityIndicatorViewScale = 40;
     }];
 }
 
+-(void)megaAnimationNew
+{
+    CGRect newCurrentWeatherLabelRect = CGRectMake(0, 30, 100, 40);
+    
+    [UIView animateWithDuration:5.0 delay:0.4 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.currentWeatherLabel.frame = newCurrentWeatherLabelRect;
+        self.currentWeatherLabel.transform = CGAffineTransformScale(self.currentWeatherLabel.transform, 0.5, 0.5);
+        self.capImageView.alpha = 1.0;
+        self.tShirtImageView.alpha = 1.0;
+        self.shortImageView.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        self.currentWeatherLabel = [[UILabel alloc] initWithFrame:newCurrentWeatherLabelRect];
+        self.currentWeatherLabel.font = [UIFont systemFontOfSize:15];
+    }];
+}
+
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     NSLog(@"%f", scrollView.contentOffset.y);
