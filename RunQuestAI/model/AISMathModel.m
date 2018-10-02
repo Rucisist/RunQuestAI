@@ -31,7 +31,7 @@
                 
                 j = j + 1;
             }
-            [filteredArray addObject:[NSNumber numberWithDouble:(sum / (2*w+1))]];
+            [filteredArray addObject:[NSNumber numberWithDouble:(sum / (2*w+1))]]; // filter
             sum = 0;
         }
         else if (i <= w)
