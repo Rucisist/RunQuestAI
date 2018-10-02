@@ -56,6 +56,21 @@ static const CGFloat AISYOffset = 50;
     }
 }
 
+-(void)countdownWithAnimate
+{
+    if (self.counter > 10)
+    {
+        self.counter = self.counter - 1;
+        [self updateCountdownScreen];
+    }
+    else
+    {
+        [self.timer invalidate];
+        self.counter = 0;
+        [self goToRunMissionInProgressTabBarViewController];
+    }
+}
+
 -(void)configureCountdownScreen
 {
     self.view.backgroundColor = [UIColor blackColor];
