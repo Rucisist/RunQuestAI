@@ -29,8 +29,7 @@ static const double AISDelayAnimationDuration = 2.0;
 
 @implementation AISMainViewTabbarController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [self configureTabBarWithViewControllers];
     [self initializeLoadingView];
@@ -41,14 +40,12 @@ static const double AISDelayAnimationDuration = 2.0;
     self.tabBar.alpha = 0.8;
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
+-(void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES];
     [self.beginRunViewController configureSaberView];
 }
 
--(void)configureTabBarWithViewControllers
-{
+-(void)configureTabBarWithViewControllers {
     self.beginRunViewController = [AISBeginRunViewController new];
     self.statsViewController = [AISStatsViewController new];
     self.prisesPagesViewController = [AISPrisesPagesViewController new];
@@ -70,8 +67,7 @@ static const double AISDelayAnimationDuration = 2.0;
     self.viewControllers = tabBarControllers;
 }
 
--(void)initializeLoadingView
-{
+-(void)initializeLoadingView {
     self.loadingImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
     self.loadingImageView.image = [UIImage imageNamed:@"redSaberInitialImage"];
     self.loadingImageView.backgroundColor = [UIColor blackColor];
@@ -79,13 +75,11 @@ static const double AISDelayAnimationDuration = 2.0;
     [self.view addSubview:self.loadingImageView];
 }
 
--(void)requestLocationUpdates
-{
+-(void)requestLocationUpdates {
     [self.locationManager startUpdatingLocation];
 }
 
--(void)animateLoading
-{
+-(void)animateLoading {
     UIView *helperCoverView = [[UIView alloc] initWithFrame:self.view.frame];
     helperCoverView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:helperCoverView];
@@ -106,15 +100,12 @@ static const double AISDelayAnimationDuration = 2.0;
     }];
 }
 
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     if (item.tag == 0)
     {
         [self.tabBar setBarStyle:UIBarStyleBlack];
         self.tabBar.alpha = 0.8;
-    }
-    else
-    {
+    } else {
         [self.tabBar setBarStyle:UIBarStyleDefault];
         self.tabBar.alpha = 1;
     }
