@@ -30,25 +30,18 @@ static NSString *const GMSServicesKey = @"AIzaSyBacMb-sv6VxaYjoZHJV9D6c4c_iyBhda
     //*****
     
     //configure window
-    self.window = [UIWindow new];
+    self.window = UIWindow.new;
     
     //создается начальный viewController
-    AISMainViewTabbarController *rootViewController = [AISMainViewTabbarController new];
-
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-
-    self.globalNavBarDelegate = [AISNavigationControllerDelegate new];
+    UINavigationController *navigationController = [UINavigationController.alloc initWithRootViewController:AISMainViewTabbarController.new];
+    self.globalNavBarDelegate = AISNavigationControllerDelegate.new;
 
     //navigationController.delegate = self.globalNavBarDelegate;
-
-    [navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault];
+    [navigationController.navigationBar setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
     navigationController.navigationBar.shadowImage = [UIImage new];
     navigationController.navigationBar.translucent = YES;
     
     self.window.rootViewController = navigationController; //[AISWeatherForRunAndClothesViewController new];
-    
-    
     [self.window makeKeyAndVisible];
         
     return YES;
