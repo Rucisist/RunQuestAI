@@ -29,4 +29,10 @@
     _temperatureString = [NSString stringWithFormat:@"%.0f°C", temperature];
 }
 
+-(void)setTemperatureStringFarenheit:(NSString *)temperatureString
+{
+    double temperature = round([temperatureString doubleValue] - 273.15);
+    _temperatureString = [NSString stringWithFormat:@"%.0f°F", temperature];
+}
+
 @end
