@@ -306,7 +306,7 @@
 			path = CoreDataInstances;
 			sourceTree = "<group>";
 		};
-		BF3065D1200C022300F3058E /* model */ = {
+		BF3065D1200C022300F3058E /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				BF91ED0F203FECB100DF34D9 /* AISSpecialWeatherForRun.h */,
@@ -324,7 +324,7 @@
 				BF3065F8200D3B0700F3058E /* AISTranslationUnitsModel.m */,
 				BF83EE222008B0F3000EBA5C /* RunQuestAI.xcdatamodeld */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BF39BC2420164DBF00919F1D /* AISHelperForPrises */ = {
@@ -523,7 +523,7 @@
 				BF4CE9AA20128DBA000BEC8A /* AppDelegate */,
 				BF4CE9BF20128F9E000BEC8A /* ViewControllers */,
 				BF4CE9AE20128E3A000BEC8A /* AISCustomViews */,
-				BF3065D1200C022300F3058E /* model */,
+				BF3065D1200C022300F3058E /* Model */,
 				BF83EE252008B0F3000EBA5C /* Assets.xcassets */,
 				BF83EE272008B0F3000EBA5C /* LaunchScreen.storyboard */,
 				BF83EE2A2008B0F3000EBA5C /* Info.plist */,
