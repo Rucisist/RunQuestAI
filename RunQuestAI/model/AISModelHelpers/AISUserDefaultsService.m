@@ -27,7 +27,6 @@
 -(void)setUserDefaultsForTheKey: (NSString *) key objectForTheKey: (id) object
 {
     [self.userDefaults setObject:object forKey:key];
-    NSLog(@"name = %@", [self.userDefaults objectForKey:@"name"]);
 }
 
 -(void)deleteUserDefaultsForTheKey: (NSString *)key
