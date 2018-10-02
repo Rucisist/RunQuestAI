@@ -24,6 +24,7 @@
 +(NSMutableArray *)calculatePaceArrayForKmWith:(Run *)runDetails
 {
     NSUInteger i = 1;
+    NSUInteger MaxDistanceNew = 1000;
     NSMutableArray *paceKmArray = [NSMutableArray new];
     
     double t = [runDetails.locations.firstObject.timestamp timeIntervalSinceReferenceDate];
@@ -34,7 +35,7 @@
     
     while (i < runDetails.locations.count)
     {
-        if (distanceLocal < 1000)
+        if (distanceLocal < MaxDistanceNew)
         {
         CLLocation *locationTo = [[CLLocation alloc] initWithLatitude:runDetails.locations[i].latitude longitude:runDetails.locations[i].longitude];
         
