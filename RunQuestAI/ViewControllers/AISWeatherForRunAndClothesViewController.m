@@ -34,8 +34,7 @@ static const CGFloat AISactivityIndicatorViewScale = 40;
 
 @implementation AISWeatherForRunAndClothesViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.weatherForRun = [[AISSpecialWeatherForRun alloc] init];
@@ -48,13 +47,11 @@ static const CGFloat AISactivityIndicatorViewScale = 40;
     [self configureUI];
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
+-(void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:NO];
 }
 
--(void)configureUI
-{
+-(void)configureUI {
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.weatherClothesView = [[UIScrollView alloc] initWithFrame:self.view.frame];
@@ -99,8 +96,7 @@ static const CGFloat AISactivityIndicatorViewScale = 40;
     self.shortImageView.alpha = 0.0;
 }
 
--(void)configureCloseButtonWithFrame:(CGRect)frame
-{
+-(void)configureCloseButtonWithFrame:(CGRect)frame {
     self.closeButton = [[UIButton alloc] initWithFrame:frame];
     [self.closeButton setTitle:@"Закрыть" forState:UIControlStateNormal];
     self.closeButton.backgroundColor = UIColor.blueColor;
@@ -110,20 +106,17 @@ static const CGFloat AISactivityIndicatorViewScale = 40;
     [self.view addSubview:self.closeButton];
 }
 
--(void)updateUI
-{
+-(void)updateUI {
     [self.activityLoadIndicator stopAnimating];
     self.currentWeatherLabel.text = self.weatherForRun.temperatureString;
     [self megaAnimation];
 }
 
--(void)closeController
-{
+-(void)closeController {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
--(void)megaAnimation
-{
+-(void)megaAnimation {
     CGRect newCurrentWeatherLabelRect = CGRectMake(0, 30, 100, 40);
     
     [UIView animateWithDuration:2.0 delay:0.4 options:UIViewAnimationOptionCurveEaseIn animations:^{
@@ -138,14 +131,12 @@ static const CGFloat AISactivityIndicatorViewScale = 40;
     }];
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"%f", scrollView.contentOffset.y);
     self.closeButton.alpha = [self makeAlphaWith:scrollView.contentOffset.y];
 }
 
--(float)makeAlphaWith:(NSUInteger)position
-{
+-(float)makeAlphaWith:(NSUInteger)position {
     float coefficient = 252 - 180;
     return (position - 180) > 0 ? (position - 180) / coefficient : 0.0;
 }
