@@ -95,3 +95,19 @@ public extension ObservationToken {
         bag.add(self)
     }
 }
+
+public extension Array {
+    /// Функция для последовательной асинхронной обработки элементов
+    /// Обработка следующего элемента последовательности начинается только после вывоза аргумент-функции `next`
+    func visit_async(_ process: @escaping (_ element:Element, _ next: @escaping () -> Void) -> Void, finish: @escaping () -> Void) {
+        var iterator = makeIterator()
+        func next() {
+            if let e = iterator.next() {
+                process(e, next)
+            } else {
+                finish()
+            }
+        }
+        next()
+    }
+}
